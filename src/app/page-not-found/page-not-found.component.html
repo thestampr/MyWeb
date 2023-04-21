@@ -1,0 +1,8 @@
+<app-page>
+    <div class="white-theme" [ngClass]="{'dark-theme': Theme.is_dark}">
+        <h1>404</h1>
+        <p>Page not found</p>
+        
+        <button class="white-theme" [ngClass]="{'dark-theme': Theme.is_dark}" (click)="Router.navigateByUrl('/')">Go back</button>
+    </div>
+</app-page>

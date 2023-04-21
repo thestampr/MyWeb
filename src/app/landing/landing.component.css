@@ -1,0 +1,58 @@
+#personal {
+    width: 800px;
+    height: 500px;
+}
+
+#me {
+    width: 250px;
+    height: 250px;
+
+    clip-path: circle(50% at 50% 50%);
+    box-shadow: 0 0px 20px rgba(0, 0, 0, 0.5);
+
+    margin: 50px;
+}
+
+.container {
+    margin-top: 150px;
+    margin-bottom: 150px;
+
+    display: flex;
+    align-items: center;
+}
+
+
+@media only screen and (max-width: 1200px) {
+    #me {
+        width: 200px;
+        height: 200px;
+    }
+
+    .container {
+        font-size: 80%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        font-size: 70%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #me {
+        width: 150px;
+        height: 150px;
+
+        margin: 25px;
+    }
+
+    .container {
+        font-size: 50%;
+    }
+
+    #greeting {
+        min-width: 300px;
+    }
+}

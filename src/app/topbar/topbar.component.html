@@ -1,0 +1,11 @@
+<div class="topbar">
+    <div class="white-theme" [ngClass]="{'dark-theme': Theme.is_dark}">
+        <button class="white-theme" [ngClass]="{'dark-theme': Theme.is_dark}" (click)="Router.navigateByUrl('/about')">About me</button>
+        <button class="white-theme" [ngClass]="{'dark-theme': Theme.is_dark}" (click)="OnDownloadResume()">Resume</button>
+        <button class="white-theme" [ngClass]="{'dark-theme': Theme.is_dark}" (click)="Router.navigateByUrl('/contact')">Contact</button>
+        <div id="linebreak"></div>
+        <button id="modeswitch" class="toblack" [ngClass]="{'towhite': Theme.is_dark}" (click)="OnSwitchTheme()">
+            <div id="switch" class="onblack" [ngClass]="{'onwhite': Theme.is_dark}"></div>
+        </button>
+    </div>
+</div>
