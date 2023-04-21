@@ -8,6 +8,9 @@
     --white2: #E9E9E9;
     --white3: #E0E0E0;
     --white4: #C1C1C1;
+
+    --alpha-dark: rgba(28, 28, 28, 0.2);
+    --alpha-white: rgba(255, 255, 255, 0.2);
 }
 
 
@@ -43,26 +46,34 @@ button {
     border-radius: 100px;
     cursor: pointer;
 
-    min-width: 75px;
+    min-width: 100px;
     min-height: 30px;
+    padding: 5px;
+    
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-weight: 500;
 }
 
-.white-theme {
+h1 {
+    text-align: center;
+}
+
+.white-theme * {
     color: var(--dark3);
 }
 
-.dark-theme {
+.dark-theme * {
     color: var(--white3);
 }
 
 .white-theme button {
-    border: 1px solid var(--dark4);
-    background-color: var(--white2);
+    border: 1px solid var(--alpha-dark);
+    background-color: var(--white1);
 }
 
 .dark-theme button {
-    border: 1px solid var(--white4);
-    background-color: var(--dark2);
+    border: 1px solid var(--alpha-white);
+    background-color: var(--dark3);
 }
 
 /* webkit */
@@ -90,4 +101,32 @@ button {
     border-radius: 5px;
     border: solid 3px transparent;
     background-clip: padding-box;
+}
+
+/* component
+
+    usage: <div class="separator">text</div>
+*/
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    margin: 100px;
+
+    width: 200px;
+}
+  
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #000;
+}
+  
+.separator:not(:empty)::before {
+    margin-right: .25em;
+}
+  
+.separator:not(:empty)::after {
+    margin-left: .25em;
 }

@@ -7,6 +7,9 @@ div {
 }
 
 h1 {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+
     font-size: 150px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }

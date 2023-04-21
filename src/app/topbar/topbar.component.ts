@@ -18,14 +18,4 @@ export class TopbarComponent {
         let body: HTMLElement = this.elementRef.nativeElement.ownerDocument.body;
         body.style.backgroundColor = this.Theme.is_dark? "#111111": "#E0E0E0";
     }
-
-    OnDownloadResume(): void {
-        let link = document.createElement('a');
-        link.setAttribute('type', 'hidden');
-        link.href = 'assets/files/CV.pdf';
-        link.download = 'CV.pdf';
-        document.body.appendChild(link);
-        link.click();
-        link.remove();
-    }
 }

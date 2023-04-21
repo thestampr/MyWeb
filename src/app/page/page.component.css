@@ -9,6 +9,10 @@
 #content {
     justify-content: center;
     flex-wrap: wrap;
+
+    animation: fadeIn ease 0.3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
 .whitepage {
@@ -41,4 +45,13 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     
     display: flex;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
 }

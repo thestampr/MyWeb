@@ -2,6 +2,7 @@ import { Component, ElementRef, AfterViewInit } from '@angular/core';
 
 import { AppearanceService } from '../appearance.service';
 
+
 @Component({
   selector: 'app-page',
   templateUrl: './page.component.html',
