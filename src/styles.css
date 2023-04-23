@@ -113,6 +113,19 @@ h1 {
     background-color: var(--dark3);
 }
 
+.whitepage {
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(28, 28, 28, 0.2);
+    color: var(--dark3);
+}
+
+.darkpage {
+    background: rgba(28, 28, 28, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--white3);
+}
+
+
 /* webkit */
 ::-webkit-scrollbar {
     width: 12px;
@@ -137,6 +150,55 @@ h1 {
     background: #555;
     background-clip: padding-box;
 }
+
+
+/* Cdk */
+#CdkMenu {
+    max-height: 300px;
+    
+    border-radius: 10px;
+    padding: 2px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#CdkMenuItem {
+    min-width: 200px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px;
+    padding-bottom: 0px;
+
+    font-size: 14px;
+}
+
+#CdkMenu:last-child {
+    padding-bottom: 10px;
+}
+
+
+@media only screen and (max-width: 1200px) {
+}
+
+@media only screen and (max-width: 900px) {
+    #CdkMenuItem {
+        min-width: 175px;
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #CdkMenuItem {
+        min-width: 150px;
+        font-size: 10px;
+    }
+}
+
+
 
 /* component
 

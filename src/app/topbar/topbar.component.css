@@ -23,6 +23,17 @@ button {
     height: min-content;
 }
 
+#setting-btn {
+    width:30px;
+    height: 30px;
+
+    border: none;
+    background-color: transparent;
+    margin-right: 20px;
+
+    font-size: 15px;
+}
+
 #navbtn {
     border: none;
     background-color: transparent;
@@ -51,22 +62,22 @@ button {
 }
 
 #modeswitch {
-    width: 50px;
-    height: 25px;
+    width: 32px;
+    height: 16px;
     min-width: unset;
     min-height: unset;
 
     cursor: pointer;
 
     border: 1px solid rgba(28, 28, 28, 0.2);
-    border-radius: 13px;
+    border-radius: 100px;
     box-shadow: 0;
     padding: 0;
 
     overflow: hidden;
     position: relative;
     right: 0px;
-    margin: 10px;
+    /* margin: 10px; */
 
     transition: box-shadow 0.2s ease-in-out;
     transition: background-color 0.2s ease-in-out;
@@ -116,9 +127,8 @@ button {
     }
 
     #modeswitch {
-        width: 40px;
-        height: 20px;
-        border-radius: 10px;
+        width: 30px;
+        height: 15px;
     }
 }
 
@@ -131,8 +141,7 @@ button {
     }
 
     #modeswitch {
-        width: 32px;
-        height: 16px;
-        border-radius: 8px;
+        width: 26px;
+        height: 13px;
     }
 }
