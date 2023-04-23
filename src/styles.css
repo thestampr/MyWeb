@@ -26,6 +26,14 @@
     scroll-margin: 5px;
 }
 
+*:active {
+    outline: none;
+}
+
+*:focus {
+    outline: none;
+}
+
 html, body {
     margin: 0;
     height: 100%;
