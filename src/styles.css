@@ -24,30 +24,45 @@
 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     scroll-margin: 5px;
-}
+    scroll-behavior: smooth;
 
-*:active {
-    outline: none;
+    cursor: default;
+    
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 *:focus {
-    outline: none;
+    outline: none !important;
 }
 
 html, body {
     margin: 0;
     height: 100%;
+    min-width: 400px;
 
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-
-    min-width: 400px;
 }
 
 body {
     min-height: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    min-height: 200px;
+    bottom: 0;
 }
 
 button {
@@ -55,7 +70,7 @@ button {
     cursor: pointer;
 
     min-width: 100px;
-    min-height: 30px;
+    min-height: 50px;
     padding: 5px;
     
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -64,6 +79,20 @@ button {
 
 h1 {
     text-align: center;
+}
+
+.animated-btn {
+    transition: scale 0.15s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.animated-btn:hover {
+    scale: 1.02;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.12);
+}
+
+.animated-btn:active {
+    scale: 0.98;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
 .white-theme * {
@@ -99,15 +128,13 @@ h1 {
 
 ::-webkit-scrollbar-thumb {
     background: #888;
-    border-radius: 5px;
+    border-radius: 10px;
     border: solid 3px transparent;
     background-clip: padding-box;
 }
 
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
-    border-radius: 5px;
-    border: solid 3px transparent;
     background-clip: padding-box;
 }
 

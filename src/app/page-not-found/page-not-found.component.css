@@ -19,3 +19,9 @@ h1 {
 p {
     margin-bottom: 100px;
 }
+
+#back {
+    border: unset;
+    background-color: var(--white1);
+    color: var(--dark3);
+}

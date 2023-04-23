@@ -3,6 +3,11 @@ import { Component } from '@angular/core';
 import { AppearanceService } from '../appearance.service';
 
 
+function delay(ms: number) {
+    return new Promise( resolve => setTimeout(resolve, ms) );
+}
+
+
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -11,4 +16,14 @@ import { AppearanceService } from '../appearance.service';
 export class ContactComponent {
 
     constructor(public Theme: AppearanceService) {}
+
+    async OnHireMe() {
+        let card: HTMLElement = document.getElementById("card")!;
+
+        card.style.scale = "1.05";
+        card.style.boxShadow = "0 10px 10px rgba(0, 0, 0, 0.1";
+        await delay(750);
+        card.style.scale = "1.0";
+        card.style.boxShadow = "0 4px 10px rgba(0, 0, 0, 0.1";
+    }
 }

@@ -1,3 +1,7 @@
+* {
+    transition: all 0.2s ease-in-out;
+}
+
 div {
     margin: 0;
 
@@ -15,6 +19,7 @@ button {
     font-weight: unset;
 
     min-width: unset;
+    min-height: unset;
     height: min-content;
 }
 
@@ -80,6 +85,8 @@ button {
 #switch {
     position: absolute;
     transition: clip-path 0.5s ease-in-out;
+
+    cursor: pointer;
 }
 
 .onblack {

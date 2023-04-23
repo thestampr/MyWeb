@@ -1,3 +1,7 @@
+* {
+    transition: all 0.2s ease-in-out;
+}
+
 #personal {
     width: 800px;
     height: 500px;
@@ -17,8 +21,16 @@
     filter: drop-shadow(0 0px 20px rgba(0, 0, 0, 0.1));
 }
 
+#content {
+    margin-top: 100px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .container {
-    margin-top: 150px;
+    margin-top: 50px;
     margin-bottom: 150px;
 
     display: flex;
@@ -58,7 +70,7 @@ h1 {
     }
 
     .container {
-        font-size: 50%;
+        font-size: 55%;
     }
 
     #greeting {

@@ -18,6 +18,7 @@ import { ContactComponent } from './contact/contact.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ResumeComponent } from './resume/resume.component';
+import { FooterComponent } from './footer/footer.component';
 
 const routes: Routes = [
     { path: '', component: LandingComponent },
@@ -39,6 +40,7 @@ const routes: Routes = [
         ContactComponent,
         PageNotFoundComponent,
         ResumeComponent,
+        FooterComponent,
     ],
     imports: [
         RouterModule.forRoot(routes),

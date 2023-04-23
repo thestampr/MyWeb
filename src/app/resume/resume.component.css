@@ -17,8 +17,9 @@
 }
 
 #content {
+    margin-top: 100px;
+
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
 }
@@ -38,12 +39,8 @@
     height: 50px;
     border: none;
 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     font-weight: 500;
-}
 
-.dark-theme #download {
-    border: unset;
     background-color: var(--white1);
     color: var(--dark3);
 }
@@ -53,9 +50,6 @@
 }
 
 @media only screen and (max-width: 900px) {
-    .fa, #download {
-        margin: 5px;
-    }
 }
 
 @media only screen and (max-width: 600px) {
