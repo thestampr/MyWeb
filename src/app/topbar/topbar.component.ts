@@ -12,7 +12,7 @@ import { AppearanceService } from '../appearance.service';
 export class TopbarComponent {
     constructor(public Theme: AppearanceService, private elementRef: ElementRef, public Router: Router) {}
 
-    OnSwitchTheme(): void {
+    SwitchTheme(): void {
         this.Theme.is_dark = !this.Theme.is_dark;
 
         let body: HTMLElement = this.elementRef.nativeElement.ownerDocument.body;

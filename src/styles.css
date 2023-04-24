@@ -20,7 +20,11 @@
     -webkit-box-sizing: border-box;
     outline: none;
 
-    transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out, 
+    filter 0.5s ease-in-out, 
+    -moz-filter 0.5s ease-in-out, 
+    -webkit-filter 0.5s ease-in-out, 
+    -o-filter 0.5s ease-in-out;
 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     scroll-margin: 5px;
@@ -65,7 +69,7 @@ footer {
     bottom: 0;
 }
 
-button {
+button:not(.ContextMenu-Item, .mat-mdc-snack-bar-container) {
     border-radius: 100px;
     cursor: pointer;
 
@@ -79,6 +83,13 @@ button {
 
 h1 {
     text-align: center;
+}
+
+.blur {
+    filter: blur(5px);
+    -moz-filter: blur(5px);
+    -webkit-filter: blur(5px);
+    -o-filter: blur(5px);
 }
 
 .animated-btn {
@@ -153,7 +164,7 @@ h1 {
 
 
 /* Cdk */
-#CdkMenu {
+/* #CdkMenu {
     max-height: 300px;
     
     border-radius: 10px;
@@ -161,10 +172,24 @@ h1 {
 
     display: flex;
     flex-direction: column;
+
+    transition: all none;
+}
+
+#CdkMenu button {
+    border-radius: 5px;
+
+    min-width: 200px;
+    min-height: unset;
+    padding: 5px;
+    
+    box-shadow: unset;
+    font-weight: unset;
 }
 
 #CdkMenuItem {
     min-width: 200px;
+    border: none;
 
     display: flex;
     align-items: center;
@@ -178,6 +203,90 @@ h1 {
 
 #CdkMenu:last-child {
     padding-bottom: 10px;
+} */
+
+.ContextMenu {
+    display: inline-flex;
+    flex-direction: column;
+    min-width: 180px;
+    max-width: 300px;
+    
+    /* From https://css.glass */
+    background-color: rgba(37, 37, 37, 0.8);
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+
+    animation: fadeIn ease 0.2s;
+}
+
+.ContextMenu-Item {
+    min-width: 64px;
+
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+  
+    user-select: none;
+    line-height: 36px;
+
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex: 1;
+
+    z-index: 100;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ContextMenu-Item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.ContextMenu-Item:active {
+    background-color: #191919;
+}
+
+.ContextMenu-Separator {
+    margin: 0 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    height: 0.5px;
+}
+
+.ContextMenu-Span {
+    width: 5px;
+    right: 16px;
+    position: absolute;
+}
+
+.mat-mdc-snack-bar-container {
+    background-color: rgba(37, 37, 37, 0.8);
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 5px;
+
+    --mat-mdc-snack-bar-button-color: #fff;
+    --mdc-snackbar-supporting-text-color: #fff;
+}
+
+.mat-mdc-snack-bar-container button {
+    box-shadow: none;
+    background-color: transparent;
+    border-radius: 5px;
+
+    min-width: unset;
+    min-height: unset;
 }
 
 
@@ -197,7 +306,6 @@ h1 {
         font-size: 10px;
     }
 }
-
 
 
 /* component
@@ -226,4 +334,15 @@ h1 {
   
 .separator:not(:empty)::after {
     margin-left: .25em;
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
 }

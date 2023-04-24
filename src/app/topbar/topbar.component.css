@@ -23,7 +23,7 @@ button {
     height: min-content;
 }
 
-#setting-btn {
+#option-btn {
     width:30px;
     height: 30px;
 
@@ -33,6 +33,14 @@ button {
 
     font-size: 15px;
 }
+
+/* .white-theme #option-btn:hover {
+    background-color: var(--white4);
+}
+
+.dark-theme #option-btn:hover {
+    background-color: var(--dark4);
+} */
 
 #navbtn {
     border: none;
@@ -78,9 +86,6 @@ button {
     position: relative;
     right: 0px;
     /* margin: 10px; */
-
-    transition: box-shadow 0.2s ease-in-out;
-    transition: background-color 0.2s ease-in-out;
 }
 
 .toblack {
@@ -136,6 +141,7 @@ button {
     button {
         font-size: 70%;
     }
+
     .topbar button:not(#modeswitch) {
         margin-right: 5px;
     }

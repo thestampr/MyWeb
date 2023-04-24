@@ -1,27 +1,37 @@
-<div class="topbar">
+<div class="topbar" (contextmenu)="false">
     <div class="white-theme" [ngClass]="{'dark-theme': Theme.is_dark}">
         <button id="navbtn" class="white-theme" [ngClass]="{'dark-theme': Theme.is_dark}" (click)="Router.navigateByUrl('aboutme')">About me</button>
         <button id="navbtn" class="white-theme" [ngClass]="{'dark-theme': Theme.is_dark}" (click)="Router.navigateByUrl('resume')">Resume</button>
         <button id="navbtn" class="white-theme" [ngClass]="{'dark-theme': Theme.is_dark}" (click)="Router.navigateByUrl('contact')">Contact</button>
-        <button id="navbtn" class="white-theme" [ngClass]="{'dark-theme': Theme.is_dark}">Login</button>
+        <!-- <button id="navbtn" class="white-theme" [ngClass]="{'dark-theme': Theme.is_dark}">Login</button> -->
         <div id="linebreak"></div>
         <!-- <button id="modeswitch" class="toblack" [ngClass]="{'towhite': Theme.is_dark}" (click)="OnSwitchTheme()">
             <div id="switch" class="onblack" [ngClass]="{'onwhite': Theme.is_dark}"></div>
         </button> -->
-        <button id="setting-btn" class="white-theme" [ngClass]="{'dark-theme': Theme.is_dark}" mat-button [cdkMenuTriggerFor]="setting">⁝</button>
+        <button id="option-btn" class="white-theme" [ngClass]="{'dark-theme': Theme.is_dark}" mat-button [cdkMenuTriggerFor]="Option">⁝</button>
     </div>
 </div>
 
-<ng-template #setting>
+<!-- <ng-template #option>
     <div id="CdkMenu" [ngClass]="{'darkpage': Theme.is_dark, 'whitepage': !Theme.is_dark}" cdkMenu>
         <div id="CdkMenuItem" cdkMenuItem>
             Dark theme
-            <button id="modeswitch" class="toblack" [ngClass]="{'towhite': Theme.is_dark}" (click)="OnSwitchTheme()">
+            <button id="modeswitch" class="toblack" [ngClass]="{'towhite': Theme.is_dark}" (click)="SwitchTheme()">
                 <div id="switch" class="onblack" [ngClass]="{'onwhite': Theme.is_dark}"></div>
             </button>
         </div>
-        <!-- <div id="CdkMenuItem" cdkMenuItem>
-            Login
-        </div> -->
+    </div>
+</ng-template> -->
+
+<ng-template #Option>
+    <div class="ContextMenu" cdkMenu>
+        <button class="ContextMenu-Item" cdkMenuItem (contextmenu)="false" (click)="SwitchTheme()">
+            {{Theme.is_dark? "Light mode" : "Dark mode"}}
+            <!-- <button id="modeswitch" class="toblack" [ngClass]="{'towhite': Theme.is_dark}" (click)="SwitchTheme()">
+                <div id="switch" class="onblack" [ngClass]="{'onwhite': Theme.is_dark}"></div>
+            </button> -->
+        </button>
+        <!-- <div class="ContextMenu-Separator"></div> -->
+        <!-- <button class="ContextMenu-Item" (contextmenu)="false" cdkMenuItem>Login</button> -->
     </div>
 </ng-template>

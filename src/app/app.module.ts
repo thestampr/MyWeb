@@ -4,6 +4,8 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { Routes, RouterModule } from '@angular/router';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { CdkMenuModule } from '@angular/cdk/menu';
+import { ClipboardModule } from '@angular/cdk/clipboard';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -51,6 +53,8 @@ const routes: Routes = [
         BrowserAnimationsModule, 
         MatTooltipModule, 
         CdkMenuModule, 
+        ClipboardModule, 
+        MatSnackBarModule, 
     ],
     providers: [
         AppearanceService, 
