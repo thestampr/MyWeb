@@ -18,7 +18,7 @@ export class ContactComponent {
 
     constructor(public Theme: AppearanceService, private _snackBar: MatSnackBar) {}
 
-    async OnHireMe() {
+    async HireMe() {
         let card: HTMLElement = document.getElementById("card")!;
 
         card.style.scale = "1.05";
