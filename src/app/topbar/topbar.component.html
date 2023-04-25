@@ -1,12 +1,11 @@
-<div class="topbar floating whitepage-header" [ngClass]="{'darkpage-header': Theme.is_dark}" (contextmenu)="false">
-    <div id="nav-btns" class="white-theme" [ngClass]="{'dark-theme': Theme.is_dark}">
-        <button id="navbtn" class="white-theme" [ngClass]="{'dark-theme': Theme.is_dark}" (click)="Router.navigateByUrl('aboutme')">About me</button>
-        <button id="navbtn" class="white-theme" [ngClass]="{'dark-theme': Theme.is_dark}" (click)="Router.navigateByUrl('resume')">Resume</button>
-        <button id="navbtn" class="white-theme" [ngClass]="{'dark-theme': Theme.is_dark}" (click)="Router.navigateByUrl('contact')">Contact</button>
-        <div id="linebreak"></div>
-        <button id="option-btn" class="white-theme" [ngClass]="{'dark-theme': Theme.is_dark}" mat-button [cdkMenuTriggerFor]="Option">⁝</button>
-    </div>
-</div>
+<nav></nav>
+<nav class="floating whitepage-header" [ngClass]="{'darkpage-header': Theme.is_dark}" (contextmenu)="false">
+    <button id="navbtn" class="white-theme" [ngClass]="{'dark-theme': Theme.is_dark}" (click)="Router.navigateByUrl('aboutme')">About me</button>
+    <button id="navbtn" class="white-theme" [ngClass]="{'dark-theme': Theme.is_dark}" (click)="Router.navigateByUrl('resume')">Resume</button>
+    <button id="navbtn" class="white-theme" [ngClass]="{'dark-theme': Theme.is_dark}" (click)="Router.navigateByUrl('contact')">Contact</button>
+    <div id="linebreak"></div>
+    <button id="option-btn" class="white-theme" [ngClass]="{'dark-theme': Theme.is_dark}" mat-button [cdkMenuTriggerFor]="Option">⁝</button>
+</nav>
 
 <ng-template #Option>
     <div class="ContextMenu" cdkMenu>

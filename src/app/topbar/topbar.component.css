@@ -2,16 +2,13 @@
     transition: all 0.2s ease-in-out;
 }
 
-div {
-    margin: 0;
+nav {
+    width: 100%;
+    height: 50px;
 
     display: flex;
-    flex-wrap: wrap;
-
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
+    justify-content: right;
+    align-items: center;
 }
 
 button {
@@ -130,11 +127,11 @@ button {
 }
 
 @media only screen and (max-width: 900px) {
-    .topbar {
+    nav {
         height: 40px;
     }
 
-    .topbar button:not(#modeswitch) {
+    nav button:not(#modeswitch) {
         margin-right: 15px;
     }
 
@@ -149,7 +146,7 @@ button {
 }
 
 @media only screen and (max-width: 600px) {
-    .topbar {
+    nav {
         height: 36px;
     }
 
@@ -157,7 +154,7 @@ button {
         font-size: 70%;
     }
 
-    .topbar button:not(#modeswitch) {
+    nav button:not(#modeswitch) {
         margin-right: 5px;
     }
 
