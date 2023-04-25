@@ -1,24 +1,60 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <app-page>
     <div id="content" class="white-theme" [ngClass]="{'dark-theme': Theme.is_dark}">
-        <div id="container" class="container">
+        <div id="container" class="container about">
 
-            <img id="me" src="assets/images/main-profile.jpg" draggable="false" [cdkContextMenuTriggerFor]="Image" (click)="ModalView()" /> 
+            <img class="me" src="assets/images/main-profile.jpg" draggable="false" [cdkContextMenuTriggerFor]="Image" (click)="ModalView()" /> 
 
             <span id="greeting">
-                <h1>Hello!</h1>
+                <h1>Peeradon Rungkanawut</h1>
+
+                I am interested in backend programming and primarily use Python  <br>
+                as my main programming language. Currently, I'm also studying Angular <br>
+                for web development and yes!, this site are made out of Angular!<br>
+                <br>
+                I enjoy learning different things to meet my developmental goals. <br>
+            </span>
+
+            <!-- <span id="greeting">
+                <h1>Peeradon Rungkanawut</h1>
 
                 My name is Peeradon, but I go by the nickname <b>Stamp</b>. I am interested in backend programming <br>
                 and primarily use Python as my main programming language. Currently, I'm also studying Angular <br>
-                for web development and yes!, this site are made out of Angular!<br><br>
+                for web development and yes!, this site are made out of Angular!<br>
+                <br>
                 I enjoy learning different things to meet my developmental goals. <br>
-            </span>
+            </span> -->
         </div>
+
+        <app-card>
+            <div class="what-ido">
+                <h1>What I do</h1>
+
+                <div class="flex-container">
+                    <div class="flex-container-item what-ido-item">
+                        <i id="icon-large" class="fa fa-code"></i>
+                        first
+                    </div>
+                    <div class="flex-container-item what-ido-item">
+                        <i id="icon-large" class="fa fa-code"></i>
+                        second
+                    </div>
+                    <div class="flex-container-item what-ido-item">
+                        <i id="icon-large" class="fa fa-code"></i>
+                        third
+                    </div>
+                </div>
+            </div>
+        </app-card>
+
+        <app-footer></app-footer>
     </div>
 </app-page>
 
 <div id="modal-img" (click)="ModalClose()">
     <div id="frame">
-        <img id="me" src="assets/images/main-profile.jpg" draggable="false" (contextmenu)="false" />
+        <img class="me" id="my-img" src="assets/images/main-profile.jpg" draggable="false" (contextmenu)="false" />
     </div>
 </div>
 

@@ -1,4 +1,4 @@
-import { Component, ElementRef } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { AppearanceService } from '../appearance.service';
@@ -9,13 +9,20 @@ import { AppearanceService } from '../appearance.service';
   templateUrl: './topbar.component.html',
   styleUrls: ['./topbar.component.css']
 })
-export class TopbarComponent {
+export class TopbarComponent implements OnInit {
     constructor(public Theme: AppearanceService, private elementRef: ElementRef, public Router: Router) {}
 
-    SwitchTheme(): void {
-        this.Theme.is_dark = !this.Theme.is_dark;
+    ngOnInit(): void {
+        this._changeTheme();
+    }
 
+    ToogleTheme(): void {
+        this.Theme.is_dark = !this.Theme.is_dark;
+        this._changeTheme();
+    }
+
+    private _changeTheme(): void {
         let body: HTMLElement = this.elementRef.nativeElement.ownerDocument.body;
-        body.style.backgroundColor = this.Theme.is_dark? "#111111": "#E0E0E0";
+        body.style.backgroundColor = this.Theme.primary_color;
     }
 }

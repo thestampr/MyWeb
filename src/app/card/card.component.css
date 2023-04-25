@@ -26,6 +26,18 @@
     animation-fill-mode: forwards;
 }
 
+.whitepage {
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(28, 28, 28, 0.2);
+    color: var(--dark3);
+}
+
+.darkpage {
+    background: rgba(28, 28, 28, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--white3);
+}
+
 
 @keyframes WalkIn {
     0% {

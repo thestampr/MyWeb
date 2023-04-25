@@ -61,6 +61,13 @@ button {
     align-content: center;
 }
 
+.floating {
+    position: fixed;
+    top: 0;
+
+    z-index: 100;
+}
+
 #linebreak {
     width: 1px;
     height: auto;
@@ -123,6 +130,10 @@ button {
 }
 
 @media only screen and (max-width: 900px) {
+    .topbar {
+        height: 40px;
+    }
+
     .topbar button:not(#modeswitch) {
         margin-right: 15px;
     }
@@ -138,6 +149,10 @@ button {
 }
 
 @media only screen and (max-width: 600px) {
+    .topbar {
+        height: 36px;
+    }
+
     button {
         font-size: 70%;
     }

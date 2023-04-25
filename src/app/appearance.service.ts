@@ -2,6 +2,9 @@ import { Injectable } from '@angular/core';
 
 const theme_key: string = "dark_theme";
 
+const dark: string = "#111111";
+const white: string = "#E0E0E0";
+
 
 @Injectable({
     providedIn: 'root'
@@ -19,5 +22,9 @@ export class AppearanceService {
         this._dark = dark;
 
         localStorage.setItem(theme_key, String(dark));
+    }
+
+    get primary_color(): string {
+        return this._dark? dark: white;
     }
 }

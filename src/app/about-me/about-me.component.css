@@ -7,7 +7,7 @@
     height: 500px;
 }
 
-#me {
+.me {
     width: 250px;
     height: 250px;
     
@@ -41,14 +41,24 @@
     animation: fadeIn ease 0.2s;
 }
 
-#modal-img #me {
+#modal-img .me {
     width: 450px;
     height: 450px;
 
     margin: auto;
     display: block;
     
-    margin-top: 135px;
+    margin-top: 150px;
+    
+    animation: fadeIn-popup ease 0.2s;
+}
+
+.hidden-modal {
+    animation: fadeOut ease 0.2s;
+}
+
+.hidden-img {
+    animation: fadeOut-popup ease 0.2s;
 }
 
 #content {
@@ -59,10 +69,13 @@
     align-items: center;
 }
 
-.container {
+.about {
     margin-top: 50px;
     margin-bottom: 150px;
 
+}
+
+.container {
     display: flex;
     align-items: center;
 }
@@ -71,9 +84,39 @@ h1 {
     text-align: left;
 }
 
+.fa {
+    width: 50px;
+    height: 50px;
+
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+
+    border-radius: 50%;
+    padding: 10px;
+    margin: 10px;
+    margin-left: 0px;
+
+    color: var(--dark3);
+    background-color: var(--white1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.what-ido {
+    width: 1000px;
+}
+
+.what-ido-item {
+    height: 200px;
+    padding: 10px;
+    padding-left: 0px;
+
+    justify-items: start;
+}
+
 
 @media only screen and (max-width: 1200px) {
-    #me {
+    .me {
         width: 200px;
         height: 200px;
     }
@@ -82,6 +125,10 @@ h1 {
         font-size: 80%;
         line-height: 140%;
     }
+
+    .what-ido {
+        max-width: 800px;
+    }
 }
 
 @media only screen and (max-width: 900px) {
@@ -89,10 +136,18 @@ h1 {
         flex-direction: column;
         font-size: 70%;
     }
+
+    .what-ido {
+        max-width: 500px;
+    }
+
+    h1 {
+        text-align: center;
+    }
 }
 
 @media only screen and (max-width: 600px) {
-    #me {
+    .me {
         width: 150px;
         height: 150px;
 
@@ -107,10 +162,14 @@ h1 {
         min-width: 300px;
     }
 
-    #modal-img #me {
+    #modal-img .me {
         width: 300px;
         height: 300px;
         
         margin-top: 200px;
+    }
+
+    .what-ido {
+        max-width: 300px;
     }
 }

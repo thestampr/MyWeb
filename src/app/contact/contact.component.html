@@ -5,19 +5,19 @@
         <h1>Contact me</h1><br>
 
         <div id="buttons">
-            <a id="icon" href="https://www.facebook.com/thestampr" target="_blank" 
+            <a id="icon-btn" href="https://www.facebook.com/thestampr" target="_blank" 
                 class="animated-btn fa fa-facebook" matTooltipPosition="above" matTooltip="Facebook">
             </a>
 
-            <a id="icon" href="https://www.instagram.com/__stampr/" target="_blank" 
+            <a id="icon-btn" href="https://www.instagram.com/__stampr/" target="_blank" 
                 class="animated-btn fa fa-instagram" matTooltipPosition="above" matTooltip="Instagram">
             </a>
 
-            <a id="icon" href="https://www.linkedin.com/in/peeradon-rungkanawut-7ba166268/" target="_blank" 
+            <a id="icon-btn" href="https://www.linkedin.com/in/peeradon-rungkanawut-7ba166268/" target="_blank" 
                 class="animated-btn fa fa-linkedin" matTooltipPosition="above" matTooltip="Linkedin">
             </a>
 
-            <a id="icon" href="https://github.com/thestampr" target="_blank" 
+            <a id="icon-btn" href="https://github.com/thestampr" target="_blank" 
                 class="animated-btn fa fa-github" matTooltipPosition="above" matTooltip="Github">
             </a>
 
@@ -27,15 +27,21 @@
         <app-card>
             <div id="personal">
                 <div class="personal-item" [ngClass]="{'dark-theme': Theme.is_dark, 'white-theme': !Theme.is_dark}">
-                    <i class="fa fa-envelope icon"></i>
+                    <i id="icon-small" class="fa fa-envelope"></i>
                     thestampmc@gmail.com
-                    <button id="clone-btn" [cdkCopyToClipboard]="'thestampmc@gmail.com'" class="fa fa-clone" (click)="OnCopy()"></button>
+                    <button id="clone-btn" [cdkCopyToClipboard]="'thestampmc@gmail.com'" 
+                        class="fa fa-clone" 
+                        (click)="OnCopy()">
+                    </button>
                 </div>
                 <br>
                 <div class="personal-item" [ngClass]="{'dark-theme': Theme.is_dark, 'white-theme': !Theme.is_dark}">
-                    <i class="fa fa-phone icon"></i>
+                    <i id="icon-small" class="fa fa-phone"></i>
                     090-935-1529
-                    <button id="clone-btn" [cdkCopyToClipboard]="'0909351529'" class="fa fa-clone" (click)="OnCopy()"></button>
+                    <button id="clone-btn" [cdkCopyToClipboard]="'0909351529'" 
+                        class="fa fa-clone" 
+                        (click)="OnCopy()">
+                    </button>
                 </div>
             </div>
         </app-card>

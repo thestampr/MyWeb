@@ -29,6 +29,6 @@ export class ContactComponent {
     }
 
     OnCopy() {
-        this._snackBar.open("Copied!", "Done", {duration: 5000});
+        this._snackBar.open("Copied!", "Done", {duration: 3000});
     }
 }
