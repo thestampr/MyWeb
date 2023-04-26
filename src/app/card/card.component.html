@@ -1,3 +1,13 @@
-<div id="card" class="whitepage" [ngClass]="{'darkpage': Theme.is_dark}">
+<div id="card" class="whitepage" [ngClass]="{'darkpage': Theme.is_dark}" cdkDrag>
     <ng-content />
 </div>
+
+<!-- <div *ngIf="fill; else nofill" id="card" class="whitepage" [ngClass]="{'darkpage': Theme.is_dark}">
+    <ng-content />
+</div>
+
+<ng-template #nofill>
+    <div id="nofill-card" class="whitepage" [ngClass]="{'darkpage': Theme.is_dark}">
+        <ng-content />
+    </div>
+</ng-template> -->

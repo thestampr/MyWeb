@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 import { AppearanceService } from '../appearance.service';
 
@@ -9,6 +9,7 @@ import { AppearanceService } from '../appearance.service';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent {
+    @Input() fill: boolean = true;
 
     constructor (public Theme: AppearanceService) {}
 }

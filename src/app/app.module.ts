@@ -22,12 +22,15 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ResumeComponent } from './resume/resume.component';
 import { FooterComponent } from './footer/footer.component';
+import { FlexCardBoxComponent } from './flex-card-box/flex-card-box.component';
+import { PlaygroundComponent } from './playground/playground.component';
 
 const routes: Routes = [
     { path: '', component: LandingComponent },
     { path: 'aboutme', component: AboutMeComponent },
     { path: 'contact', component: ContactComponent },
     { path: 'resume', component: ResumeComponent },
+    { path: 'test', component: PlaygroundComponent },
     { path: '**', component: PageNotFoundComponent },
 ];
 
@@ -44,6 +47,8 @@ const routes: Routes = [
         PageNotFoundComponent,
         ResumeComponent,
         FooterComponent,
+        FlexCardBoxComponent,
+        PlaygroundComponent,
     ],
     imports: [
         RouterModule.forRoot(routes),

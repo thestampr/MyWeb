@@ -9,7 +9,7 @@
     display: flex;
     padding: 20px;
 
-    border-radius: 10px;
+    border-radius: 20px;
     flex: 1 0 200px;
 
     backdrop-filter: blur(7.5px);
@@ -19,7 +19,10 @@
     /* justify-content: center; */
     align-items: center;
     
-    transition: scale 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transition: 
+    scale 0.3s ease-in-out, 
+    box-shadow 0.3s ease-in-out, 
+    background-color 0.2s ease-in-out;
 
     animation: WalkIn ease 1s;
     animation-iteration-count: 1;
@@ -27,13 +30,46 @@
 }
 
 .whitepage {
-    background: rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 0.75);
     border: 1px solid rgba(28, 28, 28, 0.2);
     color: var(--dark3);
 }
 
 .darkpage {
-    background: rgba(28, 28, 28, 0.75);
+    background-color: rgba(28, 28, 28, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--white3);
+}
+
+#nofill-card {
+    min-width: 400px;
+    min-height: 100px;
+    margin: 10px;
+    display: flex;
+    padding: 20px;
+
+    border-radius: 20px;
+    flex: 1 0 200px;
+
+    background-color: transparent;
+    align-items: center;
+    
+    transition: 
+    scale 0.3s ease-in-out, 
+    box-shadow 0.3s ease-in-out, 
+    background-color 0.2s ease-in-out;
+
+    animation: WalkIn ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+#nofill-card.whitepage {
+    border: 1px solid rgba(28, 28, 28, 0.2);
+    color: var(--dark3);
+}
+
+#nofill-card.darkpage {
     border: 1px solid rgba(255, 255, 255, 0.2);
     color: var(--white3);
 }

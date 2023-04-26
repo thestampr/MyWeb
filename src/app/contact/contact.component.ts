@@ -3,10 +3,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 
 import { AppearanceService } from '../appearance.service';
 
-
-function delay(ms: number) {
-    return new Promise( resolve => setTimeout(resolve, ms) );
-}
+import * as utils from '../utils';
 
 
 @Component({
@@ -23,7 +20,9 @@ export class ContactComponent {
 
         card.style.scale = "1.05";
         card.style.boxShadow = "0 10px 10px rgba(0, 0, 0, 0.1";
-        await delay(750);
+
+        await utils.delay(750);
+        
         card.style.scale = "1.0";
         card.style.boxShadow = "0 4px 10px rgba(0, 0, 0, 0.1";
     }

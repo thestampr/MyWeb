@@ -1,12 +1,25 @@
 <app-page>
     <div id="content" class="white-theme" [ngClass]="{'dark-theme': Theme.is_dark}">
-        <h1>Resume</h1><br>
+        <!-- <app-card>
+            <h1>Toeic</h1>
+            <p>520</p>
+        </app-card> -->
+
+        <app-card [fill]="false">
+            <app-flex-card-box 
+                name="Education"
+                [one_col]="true"
+                [items]="[
+                    {icon: 'fa-mortar-board', title: 'High School Certificate', descriptions: 'Prachinratsadornamroong School'}, 
+                    {icon: 'fa-mortar-board', title: 'Bachelor of Engineering', descriptions: 'Rajamangala university of technology thanyaburi'}, 
+                ]"
+            />
+        </app-card>
 
         <div id="icons">
-            <button id="download" class="animated-btn" (click)="OnDownloadResume()">
+            <button id="download" class="animated-btn" (click)="DownloadResume()">
                 Download Resume 
             </button>
         </div>
-
     </div>
 </app-page>

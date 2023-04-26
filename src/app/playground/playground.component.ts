@@ -1,18 +1,14 @@
 import { Component } from '@angular/core';
 
-import { AppearanceService } from '../appearance.service';
-
-import * as utils from '../utils';
+import * as utils from '../utils'
 
 
 @Component({
-  selector: 'app-about-me',
-  templateUrl: './about-me.component.html',
-  styleUrls: ['./about-me.component.css']
+  selector: 'app-playground',
+  templateUrl: './playground.component.html',
+  styleUrls: ['./playground.component.css']
 })
-export class AboutMeComponent {
-    
-    constructor(public Theme: AppearanceService) {}
+export class PlaygroundComponent {
 
     async ModalView() {
         let modal: HTMLElement = document.getElementById("modal-img")!;
@@ -36,4 +32,5 @@ export class AboutMeComponent {
         modal.style.display = "none";
         modal.style.opacity = "1";
     }
+
 }

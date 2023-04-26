@@ -12,7 +12,6 @@
 
     border-radius: 50%;
     padding: 10px;
-    margin: 10px;
 
     color: var(--dark3);
     background-color: var(--white1);
@@ -22,10 +21,9 @@
 .personal-item {
     display: flex;
     flex-direction: row;
+    align-items: center;
 
     width: 400px;
-
-    align-items: center;
 }
 
 .personal-item:hover #clone-btn {
@@ -68,6 +66,9 @@
     flex-direction: row;
 
     margin-bottom: 100px;
+
+    gap: 15px;
+    padding: 10px; 
 }
 
 #buttons * {
@@ -76,7 +77,6 @@
 
 #hire {
     align-self: center;
-    margin: 10px;
     height: 50px;
     border: none;
     
@@ -91,13 +91,18 @@
     color: var(--white3);
 }
 
+#icon-small {
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
 
 @media only screen and (max-width: 1200px) {
 }
 
 @media only screen and (max-width: 900px) {
-    .fa:not(i), #hire {
-        margin-right: 5px;
+    #buttons {
+        gap: 5px;
     }
 }
 

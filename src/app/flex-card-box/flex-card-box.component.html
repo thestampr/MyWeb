@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="flexable" [ngClass]="{'fullsize': one_col}">
+    <h2>{{name}}</h2>
+
+    <div class="flex-container">
+        <div class="flex-container-item flexable-item" [ngClass]="{'fullsize': one_col}" *ngFor="let item of items; let i = index">
+            <h3>
+                <i id="icon-large" class="fa {{item.icon}}"></i>
+                {{item.title}}
+            </h3>
+            <div class="descriptions">
+                {{item.descriptions}}
+            </div>
+        </div>
+    </div>
+</div>

@@ -12,7 +12,7 @@ export class ResumeComponent {
 
     constructor(public Theme: AppearanceService) {}
 
-    OnDownloadResume(): void {
+    DownloadResume(): void {
         let link = document.createElement('a');
         link.setAttribute('type', 'hidden');
         link.href = 'assets/files/CV.pdf';

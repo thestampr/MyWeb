@@ -11,6 +11,8 @@
 
     --alpha-dark: rgba(28, 28, 28, 0.2);
     --alpha-white: rgba(255, 255, 255, 0.2);
+
+    --scheme-color: #7C83C8;
 }
 
 
@@ -50,7 +52,6 @@
 
 html, body {
     margin: 0;
-    height: 100%;
     min-width: 400px;
 
     top: 0;
@@ -61,13 +62,14 @@ html, body {
 
 html {
     margin: 0;
-
+    height: 100%;
+    
     /* background-color: aqua; */
 }
 
 body {
     height: auto;
-    min-height: 100%;
+    /* min-height: 100%; */
 
     display: flex;
     flex-direction: column;
@@ -103,10 +105,6 @@ h1 {
     -moz-filter: blur(5px);
     -webkit-filter: blur(5px);
     -o-filter: blur(5px);
-}
-
-.scrollable {
-    overflow-y: scroll;
 }
 
 .animated-btn {
@@ -154,8 +152,9 @@ h1 {
 }
 
 .whitepage-header {
-    background-color: var(--white2);
+    background-color: var(--white3);
     color: var(--dark2);
+    border-bottom: 1px solid var(--alpha-dark);
 }
 
 .whitepage-header * {
@@ -163,8 +162,9 @@ h1 {
 }
 
 .darkpage-header {
-    background-color: var(--dark2);
+    background-color: var(--dark1);
     color: var(--white3);
+    border-bottom: 1px solid var(--alpha-white);
 }
 
 .darkpage-header * {
@@ -179,6 +179,7 @@ h1 {
 
     /* overflow: scroll; */
     margin: 3px;
+    display: block;
 }
 
 ::-webkit-scrollbar-track {
@@ -195,6 +196,19 @@ h1 {
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
     background-clip: padding-box;
+}
+
+
+@media only screen and (max-width: 1200px) {
+}
+
+@media only screen and (max-width: 900px) {
+    ::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
 }
 
 
@@ -379,6 +393,7 @@ h1 {
 }
 
 .flex-container-item {
+    min-width: 50%;
     width: 50%;
 }
 
@@ -453,6 +468,22 @@ h1 {
     .flex-container-item {
         width: 100%;
     }
+    
+    #icon-large {
+        width: 60px;
+        height: 60px;
+    
+        font-size: 32px;
+        padding-top: 12px;
+    }
+
+    #icon-mid {
+        width: 52px;
+        height: 52px;
+    
+        font-size: 25px;
+        padding-top: 9px;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -481,7 +512,7 @@ h1 {
 @keyframes fadeIn-popup {
     0% {
         opacity: 0;
-        scale: 50%;
+        scale: 75%;
     }
     100% {
         opacity: 1;
@@ -496,6 +527,6 @@ h1 {
     }
     100% {
         opacity: 0;
-        scale: 50%;
+        scale: 75%;
     }
 }

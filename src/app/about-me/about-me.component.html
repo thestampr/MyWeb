@@ -1,8 +1,5 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 <app-page>
     <div id="content" class="scrollable white-theme" [ngClass]="{'dark-theme': Theme.is_dark}">
-    <!-- <div id="content"> -->
         <div id="container" class="container about">
 
             <img class="me" src="assets/images/main-profile.jpg" draggable="false" [cdkContextMenuTriggerFor]="Image" (click)="ModalView()" /> 
@@ -16,40 +13,19 @@
                 <br>
                 I enjoy learning different things to meet my developmental goals. <br>
             </span>
-
-            <!-- <span id="greeting">
-                <h1>Peeradon Rungkanawut</h1>
-
-                My name is Peeradon, but I go by the nickname <b>Stamp</b>. I am interested in backend programming <br>
-                and primarily use Python as my main programming language. Currently, I'm also studying Angular <br>
-                for web development and yes!, this site are made out of Angular!<br>
-                <br>
-                I enjoy learning different things to meet my developmental goals. <br>
-            </span> -->
         </div>
 
-        <app-card>
-            <div class="what-ido">
-                <h2>What I do</h2>
-
-                <div class="flex-container">
-                    <div class="flex-container-item what-ido-item">
-                        <i id="icon-large" class="fa fa-code"></i>
-                        first
-                    </div>
-                    <div class="flex-container-item what-ido-item">
-                        <i id="icon-large" class="fa fa-code"></i>
-                        second
-                    </div>
-                    <div class="flex-container-item what-ido-item">
-                        <i id="icon-large" class="fa fa-code"></i>
-                        third
-                    </div>
-                </div>
-            </div>
-        </app-card>
-
-        <app-footer></app-footer>
+        <!-- <app-card> -->
+            <app-flex-card-box 
+                name="What I do"
+                [items]="[
+                    {icon: 'fa-code', title: 'Developer', descriptions: 'C / Cpp / Python / TypeScript'}, 
+                    {icon: 'fa-code', title: 'Web Design', descriptions: 'Angular / VueJs'}, 
+                    {icon: 'fa-database', title: 'Database', descriptions: 'MongoDB'}, 
+                    {icon: 'fa-cube', title: '3D Model', descriptions: 'Blender'}, 
+                ]"
+            />
+        <!-- </app-card> -->
     </div>
 </app-page>
 

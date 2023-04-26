@@ -1,0 +1,41 @@
+<app-topbar />
+<div id="container" class="container about">
+
+    <img class="me" src="assets/images/main-profile.jpg" draggable="false" [cdkContextMenuTriggerFor]="Image" (click)="ModalView()" /> 
+
+    <span id="greeting">
+        <h1>Peeradon Rungkanawut</h1>
+
+        I am interested in backend programming and primarily use Python  <br>
+        as my main programming language. Currently, I'm also studying Angular <br>
+        for web development and yes!, this site are made out of Angular!<br>
+        <br>
+        I enjoy learning different things to meet my developmental goals. <br>
+    </span>
+</div>
+
+<!-- <app-card> -->
+    <app-flex-card-box 
+        name="What I do"
+        [items]="[
+            {icon: 'fa-code', title: 'Developer', descriptions: 'C / Cpp / Python / TypeScript'}, 
+            {icon: 'fa-code', title: 'Web Design', descriptions: 'Angular / VueJs'}, 
+            {icon: 'fa-database', title: 'Database', descriptions: 'MongoDB'}, 
+            {icon: 'fa-cube', title: '3D Model', descriptions: 'Blender'}, 
+        ]"
+    />
+<!-- </app-card> -->
+<app-footer />
+
+<div id="modal-img" (click)="ModalClose()">
+    <div id="frame">
+        <img class="me" id="my-img" src="assets/images/main-profile.jpg" draggable="false" (contextmenu)="false" />
+    </div>
+</div>
+
+<ng-template #Image>
+    <div class="ContextMenu" cdkMenu>
+        <button class="ContextMenu-Item" cdkMenuItem (contextmenu)="false" (click)="ModalView()">View image</button>
+        <!-- <button class="ContextMenu-Item" cdkMenuItem>Download</button> -->
+    </div>
+</ng-template>
