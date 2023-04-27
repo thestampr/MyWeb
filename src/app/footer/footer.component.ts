@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 
+import { AppearanceService } from '../appearance.service';
+
+
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
@@ -7,4 +10,5 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
 
+    constructor(public Theme: AppearanceService) {}
 }

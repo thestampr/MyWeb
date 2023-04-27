@@ -4,25 +4,29 @@
 
 #container, #content {
     width: 100%;
-    height: auto;
+    /* height: auto; */
     margin: 0;
 
     display: flex;
 }
 
+#container {
+    height: calc(100% - 60px);
+}
+
 #content {
+    height: 100%;
+
     justify-content: center;
-    flex-wrap: wrap;
+    position: relative;
 
     animation: fadeIn ease 0.3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 
-    overflow-y: scroll;
+    overflow-y: overlay;
 
     /* background-color: gold; */
-    height: 100vh;
-    padding-bottom: 50px;
 }
 
 .whitepage {
@@ -47,6 +51,18 @@ div {
     right: 0;
 }
 
-footer {
-    background-color: red;
+
+@media only screen and (max-width: 1200px) {
+}
+
+@media only screen and (max-width: 900px) {
+    #content {
+        height: calc(100% + 10px);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #content {
+        height: calc(100% + 20px);
+    }
 }
