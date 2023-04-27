@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { AppearanceService } from '../appearance.service';
+import { BackendService } from '../backend.service';
 
 import * as utils from '../utils';
 
@@ -12,7 +14,7 @@ import * as utils from '../utils';
 })
 export class AboutMeComponent {
     
-    constructor(public Theme: AppearanceService) {}
+    constructor(public Theme: AppearanceService, public Backend: BackendService, public Router: Router) {}
 
     async ModalView() {
         let modal: HTMLElement = document.getElementById("modal-img")!;

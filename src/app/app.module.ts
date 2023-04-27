@@ -12,8 +12,9 @@ import { AppComponent } from './app.component';
 import { PageComponent } from './page/page.component';
 
 import { AppearanceService } from './appearance.service';
-import { CardComponent } from './card/card.component';
+import { BackendService } from './backend.service';
 
+import { CardComponent } from './card/card.component';
 import { TopbarComponent } from './topbar/topbar.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { LandingComponent } from './landing/landing.component';
@@ -24,6 +25,7 @@ import { ResumeComponent } from './resume/resume.component';
 import { FooterComponent } from './footer/footer.component';
 import { FlexCardBoxComponent } from './flex-card-box/flex-card-box.component';
 import { PlaygroundComponent } from './playground/playground.component';
+
 
 const routes: Routes = [
     { path: '', component: LandingComponent },
@@ -63,6 +65,7 @@ const routes: Routes = [
     ],
     providers: [
         AppearanceService, 
+        BackendService, 
     ],
     bootstrap: [
         AppComponent

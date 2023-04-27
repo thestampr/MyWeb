@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import { AppearanceService } from '../appearance.service';
+import { BackendService } from '../backend.service';
 
 
 @Component({
@@ -10,15 +11,5 @@ import { AppearanceService } from '../appearance.service';
 })
 export class ResumeComponent {
 
-    constructor(public Theme: AppearanceService) {}
-
-    DownloadResume(): void {
-        let link = document.createElement('a');
-        link.setAttribute('type', 'hidden');
-        link.href = 'assets/files/CV.pdf';
-        link.download = 'Resume.pdf';
-        document.body.appendChild(link);
-        link.click();
-        link.remove();
-    }
+    constructor(public Theme: AppearanceService, public Backend: BackendService) {}
 }

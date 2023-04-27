@@ -83,6 +83,20 @@
     text-align: left;
 }
 
+.btns {
+    padding-top: 20px;
+}
+
+.btns button {
+    margin-right: 10px;
+}
+
+#contact {
+    border: unset;
+    background-color: var(--scheme-color);
+    color: var(--white1);
+}
+
 
 @media only screen and (max-width: 1200px) {
     .me {
@@ -133,5 +147,9 @@
 
     .about {
         margin-top: 50px;
+    }
+
+    p {
+        padding-left: 10px;
     }
 }

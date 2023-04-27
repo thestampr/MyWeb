@@ -88,7 +88,10 @@ button:not(.ContextMenu-Item, .mat-mdc-snack-bar-container) {
 
     min-width: 100px;
     min-height: 50px;
+
     padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
     
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     font-weight: 500;
