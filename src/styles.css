@@ -8,6 +8,7 @@
     --white2: #E9E9E9;
     --white3: #E0E0E0;
     --white4: #C1C1C1;
+    --white5: #a6a6a6;
 
     --alpha-dark: rgba(28, 28, 28, 0.2);
     --alpha-white: rgba(255, 255, 255, 0.2);
@@ -77,9 +78,8 @@ body {
     /* background-color: red; */
 }
 
-footer {
-    min-height: 200px;
-    bottom: 0;
+nav * {
+    cursor: pointer;
 }
 
 button:not(.ContextMenu-Item, .mat-mdc-snack-bar-container) {

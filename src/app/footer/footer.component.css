@@ -2,17 +2,21 @@
     transition: all 0.2s ease-in-out;
 }
 
+.fa {
+    padding-top: 15px;
+}
+
 footer {
-    color: var(--white3);
+    color: var(--white5);
     background-color: var(--dark2);
 
     display: flex;
-    height: 10px;
+    height: 200px;
     width: 100vw;
 
     bottom: 0;
     left: 0;
-    margin-top: 200px;
+    margin-top: 100px;
     align-items: center;
 
     padding-top: 20px;
@@ -25,6 +29,32 @@ footer {
     /* background-color: gold; */
 }
 
+footer * {
+    color: var(--white5);
+}
+
+nav {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+
+    right: 0;
+    margin-left: auto;
+
+    gap: 25px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--white1);
+    /* text-decoration: underline; */
+
+    cursor: pointer;
+}
+
 
 @media only screen and (max-width: 1200px) {
 }
@@ -33,8 +63,8 @@ footer {
     footer {
         font-size: 12px;
 
-        padding-left: 80px;
-        padding-right: 80px;
+        padding-left: 70px;
+        padding-right: 70px;
     }
 }
 
@@ -42,7 +72,16 @@ footer {
     footer {
         font-size: 10px;
 
-        padding-left: 50px;
-        padding-right: 50px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    nav {
+        justify-content: left;
+        align-items: start;
+
+        flex-direction: column;
+
+        gap: 20px;
     }
 }

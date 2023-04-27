@@ -75,18 +75,6 @@
 }
 
 
-@keyframes WalkIn {
-    0% {
-        opacity: 0;
-        margin-top: 20px;
-    }
-    100% {
-        opacity: 1;
-        margin-top: 10px;
-     }
-}
-
-
 @media only screen and (max-width: 1200px) {
 }
 
@@ -97,4 +85,18 @@
     #card {
         min-width: 350px;
     }
+}
+
+
+@keyframes WalkIn {
+    0% {
+        opacity: 0;
+        /* margin-top: 20px; */
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        /* margin-top: 10px; */
+        transform: translateY(0px);
+     }
 }
