@@ -10,14 +10,6 @@
     align-items: center;
 }
 
-#icons {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-
-    margin-bottom: 100px;
-}
-
 #download {
     align-self: center;
     margin: 10px;
