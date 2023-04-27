@@ -1,8 +1,10 @@
 <header class="floating whitepage-header" [ngClass]="{'darkpage-header': Theme.is_dark}" (contextmenu)="false">
-    <button id="navbtn" class="white-theme" [ngClass]="{'dark-theme': Theme.is_dark}" (click)="Router.navigateByUrl('aboutme')">About me</button>
-    <button id="navbtn" class="white-theme" [ngClass]="{'dark-theme': Theme.is_dark}" (click)="Router.navigateByUrl('resume')">Resume</button>
-    <button id="navbtn" class="white-theme" [ngClass]="{'dark-theme': Theme.is_dark}" (click)="Router.navigateByUrl('contact')">Contact</button>
-    <div id="linebreak"></div>
+    <nav>
+        <a (click)="Router.navigateByUrl('aboutme')">About me</a>
+        <!-- <a (click)="Router.navigateByUrl('resume')">Resume</a> -->
+        <a (click)="Router.navigateByUrl('contact')">Contact</a>
+    </nav>
+
     <button id="option-btn" class="white-theme" [ngClass]="{'dark-theme': Theme.is_dark}" mat-button [cdkMenuTriggerFor]="Option">⁝</button>
 </header>
 

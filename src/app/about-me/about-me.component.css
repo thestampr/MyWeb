@@ -17,6 +17,10 @@
     object-fit: cover;
 }
 
+#container .me {
+    cursor: pointer;
+}
+
 #frame {
     filter: drop-shadow(0 0px 20px rgba(0, 0, 0, 0.1));
 }
@@ -81,13 +85,15 @@
 
 #greeting h1 {
     text-align: left;
+    margin-top: 0px;
 }
 
-.btns {
+.buttons {
+    display: flex;
     padding-top: 20px;
 }
 
-.btns button {
+.buttons button {
     margin-right: 10px;
 }
 
@@ -118,6 +124,10 @@
 
     #greeting h1 {
         text-align: center;
+    }
+
+    .buttons {
+        justify-content: center;
     }
 }
 

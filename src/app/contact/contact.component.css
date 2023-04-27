@@ -54,6 +54,7 @@
 
 #content {
     margin-top: 100px;
+    margin-bottom: 100px;
 
     display: flex;
     flex-direction: column;
@@ -64,7 +65,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
+    /* flex-direction: row; */
 
     margin-bottom: 100px;
 
@@ -77,15 +78,23 @@
 }
 
 #hire {
-    align-self: center;
     height: 50px;
+    min-height: unset;
+
+    align-self: center;
     border: none;
     
     font-weight: 500;
+    font-size: 15px;
 
     border: unset;
     background-color: var(--white1);
     color: var(--dark3);
+}
+
+.or {
+    opacity: 0.5;
+    font-size: 15px;
 }
 
 .dark-theme #clone-btn {
@@ -102,17 +111,41 @@
 }
 
 @media only screen and (max-width: 900px) {
-    #buttons {
-        gap: 5px;
+    .fa {
+        width: 45px;
+        height: 45px;
+    
+        font-size: 25px;
+    }
+
+    #hire {
+        height: 45px;
+
+        align-self: flex-end;
     }
 }
 
 @media only screen and (max-width: 600px) {
+    #buttons {
+        gap: 12px;
+    }
+
     #hire {
-        align-self: flex-end;
+        height: 40px;
     }
 
     .personal-item {
         width: 300px;
+    }
+
+    .fa {
+        width: 40px;
+        height: 40px;
+    
+        font-size: 20px;
+    }
+
+    .or {
+        font-size: 12px;
     }
 }
