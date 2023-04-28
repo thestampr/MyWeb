@@ -3,9 +3,9 @@
 }
 
 #card {
-    min-width: 400px;
+    min-width: 200px;
     min-height: 100px;
-    margin: 10px;
+    /* margin: 10px; */
     display: flex;
     padding: 20px;
 
@@ -14,7 +14,6 @@
 
     backdrop-filter: blur(7.5px);
     -webkit-backdrop-filter: blur(7.5px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 
     /* justify-content: center; */
     align-items: center;
@@ -33,12 +32,14 @@
     background-color: rgba(255, 255, 255, 0.75);
     border: 1px solid rgba(28, 28, 28, 0.2);
     color: var(--dark3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .darkpage {
     background-color: rgba(28, 28, 28, 0.75);
     border: 1px solid rgba(255, 255, 255, 0.2);
     color: var(--white3);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.9);
 }
 
 #nofill-card {
