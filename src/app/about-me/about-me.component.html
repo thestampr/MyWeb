@@ -2,7 +2,7 @@
     <div id="content" class="white-theme" [ngClass]="{'dark-theme': Theme.is_dark}">
         <div id="container" class="container about">
 
-            <img class="me" src="assets/images/profile-2.jpg" draggable="false" [cdkContextMenuTriggerFor]="Image" (click)="ModalView()" /> 
+            <img class="me" src="assets/images/profile-2.jpg" [cdkContextMenuTriggerFor]="Image" (click)="ModalView()" /> 
 
             <span id="greeting">
                 <h1>Peeradon Rungkanawut</h1>
@@ -22,23 +22,21 @@
             </span>
         </div>
 
-        <!-- <app-card> -->
-            <app-flex-card-box 
-                name="What I do"
-                [items]="[
-                    {icon: 'fa-code', title: 'Coding', descriptions: 'C / Cpp / Python / TypeScript'}, 
-                    {icon: 'fa-code', title: 'Web Design', descriptions: 'Angular / VueJs'}, 
-                    {icon: 'fa-cube', title: '3D Modeling', descriptions: 'Blender'}, 
-                ]"
-            />
-        <!-- </app-card> -->
+        <app-flex-card-box 
+            name="What I do"
+            [items]="[
+                {icon: 'fa-code', title: 'Coding', descriptions: 'C / Cpp / Python / TypeScript'}, 
+                {icon: 'fa-code', title: 'Web Design', descriptions: 'Angular / VueJs'}, 
+                {icon: 'fa-cube', title: '3D Modeling', descriptions: 'Blender'}, 
+            ]"
+        />
     </div>
     <app-footer />
 </app-page>
 
 <div id="modal-img" (click)="ModalClose()">
     <div id="frame">
-        <img class="me" id="my-img" src="assets/images/profile-2.jpg" draggable="false" (contextmenu)="false" />
+        <img class="me" id="my-img" src="assets/images/profile-2.jpg" (contextmenu)="false" />
     </div>
 </div>
 

@@ -14,6 +14,6 @@ export class PageComponent implements AfterViewInit {
     }
 
     ngAfterViewInit() {
-        this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = this.Theme.primary_color;
+        this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = this.Theme.background_color;
     }
 }

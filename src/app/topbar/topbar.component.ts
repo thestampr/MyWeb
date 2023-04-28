@@ -23,6 +23,6 @@ export class TopbarComponent implements OnInit {
 
     private _changeTheme(): void {
         let body: HTMLElement = this.elementRef.nativeElement.ownerDocument.body;
-        body.style.backgroundColor = this.Theme.primary_color;
+        body.style.backgroundColor = this.Theme.background_color;
     }
 }

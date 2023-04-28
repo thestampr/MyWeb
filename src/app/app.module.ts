@@ -32,7 +32,7 @@ const routes: Routes = [
     { path: 'aboutme', component: AboutMeComponent },
     { path: 'contact', component: ContactComponent },
     { path: 'resume', component: ResumeComponent },
-    { path: 'test', component: PlaygroundComponent },
+    // { path: 'test', component: PlaygroundComponent },
     { path: '**', component: PageNotFoundComponent },
 ];
 

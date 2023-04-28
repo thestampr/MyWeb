@@ -42,7 +42,8 @@ nav {
     display: flex;
     align-items: center;
 
-    padding-right: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
     
     gap: 25px;
 }
@@ -59,6 +60,8 @@ nav a {
     font-weight: 400;
     font-size: 15px;
     text-decoration: none;
+
+    text-underline-offset: 2px;
 }
 
 nav a:hover {
@@ -70,6 +73,26 @@ nav a:hover {
     top: 0;
 
     z-index: 100;
+}
+
+.whitepage-header {
+    background-color: var(--white3);
+    color: var(--dark2);
+    /* border-bottom: 1px solid var(--alpha-dark); */
+}
+
+.whitepage-header * {
+    color: var(--dark2);
+}
+
+.darkpage-header {
+    background-color: var(--dark1);
+    color: var(--white3);
+    border-bottom: 1px solid var(--alpha-white);
+}
+
+.darkpage-header * {
+    color: var(--white3);
 }
 
 
@@ -86,7 +109,8 @@ nav a:hover {
 
     nav {
         gap: 20px;
-        padding-right: 18px;
+        margin-left: 18px;
+        margin-right: 18px;
     }
 
     #option-btn {
@@ -102,7 +126,12 @@ nav a:hover {
 
     nav {
         gap: 15px;
-        padding-right: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    nav a {
+        text-underline-offset: 1px;
     }
 
     nav a, #option-btn {

@@ -24,7 +24,7 @@ export class AppearanceService {
         localStorage.setItem(theme_key, String(dark));
     }
 
-    get primary_color(): string {
+    get background_color(): string {
         return this._dark? dark: white;
     }
 }
