@@ -30,18 +30,18 @@
 
 .whitepage {
     background-color: rgba(255, 255, 255, 0.75);
-    border: 1px solid rgba(28, 28, 28, 0.2);
+    border: 1px solid var(--alpha-dark);
     color: var(--dark3);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .darkpage {
     background-color: rgba(28, 28, 28, 0.75);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid var(--alpha-white);
     color: var(--white3);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.9);
 }
-
+/* 
 #nofill-card {
     min-width: 400px;
     min-height: 100px;
@@ -66,14 +66,14 @@
 }
 
 #nofill-card.whitepage {
-    border: 1px solid rgba(28, 28, 28, 0.2);
+    border: 1px solid var(--alpha-dark);
     color: var(--dark3);
 }
 
 #nofill-card.darkpage {
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid var(--alpha-white);
     color: var(--white3);
-}
+} */
 
 
 @media only screen and (max-width: 1200px) {
@@ -83,9 +83,6 @@
 }
 
 @media only screen and (max-width: 600px) {
-    #card {
-        min-width: 350px;
-    }
 }
 
 

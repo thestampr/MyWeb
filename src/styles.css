@@ -11,7 +11,7 @@
     --white5: #a6a6a6;
 
     --alpha-dark: rgba(28, 28, 28, 0.2);
-    --alpha-white: rgba(255, 255, 255, 0.2);
+    --alpha-white: rgba(255, 255, 255, 0.1);
 
     --scheme-color: #7C83C8;
 }
@@ -150,13 +150,13 @@ h1 {
 
 .whitepage {
     background-color: var(--white3);
-    border: 1px solid rgba(28, 28, 28, 0.2);
+    border: 1px solid var(--alpha-dark);
     color: var(--dark2);
 }
 
 .darkpage {
     background-color: var(--dark2);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid var(--alpha-white);
     color: var(--white3);
 }
 
@@ -260,7 +260,7 @@ h1 {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--alpha-white);
     border-radius: 5px;
     overflow: hidden;
 
