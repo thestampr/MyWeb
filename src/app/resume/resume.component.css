@@ -39,17 +39,6 @@ hr {
     font-size: 14px;
 }
 
-.section-name {
-    margin-top: 20px;
-
-    opacity: 0.4;
-    font-size: 14px;
-}
-
-.section-value {
-    font-size: 18px;
-}
-
 #content {
     width: 1300px;
     margin-top: 100px;
@@ -84,6 +73,17 @@ hr {
     gap: 50px;
 }
 
+.section-name {
+    margin-top: 20px;
+
+    opacity: 0.4;
+    font-size: 14px;
+}
+
+.section-value {
+    font-size: 18px;
+}
+
 .grid-item {
     display: flex;
     gap: 20px;
@@ -95,10 +95,13 @@ hr {
     display: flex;
 }
 
-.personal {
-    /* height: 500px; */
+.auto-heigh {
     height: auto;
     padding-bottom: 10px;
+}
+
+.personal {
+    height: 500px;
 }
 
 .personal-extend {
@@ -121,8 +124,15 @@ hr {
     margin-left: auto;
     margin-right: auto;
 
-    display: none;
     justify-self: center;
+}
+
+.grid-linebreak {
+    display: none;
+}
+
+.section-linebreak {
+    margin-top: 20px;
 }
 
 .line-white {
@@ -150,7 +160,7 @@ hr {
         font-size: 10px;
     }
     
-    .section-name {
+    .section-name, .section-linebreak {
         margin-top: 15px;
     }
     
@@ -167,7 +177,7 @@ hr {
 
         justify-content: center;
     
-        gap: 20px;
+        /* gap: 20px; */
     }
 
     .grid-item  {
@@ -187,7 +197,7 @@ hr {
         font-size: 16px;
     }
 
-    .linebreak {
+    .grid-linebreak {
         display: block;
     }
 }
