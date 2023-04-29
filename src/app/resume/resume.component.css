@@ -82,6 +82,20 @@ hr {
 
 .section-value {
     font-size: 18px;
+    position: relative;
+}
+
+.section-extra {
+    font-size: 14px;
+
+    width: 100%;
+    opacity: 0.5;
+    text-align: right;
+    position: absolute;
+
+    /* top: 0; */
+    right: 0;
+    bottom: 2px;
 }
 
 .grid-item {
@@ -167,6 +181,10 @@ hr {
     .section-value {
         font-size: 14px;
     }
+    
+    .section-extra {
+        font-size: 12px;
+    }
 }
 
 @media only screen and (max-width: 900px) {
@@ -195,6 +213,10 @@ hr {
     
     .section-value {
         font-size: 16px;
+    }
+    
+    .section-extra {
+        font-size: 14px;
     }
 
     .grid-linebreak {
