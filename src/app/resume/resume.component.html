@@ -13,32 +13,59 @@
 
         <div class="grid-content">
             <div class="side-field grid-item">
-                <app-card>
+                <app-card class="card">
                     <div class="personal">
-                        Personal
+                        <div class="card-name">Personal</div>
+
+                        <div class="image">
+                            <img class="me" src="assets/images/profile-2.jpg" /> 
+                        </div>
+
+                        <div class="section-name">Name</div>
+                        <div class="section-value">
+                            Peeradon Rungkanawut
+                        </div>
+
+                        <div class="section-name">Birth date</div>
+                        <div class="section-value">
+                            5 Apr 2001
+                        </div>
+
+                        <div class="section-name">Gender</div>
+                        <div class="section-value">
+                            Male
+                        </div>
+
+                        <div class="section-name">Nationality</div>
+                        <div class="section-value">
+                            Thailand
+                        </div>
+
                     </div>
                 </app-card>
-                <app-card>
+                <app-card class="card">
                     <div class="personal-extend">
-                        Personal extend
+                        <div class="card-name">Personal extend</div>
                     </div>
                 </app-card>
             </div>
 
+            <div class="linebreak" [ngClass]="{'line-dark': Theme.is_dark, 'line-white': !Theme.is_dark}"></div>
+
             <div class="content-field grid-item">
-                <app-card>
+                <app-card class="card">
                     <div class="skills">
-                        Skills
+                        <div class="card-name">Skills</div>
                     </div>
                 </app-card>
-                <app-card>
+                <app-card class="card">
                     <div class="education">
-                        Educations
+                        <div class="card-name">Educations</div>
                     </div>
                 </app-card>
-                <app-card>
+                <app-card class="card">
                     <div class="exp">
-                        Work Experience
+                        <div class="card-name">Work Experience</div>
                     </div>
                 </app-card>
             </div>

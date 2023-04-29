@@ -2,6 +2,54 @@
     transition: all 0.2s ease-in-out;
 }
 
+hr {
+    width: 80%;
+    /* border: 1px solid var(--alpha-white); */
+    opacity: 0.2;
+    display: none;
+}
+
+.card div {
+    width: 100%;
+}
+
+.image {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    margin-top: 20px;
+    margin-bottom: 40px;
+
+    /* background-color: aqua; */
+}
+
+.me {
+    width: 200px;
+    height: 200px;
+    
+    clip-path: circle(50% at 50% 50%);
+
+    object-fit: cover;
+}
+
+.card-name {
+    opacity: 0.4;
+    font-size: 14px;
+}
+
+.section-name {
+    margin-top: 20px;
+
+    opacity: 0.4;
+    font-size: 14px;
+}
+
+.section-value {
+    font-size: 18px;
+}
+
 #content {
     width: 1300px;
     margin-top: 100px;
@@ -24,6 +72,11 @@
     color: var(--dark3);
 }
 
+.animated-card:hover {
+    transform: translateY(-5px);
+    /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.9); */
+}
+
 .grid-content {
     display: grid;
     grid-template-columns: 300px 800px;
@@ -43,7 +96,9 @@
 }
 
 .personal {
-    height: 500px;
+    /* height: 500px; */
+    height: auto;
+    padding-bottom: 10px;
 }
 
 .personal-extend {
@@ -58,12 +113,49 @@
     height: 200px;
 }
 
+.linebreak {
+    width: 80%;
+    height: 1px;
+    opacity: 0.5;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    display: none;
+    justify-self: center;
+}
+
+.line-white {
+    background-color: var(--alpha-dark);
+}
+
+.line-dark {
+    background-color: var(--alpha-white);
+}
+
 
 @media only screen and (max-width: 1200px) {
     .grid-content {
         grid-template-columns: 200px 600px;
     
-        gap: 30px;
+        gap: 40px;
+    }
+
+    .me {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .section-name, .card-name {
+        font-size: 10px;
+    }
+    
+    .section-name {
+        margin-top: 15px;
+    }
+    
+    .section-value {
+        font-size: 14px;
     }
 }
 
@@ -74,10 +166,29 @@
         flex-direction: column;
 
         justify-content: center;
+    
+        gap: 20px;
     }
 
     .grid-item  {
         width: 500px;
+    }
+
+    .me {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .section-name, .card-name {
+        font-size: 12px;
+    }
+    
+    .section-value {
+        font-size: 16px;
+    }
+
+    .linebreak {
+        display: block;
     }
 }
 
