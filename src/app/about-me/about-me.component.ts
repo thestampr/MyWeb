@@ -7,7 +7,7 @@ import { BackendService } from '../backend.service';
 import * as utils from '../utils';
 
 
-const MOUSE_PARALLAX: Boolean = false;
+const MOUSE_PARALLAX: Boolean = true;
 
 
 @Component({
@@ -21,9 +21,6 @@ export class AboutMeComponent implements OnInit {
 
     ngOnInit(): void {
         if (MOUSE_PARALLAX) {
-            let modal_img: HTMLElement = document.getElementById("my-img")!;
-            modal_img.style.transition = "none";
-
             document.addEventListener("mousemove", this.MouseParallax);
         }
     }
@@ -38,6 +35,11 @@ export class AboutMeComponent implements OnInit {
 
     async ModalView() {
         let modal: HTMLElement = document.getElementById("modal-img")!;
+
+        if (MOUSE_PARALLAX) {
+            let modal_img: HTMLElement = document.getElementById("my-img")!;
+            modal_img.style.transition = "none";
+        }
         
         modal.style.display = "block";
     }
@@ -45,6 +47,11 @@ export class AboutMeComponent implements OnInit {
     async ModalClose() {
         let modal: HTMLElement = document.getElementById("modal-img")!;
         let me: HTMLElement = document.querySelector("#modal-img .me")!;
+
+        if (MOUSE_PARALLAX) {
+            let modal_img: HTMLElement = document.getElementById("my-img")!;
+            modal_img.style.transition = "all 0.2s ease-in-out";
+        }
 
         me.style.scale = "75%";
         me.style.opacity = "0";
