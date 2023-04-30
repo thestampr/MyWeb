@@ -7,7 +7,7 @@ import { BackendService } from '../backend.service';
 import * as utils from '../utils';
 
 
-const MOUSE_PARALLAX: Boolean = true;
+const MOUSE_PARALLAX: Boolean = false;
 
 
 @Component({
