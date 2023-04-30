@@ -9,7 +9,5 @@ import { AppearanceService } from '../appearance.service';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent {
-    @Input() fill: boolean = true;
-
     constructor (public Theme: AppearanceService) {}
 }

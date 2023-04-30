@@ -4,6 +4,7 @@
 
 .card div {
     width: 100%;
+    overflow-x: hidden;
 }
 
 .image {
@@ -66,6 +67,10 @@
     gap: 50px;
 }
 
+.section-spacing {
+    margin-top: 20px;
+}
+
 .section-name {
     margin-top: 20px;
 
@@ -75,7 +80,10 @@
 
 .section-value {
     font-size: 18px;
+
+    display: flex;
     position: relative;
+    align-items: center;
 }
 
 ul {
@@ -131,7 +139,7 @@ ul {
 .linebreak {
     width: 80%;
     height: 1px;
-    opacity: 0.5;
+    opacity: 0.6;
 
     margin-left: auto;
     margin-right: auto;
@@ -153,6 +161,24 @@ ul {
 
 .line-dark {
     background-color: var(--alpha-white);
+}
+
+mat-progress-bar {
+    height: 10px;
+    width: 70%;
+
+    display: flex;
+    justify-self: right;
+    position: absolute;
+
+    top: 5px;
+    right: 0;
+    bottom: 0;
+}
+
+:host ::ng-deep mat-progress-bar .mdc-linear-progress__bar-inner {
+    border-color: var(--scheme-color);
+    border-top-width: 1000px; /* full height */
 }
 
 
@@ -186,6 +212,11 @@ ul {
 
     ul {
         padding-left: 16px;
+    }
+
+    mat-progress-bar {
+        height: 8px;
+        /* width: 70%; */
     }
 }
 
@@ -228,10 +259,19 @@ ul {
     ul {
         padding-left: 18px;
     }
+
+    mat-progress-bar {
+        height: 10px;
+        width: 65%;
+    }
 }
 
 @media only screen and (max-width: 600px) {
     .grid-item  {
         width: 300px;
+    }
+
+    mat-progress-bar {
+        width: 50%;
     }
 }

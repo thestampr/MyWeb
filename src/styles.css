@@ -248,6 +248,15 @@ h1 {
     padding-bottom: 10px;
 } */
 
+mat-progress-bar {
+    border-radius: 100px;
+}
+
+:host ::ng-deep mat-progress-bar .mdc-linear-progress__bar-inner {
+    border-color: var(--scheme-color);
+    border-top-width: 1000px; /* full height */
+}
+
 .ContextMenu {
     display: inline-flex;
     flex-direction: column;

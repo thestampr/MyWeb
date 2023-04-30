@@ -4,7 +4,9 @@
     <h2>{{name}}</h2>
 
     <div class="flex-container">
-        <div class="flex-container-item flexable-item" [ngClass]="{'fullsize': one_col}" *ngFor="let item of items; let i = index">
+        <div class="flex-container-item flexable-item" 
+            [ngClass]="{'fullsize': one_col}" 
+            *ngFor="let item of items; let i = index">
             <h3>
                 <i id="icon-large" class="fa {{item.icon}}"></i>
                 {{item.title}}

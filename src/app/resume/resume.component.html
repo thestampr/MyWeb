@@ -1,15 +1,5 @@
 <app-page>
     <div id="content" class="white-theme" [ngClass]="{'dark-theme': Theme.is_dark}">
-        <!-- <app-card [fill]="false">
-            <app-flex-card-box 
-                name="Education"
-                [one_col]="true"
-                [items]="[
-                    {icon: 'fa-mortar-board', title: 'High School Certificate', descriptions: 'Prachinratsadornamroong School'}, 
-                    {icon: 'fa-mortar-board', title: 'Bachelor of Engineering', descriptions: 'Rajamangala university of technology thanyaburi'}, 
-                ]"
-            />
-        </app-card> -->
 
         <div class="grid-content">
             <div class="side-field grid-item">
@@ -20,6 +10,8 @@
                         <div class="image">
                             <img class="me" src="assets/images/profile-2.jpg" /> 
                         </div>
+
+                        <div class="section-linebreak linebreak" [ngClass]="{'line-dark': Theme.is_dark, 'line-white': !Theme.is_dark}"></div>
 
                         <div class="section-name">Name</div>
                         <div class="section-value">
@@ -47,6 +39,17 @@
                     <div class="auto-heigh">
                         <!-- <div class="card-name">Personal extend</div> -->
 
+                        <div class="section-name">Interests</div>
+                        <div class="section-value">
+                            <ul>
+                                <li>Python</li>
+                                <li>Frontend</li>
+                                <li>Angular / React</li>
+                            </ul>
+                        </div>
+
+                        <div class="linebreak" [ngClass]="{'line-dark': Theme.is_dark, 'line-white': !Theme.is_dark}"></div>
+
                         <div class="section-name">Languages</div>
                         <div class="section-value">
                             English
@@ -62,17 +65,6 @@
                                 7 Apr 2023
                             </div>
                         </div>
-
-                        <div class="section-linebreak linebreak" [ngClass]="{'line-dark': Theme.is_dark, 'line-white': !Theme.is_dark}"></div>
-
-                        <div class="section-name">Interests</div>
-                        <div class="section-value">
-                            <ul>
-                                <li>Python developer</li>
-                                <li>Frontend developer</li>
-                                <li>Angular / React developer</li>
-                            </ul>
-                        </div>
                     </div>
                 </app-card>
             </div>
@@ -81,18 +73,71 @@
 
             <div class="content-field grid-item">
                 <app-card class="card">
-                    <div class="skills">
+                    <div class="auto-heigh">
                         <div class="card-name">Skills</div>
+                        <div class="linebreak" [ngClass]="{'line-dark': Theme.is_dark, 'line-white': !Theme.is_dark}"></div>
+
+                        <div class="section-spacing"></div>
+                        <div class="section-value">
+                            C, Cpp
+                            <mat-progress-bar mode="determinate" value="75" />
+                        </div>
+                        
+                        <div class="section-spacing"></div>
+                        <div class="section-value">
+                            Python
+                            <mat-progress-bar mode="determinate" value="75" />
+                        </div>
+                        
+                        <div class="section-spacing"></div>
+                        <div class="section-value">
+                            Angular
+                            <mat-progress-bar mode="determinate" value="25" />
+                        </div>
+                        
+                        <div class="section-spacing"></div>
+                        <div class="section-value">
+                            Self-Learning
+                            <mat-progress-bar mode="determinate" value="99" />
+                        </div>
                     </div>
                 </app-card>
                 <app-card class="card">
                     <div class="education">
                         <div class="card-name">Educations</div>
+                        <div class="linebreak" [ngClass]="{'line-dark': Theme.is_dark, 'line-white': !Theme.is_dark}"></div>
+
+                        <!-- <app-flex-card-box 
+                            name=""
+                            [one_col]="true"
+                            [items]="[
+                                {icon: 'fa-mortar-board', title: 'High School Certificate', descriptions: 'Prachinratsadornamroong School'}, 
+                                {icon: 'fa-mortar-board', title: 'Bachelor of Engineering', descriptions: 'Rajamangala university of technology thanyaburi'}, 
+                            ]"
+                        /> -->
+
+                        <!-- <div class="section-name">High School Certificate</div>
+                        <div class="section-value">
+                            Prachinratsadornamroong School
+                            <div class="section-extra">
+                                2013 - 2018
+                            </div>
+                        </div>
+
+                        <div class="section-name">Bachelor of Engineering</div>
+                        <div class="section-value">
+                            Rajamangala university of technology thanyaburi
+                            <div class="section-extra">
+                                2019 - Apr 2023
+                            </div>
+                        </div> -->
                     </div>
                 </app-card>
                 <app-card class="card">
                     <div class="exp">
                         <div class="card-name">Work Experience</div>
+                        <div class="linebreak" [ngClass]="{'line-dark': Theme.is_dark, 'line-white': !Theme.is_dark}"></div>
+
                     </div>
                 </app-card>
             </div>
