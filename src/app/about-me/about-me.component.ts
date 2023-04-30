@@ -21,6 +21,9 @@ export class AboutMeComponent implements OnInit {
 
     ngOnInit(): void {
         if (MOUSE_PARALLAX) {
+            let modal_img: HTMLElement = document.getElementById("my-img")!;
+            modal_img.style.transition = "none";
+
             document.addEventListener("mousemove", this.MouseParallax);
         }
     }

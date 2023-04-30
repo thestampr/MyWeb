@@ -55,7 +55,6 @@
     margin-top: 150px;
     
     animation: fadeIn-popup ease 0.2s;
-    transition: none;
 }
 
 .hidden-modal {
