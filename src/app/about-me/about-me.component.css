@@ -45,7 +45,7 @@
     animation: fadeIn ease 0.2s;
 }
 
-#modal-img .me {
+#my-img {
     width: 450px;
     height: 450px;
 
@@ -55,6 +55,7 @@
     margin-top: 150px;
     
     animation: fadeIn-popup ease 0.2s;
+    transition: none;
 }
 
 .hidden-modal {

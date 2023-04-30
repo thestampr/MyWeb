@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { AppearanceService } from '../appearance.service';
@@ -7,14 +7,31 @@ import { BackendService } from '../backend.service';
 import * as utils from '../utils';
 
 
+const MOUSE_PARALLAX: Boolean = false;
+
+
 @Component({
   selector: 'app-about-me',
   templateUrl: './about-me.component.html',
   styleUrls: ['./about-me.component.css']
 })
-export class AboutMeComponent {
+export class AboutMeComponent implements OnInit {
     
     constructor(public Theme: AppearanceService, public Backend: BackendService, public Router: Router) {}
+
+    ngOnInit(): void {
+        if (MOUSE_PARALLAX) {
+            document.addEventListener("mousemove", this.MouseParallax);
+        }
+    }
+
+    MouseParallax(event: MouseEvent): void {
+        let modal_img: HTMLElement = document.getElementById("my-img")!;
+        let x: number = (50 - event.clientX - (window.innerWidth / 2)) * 0.01
+        let y: number = (50 - event.clientY - (window.innerHeight / 2)) * 0.01
+
+        modal_img.style.transform = `translateX(${x}px) translateY(${y}px)`;
+    }
 
     async ModalView() {
         let modal: HTMLElement = document.getElementById("modal-img")!;

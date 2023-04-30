@@ -2,13 +2,6 @@
     transition: all 0.2s ease-in-out;
 }
 
-hr {
-    width: 80%;
-    /* border: 1px solid var(--alpha-white); */
-    opacity: 0.2;
-    display: none;
-}
-
 .card div {
     width: 100%;
 }
@@ -83,6 +76,11 @@ hr {
 .section-value {
     font-size: 18px;
     position: relative;
+}
+
+ul {
+    margin-top: 0px;
+    padding-left: 20px;
 }
 
 .section-extra {
@@ -185,6 +183,10 @@ hr {
     .section-extra {
         font-size: 12px;
     }
+
+    ul {
+        padding-left: 16px;
+    }
 }
 
 @media only screen and (max-width: 900px) {
@@ -221,6 +223,10 @@ hr {
 
     .grid-linebreak {
         display: block;
+    }
+
+    ul {
+        padding-left: 18px;
     }
 }
 

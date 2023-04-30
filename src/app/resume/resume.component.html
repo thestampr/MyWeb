@@ -47,19 +47,6 @@
                     <div class="auto-heigh">
                         <!-- <div class="card-name">Personal extend</div> -->
 
-                        <div class="section-name">Interests</div>
-                        <div class="section-value">
-                            Python developer
-                        </div>
-                        <div class="section-value">
-                            Frontend developer
-                        </div>
-                        <div class="section-value">
-                            Angular / React dev
-                        </div>
-
-                        <div class="section-linebreak linebreak" [ngClass]="{'line-dark': Theme.is_dark, 'line-white': !Theme.is_dark}"></div>
-
                         <div class="section-name">Languages</div>
                         <div class="section-value">
                             English
@@ -74,6 +61,17 @@
                             <div class="section-extra">
                                 7 Apr 2023
                             </div>
+                        </div>
+
+                        <div class="section-linebreak linebreak" [ngClass]="{'line-dark': Theme.is_dark, 'line-white': !Theme.is_dark}"></div>
+
+                        <div class="section-name">Interests</div>
+                        <div class="section-value">
+                            <ul>
+                                <li>Python developer</li>
+                                <li>Frontend developer</li>
+                                <li>Angular / React developer</li>
+                            </ul>
                         </div>
                     </div>
                 </app-card>
