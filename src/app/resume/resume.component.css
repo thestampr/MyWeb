@@ -15,8 +15,6 @@
 
     margin-top: 20px;
     margin-bottom: 40px;
-
-    /* background-color: aqua; */
 }
 
 .me {
@@ -76,6 +74,14 @@
 
     opacity: 0.4;
     font-size: 14px;
+
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.section-name > .section-extra {
+    opacity: 1.0;
 }
 
 .section-value {
@@ -120,7 +126,7 @@ ul {
     padding-bottom: 10px;
 }
 
-.personal {
+/* .personal {
     height: 500px;
 }
 
@@ -134,7 +140,7 @@ ul {
 
 .exp {
     height: 200px;
-}
+} */
 
 .linebreak {
     width: 80%;
@@ -163,17 +169,97 @@ ul {
     background-color: var(--alpha-white);
 }
 
+.timeline-item {
+    width: 100%;
+    height: 120px;
+    min-height: 120px;
+
+    overflow: hidden;
+    float: left;
+
+    display: flex;
+    flex-direction: row;
+
+    gap: 10px;
+}
+
+.timeline-head {
+    max-width: fit-content;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline-dot {
+    min-width: 18px;
+    min-height: 18px;
+
+    width: 18px;
+    height: 18px;
+
+    top: 0;
+    left: 0;
+
+    border: 4px solid var(--alpha-dark);
+    border-radius: 50%;
+    margin-top: 2px;
+    margin-bottom: 2px;
+
+    display: inline-block;
+
+    background-color: transparent;
+}
+
+.timeline-line {
+    width: 4px;
+    height: 100%;
+
+    margin-left: 7px;
+    margin-right: 7px;
+
+    bottom: 0;
+    left: 0;
+
+    display: inline-block;
+
+    background-color: var(--alpha-dark);
+}
+
+.timeline-content {
+    width: auto;
+    height: auto;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline-content > .section-name {
+    margin-top: 2px;
+    margin-bottom: 10px;
+}
+
+.darktheme .timeline-dot {
+    border: 4px solid var(--alpha-white);
+}
+
+.darktheme .timeline-line {
+    background-color: var(--alpha-white);
+}
+
+
 mat-progress-bar {
     height: 10px;
     width: 70%;
 
-    display: flex;
-    justify-self: right;
-    position: absolute;
-
-    top: 5px;
+    display: inline-block;
+    
     right: 0;
-    bottom: 0;
+    margin-left: auto;
 }
 
 :host ::ng-deep mat-progress-bar .mdc-linear-progress__bar-inner {
@@ -212,6 +298,19 @@ mat-progress-bar {
 
     ul {
         padding-left: 16px;
+    }
+
+    .timeline-dot {
+        min-width: 14px;
+        min-height: 14px;
+
+        width: 14px;
+        height: 14px;
+    }
+    
+    .timeline-line {
+        margin-left: 5px;
+        margin-right: 5px;
     }
 
     mat-progress-bar {
@@ -258,6 +357,19 @@ mat-progress-bar {
 
     ul {
         padding-left: 18px;
+    }
+
+    .timeline-dot {
+        min-width: 16px;
+        min-height: 16px;
+
+        width: 16px;
+        height: 16px;
+    }
+    
+    .timeline-line {
+        margin-left: 6px;
+        margin-right: 6px;
     }
 
     mat-progress-bar {

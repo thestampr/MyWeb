@@ -103,38 +103,44 @@
                     </div>
                 </app-card>
                 <app-card class="card">
-                    <div class="education">
+                    <div class="auto-height">
                         <div class="card-name">Educations</div>
                         <div class="linebreak" [ngClass]="{'line-dark': Theme.is_dark, 'line-white': !Theme.is_dark}"></div>
-
-                        <!-- <app-flex-card-box 
-                            name=""
-                            [one_col]="true"
-                            [items]="[
-                                {icon: 'fa-mortar-board', title: 'High School Certificate', descriptions: 'Prachinratsadornamroong School'}, 
-                                {icon: 'fa-mortar-board', title: 'Bachelor of Engineering', descriptions: 'Rajamangala university of technology thanyaburi'}, 
-                            ]"
-                        /> -->
-
-                        <!-- <div class="section-name">High School Certificate</div>
-                        <div class="section-value">
-                            Prachinratsadornamroong School
-                            <div class="section-extra">
-                                2013 - 2018
+                        <div class="section-spacing"></div>
+                        
+                        <div class="timeline-item" [ngClass]="{'darktheme': Theme.is_dark}">
+                            <div class="timeline-head">
+                                <span class="timeline-dot"></span>
+                                <span class="timeline-line"></span>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="section-name">2013 - 2018</div>
+                                <div class="section-value">
+                                    Prachinratsadornamroong School
+                                </div>
+                                <div class="section-name">High School Certificate</div>
                             </div>
                         </div>
 
-                        <div class="section-name">Bachelor of Engineering</div>
-                        <div class="section-value">
-                            Rajamangala university of technology thanyaburi
-                            <div class="section-extra">
-                                2019 - Apr 2023
+                        <div class="timeline-item" [ngClass]="{'darktheme': Theme.is_dark}">
+                            <div class="timeline-head">
+                                <span class="timeline-dot"></span>
+                                <span class="timeline-line"></span>
                             </div>
-                        </div> -->
+                            <div class="timeline-content">
+                                <div class="section-name">2019 - Apr 2023</div>
+                                <div class="section-value">
+                                    Rajamangala university of technology thanyaburi
+                                </div>
+                                <div class="section-name">Bachelor of Engineering</div>
+                            </div>
+                        </div>
+                        <div class="section-name">Present</div>
+
                     </div>
                 </app-card>
                 <app-card class="card">
-                    <div class="exp">
+                    <div class="auto-height">
                         <div class="card-name">Work Experience</div>
                         <div class="linebreak" [ngClass]="{'line-dark': Theme.is_dark, 'line-white': !Theme.is_dark}"></div>
 
