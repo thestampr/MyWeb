@@ -97,6 +97,10 @@ ul {
     padding-left: 20px;
 }
 
+li {
+    font-size: 16px;
+}
+
 .section-extra {
     font-size: 14px;
 
@@ -107,7 +111,7 @@ ul {
 
     /* top: 0; */
     right: 0;
-    bottom: 2px;
+    bottom: 1px;
 }
 
 .grid-item {
@@ -171,24 +175,25 @@ ul {
 
 .timeline-item {
     width: 100%;
-    height: 120px;
+    height: auto;
     min-height: 120px;
 
-    overflow: hidden;
     float: left;
 
     display: flex;
     flex-direction: row;
+    /* position: relative; */
 
     gap: 10px;
 }
 
 .timeline-head {
     max-width: fit-content;
-    height: 100%;
+    height: inherit;
 
     display: flex;
     flex-direction: column;
+    /* position: absolute; */
 }
 
 .timeline-dot {
@@ -218,12 +223,9 @@ ul {
     margin-left: 7px;
     margin-right: 7px;
 
-    bottom: 0;
-    left: 0;
-
-    display: inline-block;
-
     background-color: var(--alpha-dark);
+
+    border-radius: 10px;
 }
 
 .timeline-content {
@@ -236,10 +238,12 @@ ul {
 
     display: flex;
     flex-direction: column;
+
+    padding-top: 2px;
 }
 
 .timeline-content > .section-name {
-    margin-top: 2px;
+    margin-top: 0px;
     margin-bottom: 10px;
 }
 
@@ -257,7 +261,7 @@ mat-progress-bar {
     width: 70%;
 
     display: inline-block;
-    
+
     right: 0;
     margin-left: auto;
 }
@@ -298,6 +302,10 @@ mat-progress-bar {
 
     ul {
         padding-left: 16px;
+    }
+
+    li {
+        font-size: 12px;
     }
 
     .timeline-dot {
@@ -359,6 +367,14 @@ mat-progress-bar {
         padding-left: 18px;
     }
 
+    li {
+        font-size: 14px;
+    }
+
+    /* .auto-height > ul > li {
+        font-size: 12px;
+    } */
+
     .timeline-dot {
         min-width: 16px;
         min-height: 16px;
@@ -372,6 +388,10 @@ mat-progress-bar {
         margin-right: 6px;
     }
 
+    .timeline-content {
+        padding-top: 3px;
+    }
+
     mat-progress-bar {
         height: 10px;
         width: 65%;
@@ -381,6 +401,10 @@ mat-progress-bar {
 @media only screen and (max-width: 600px) {
     .grid-item  {
         width: 300px;
+    }
+    
+    .section-extra {
+        font-size: 12px;
     }
 
     mat-progress-bar {
