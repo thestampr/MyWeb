@@ -4,7 +4,7 @@
         <div class="grid-content">
             <div class="side-field grid-item">
                 <app-card class="card">
-                    <div class="auto-height">
+                    <div class="personal">
                         <div class="card-name">Personal</div>
 
                         <div class="image">
@@ -33,18 +33,14 @@
                             Thailand
                         </div>
 
-                    </div>
-                </app-card>
-                <app-card class="card">
-                    <div class="auto-height">
-                        <!-- <div class="card-name">Personal extend</div> -->
+                        <div class="section-linebreak linebreak" [ngClass]="{'line-dark': Theme.is_dark, 'line-white': !Theme.is_dark}"></div>
 
                         <div class="section-name">Interests</div>
                         <div class="section-value">
                             <ul>
                                 <li>Coding</li>
-                                <li>Coffee</li>
                                 <li>Travel</li>
+                                <li>Movies</li>
                             </ul>
                         </div>
 
@@ -65,6 +61,7 @@
                                 7 Apr 2023
                             </div>
                         </div>
+
                     </div>
                 </app-card>
             </div>
@@ -130,7 +127,7 @@
                             <div class="timeline-content">
                                 <div class="section-name">2019 - Apr 2023</div>
                                 <div class="section-value">
-                                    Rajamangala university of technology thanyaburi
+                                    Rajamangala University of Technology Thanyaburi
                                 </div>
                                 <div class="section-name">Bachelor of Engineering</div>
                             </div>

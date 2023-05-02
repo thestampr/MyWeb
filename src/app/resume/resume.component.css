@@ -130,22 +130,6 @@ li {
     padding-bottom: 10px;
 }
 
-/* .personal {
-    height: 500px;
-}
-
-.personal-extend {
-    height: 300px;
-}
-
-.skills, .education {
-    height: 350px;
-}
-
-.exp {
-    height: 200px;
-} */
-
 .linebreak {
     width: 80%;
     height: 1px;
@@ -193,7 +177,6 @@ li {
 
     display: flex;
     flex-direction: column;
-    /* position: absolute; */
 }
 
 .timeline-dot {
