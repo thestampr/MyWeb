@@ -9,6 +9,7 @@
     display: flex;
     padding: 20px;
 
+    border: none;
     border-radius: 20px;
     flex: 1 0 200px;
 
@@ -24,56 +25,21 @@
     background-color 0.2s ease-in-out;
 
     animation: WalkIn ease 1s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
 }
 
 .whitepage {
     background-color: rgba(255, 255, 255, 0.75);
-    border: 1px solid var(--alpha-dark);
+    /* border: 1px solid var(--alpha-dark); */
     color: var(--dark3);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .darkpage {
     background-color: rgba(28, 28, 28, 0.75);
-    border: 1px solid var(--alpha-white);
+    /* border: 1px solid var(--alpha-white); */
     color: var(--white3);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.9);
 }
-/* 
-#nofill-card {
-    min-width: 400px;
-    min-height: 100px;
-    margin: 10px;
-    display: flex;
-    padding: 20px;
-
-    border-radius: 20px;
-    flex: 1 0 200px;
-
-    background-color: transparent;
-    align-items: center;
-    
-    transition: 
-    scale 0.3s ease-in-out, 
-    box-shadow 0.3s ease-in-out, 
-    background-color 0.2s ease-in-out;
-
-    animation: WalkIn ease 1s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-}
-
-#nofill-card.whitepage {
-    border: 1px solid var(--alpha-dark);
-    color: var(--dark3);
-}
-
-#nofill-card.darkpage {
-    border: 1px solid var(--alpha-white);
-    color: var(--white3);
-} */
 
 
 @media only screen and (max-width: 1200px) {

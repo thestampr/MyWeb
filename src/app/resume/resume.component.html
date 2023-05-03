@@ -5,10 +5,10 @@
             <div class="side-field grid-item">
                 <app-card class="card">
                     <div class="personal">
-                        <div class="card-name">Personal</div>
+                        <!-- <div class="card-name">Personal information</div> -->
 
                         <div class="image">
-                            <img class="me" src="assets/images/profile-2.jpg" /> 
+                            <img class="me" src="assets/images/me-rotated.jpg" /> 
                         </div>
 
                         <div class="section-linebreak linebreak" [ngClass]="{'line-dark': Theme.is_dark, 'line-white': !Theme.is_dark}"></div>
@@ -17,10 +17,15 @@
                         <div class="section-value">
                             Peeradon Rungkanawut
                         </div>
-
-                        <div class="section-name">Birth date</div>
+                        
+                        <div class="section-name">Email</div>
                         <div class="section-value">
-                            5 Apr 2001
+                            thestampmc@gmail.com
+                        </div>
+
+                        <div class="section-name">Phone number</div>
+                        <div class="section-value">
+                            090-935-1529
                         </div>
 
                         <div class="section-name">Gender</div>
@@ -30,7 +35,7 @@
 
                         <div class="section-name">Nationality</div>
                         <div class="section-value">
-                            Thailand
+                            Thai
                         </div>
 
                         <div class="section-linebreak linebreak" [ngClass]="{'line-dark': Theme.is_dark, 'line-white': !Theme.is_dark}"></div>
@@ -38,8 +43,8 @@
                         <div class="section-name">Interests</div>
                         <div class="section-value">
                             <ul>
-                                <li>Coding</li>
-                                <li>Travel</li>
+                                <li>Programming</li>
+                                <li>Traveling</li>
                                 <li>Movies</li>
                             </ul>
                         </div>
@@ -71,6 +76,30 @@
             <div class="content-field grid-item">
                 <app-card class="card">
                     <div class="auto-height">
+                        <div class="card-name">About me</div>
+                        <div class="linebreak" [ngClass]="{'line-dark': Theme.is_dark, 'line-white': !Theme.is_dark}"></div>
+
+                        <div class="section-spacing"></div>
+                        <p>
+                            <!-- I graduated from RMUTT, a bachelor degree of engineering in electronic major. <br> -->
+                            <!-- I am interested in programming, I have started learning by myself since 2017. <br> -->
+                            Good Python developer with knowledge of OOP, Type-Hint, and MongoDB.
+                            Also, I am interested in the Angular framework for front-end development.
+                            I'm happy to code, debug, and write some documentation. <br>
+                            <!-- Open to learn and work for Angular developer position. -->
+                        </p>
+
+                        <!-- <div class="linebreak" [ngClass]="{'line-dark': Theme.is_dark, 'line-white': !Theme.is_dark}"></div>
+
+                        <div class="section-name">Career Objective</div>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni numquam quasi minus quaerat dignissimos sit explicabo, assumenda temporibus necessitatibus! Perferendis consequuntur quisquam, odit velit provident dolore vitae voluptate? Libero, aliquid.
+                        </p> -->
+                        
+                    </div>
+                </app-card>
+                <app-card class="card">
+                    <div class="auto-height">
                         <div class="card-name">Skills</div>
                         <div class="linebreak" [ngClass]="{'line-dark': Theme.is_dark, 'line-white': !Theme.is_dark}"></div>
 
@@ -78,25 +107,121 @@
                         <div class="section-value">
                             C, Cpp
                             <mat-progress-bar mode="determinate" value="75" />
+                            <!-- <div class="section-extra">
+                                Experienced
+                            </div> -->
                         </div>
                         
                         <div class="section-spacing"></div>
                         <div class="section-value">
                             Python
                             <mat-progress-bar mode="determinate" value="75" />
+                            <!-- <div class="section-extra">
+                                Experienced
+                            </div> -->
+                        </div>
+                        
+                        <div class="section-spacing"></div>
+                        <div class="section-value">
+                            TypeScript
+                            <mat-progress-bar mode="determinate" value="50" />
+                            <!-- <div class="section-extra">
+                                Intermediate
+                            </div> -->
                         </div>
                         
                         <div class="section-spacing"></div>
                         <div class="section-value">
                             Angular
-                            <mat-progress-bar mode="determinate" value="25" />
+                            <mat-progress-bar mode="determinate" value="50" />
+                            <!-- <div class="section-extra">
+                                Intermediate
+                            </div> -->
                         </div>
                         
                         <div class="section-spacing"></div>
                         <div class="section-value">
                             Self-Learning
                             <mat-progress-bar mode="determinate" value="99" />
+                            <!-- <div class="section-extra">
+                                Expert
+                            </div> -->
                         </div>
+                    </div>
+                </app-card>
+                <app-card class="card">
+                    <div class="auto-height">
+                        <div class="card-name">Work Experiences</div>
+                        <div class="linebreak" [ngClass]="{'line-dark': Theme.is_dark, 'line-white': !Theme.is_dark}"></div>
+                        <div class="section-spacing"></div>
+
+                        <div class="timeline-item" [ngClass]="{'darktheme': Theme.is_dark}">
+                            <div class="timeline-head">
+                                <span class="timeline-dot"></span>
+                                <span class="timeline-line"></span>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="section-name">2019 - 2020</div>
+                                <div class="section-value">
+                                    3D Designer
+                                    <div class="section-extra">Freelance</div>
+                                </div>
+                                <!-- <div class="section-name">Work from home</div> -->
+                                <div class="auto-height">
+                                    <ul>
+                                        <li>3D modeling in Blender</li>
+                                        <li>Lighting, rendering and compositing</li>
+                                        <li>Design advertisment poster</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- <div class="timeline-item" [ngClass]="{'darktheme': Theme.is_dark}">
+                            <div class="timeline-head">
+                                <span class="timeline-dot"></span>
+                                <span class="timeline-line"></span>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="section-name">2020 - Present</div>
+                                <div class="section-value">
+                                    Developer
+                                    <div class="section-extra">self-employed</div>
+                                </div>
+                                <div class="auto-height">
+                                    <ul>
+                                        <li>A discord music application that supports <b>YouTube</b>, <b>Spotify</b>, <b>SoundCloud</b>, and <b>Last.fm </b>                                       </li>
+                                        <li>Using discord.py lib, Google, Spotify api and database <b>MongoDB</b>.</li>
+                                        <li>UX design and development.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <div class="timeline-item" [ngClass]="{'darktheme': Theme.is_dark}">
+                            <div class="timeline-head">
+                                <span class="timeline-dot"></span>
+                                <span class="timeline-line"></span>
+                            </div>
+                            <div class="timeline-content">
+                                <div class="section-name">Jan - Oct 2022</div>
+                                <div class="section-value">
+                                    Internship
+                                    <div class="section-extra">Cooperative Education</div>
+                                </div>
+                                <!-- <div class="section-name">RealAdvance</div> -->
+                                <div class="auto-height">
+                                    <ul>
+                                        <li>C, Cpp programmer (main)</li>
+                                        <li>Reserch & development</li>
+                                        <li>Photoshop man</li>
+                                        <li>IT support</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="section-name">Present</div>
+
                     </div>
                 </app-card>
                 <app-card class="card">
@@ -136,83 +261,10 @@
 
                     </div>
                 </app-card>
-                <app-card class="card">
-                    <div class="auto-height">
-                        <div class="card-name">Work Experience</div>
-                        <div class="linebreak" [ngClass]="{'line-dark': Theme.is_dark, 'line-white': !Theme.is_dark}"></div>
-                        <div class="section-spacing"></div>
-
-                        <div class="timeline-item" [ngClass]="{'darktheme': Theme.is_dark}">
-                            <div class="timeline-head">
-                                <span class="timeline-dot"></span>
-                                <span class="timeline-line"></span>
-                            </div>
-                            <div class="timeline-content">
-                                <div class="section-name">2019 - 2020</div>
-                                <div class="section-value">
-                                    3D Designer
-                                    <div class="section-extra">Freelance</div>
-                                </div>
-                                <div class="auto-height">
-                                    <ul>
-                                        <li>3D modeling in Blender</li>
-                                        <li>Lighting, Rendering and Compositing</li>
-                                        <li>Design advertisment poster</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- <div class="timeline-item" [ngClass]="{'darktheme': Theme.is_dark}">
-                            <div class="timeline-head">
-                                <span class="timeline-dot"></span>
-                                <span class="timeline-line"></span>
-                            </div>
-                            <div class="timeline-content">
-                                <div class="section-name">2020 - Present</div>
-                                <div class="section-value">
-                                    Developer
-                                    <div class="section-extra">self-employed</div>
-                                </div>
-                                <div class="auto-height">
-                                    <ul>
-                                        <li>A discord music application that supports <b>YouTube</b>, <b>Spotify</b>, <b>SoundCloud</b>, and <b>Last.fm </b>                                       </li>
-                                        <li>Using discord.py lib, Google, Spotify api and database <b>MongoDB</b>.</li>
-                                        <li>UX design and developement.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div> -->
-
-                        <div class="timeline-item" [ngClass]="{'darktheme': Theme.is_dark}">
-                            <div class="timeline-head">
-                                <span class="timeline-dot"></span>
-                                <span class="timeline-line"></span>
-                            </div>
-                            <div class="timeline-content">
-                                <div class="section-name">Jan - Oct 2022</div>
-                                <div class="section-value">
-                                    Internship
-                                    <div class="section-extra">Cooperative Education</div>
-                                </div>
-                                <div class="auto-height">
-                                    <ul>
-                                        <li>C, Cpp programmer (main)</li>
-                                        <li>Reserch & developement</li>
-                                        <li>Photoshop man</li>
-                                        <li>IT support</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="section-name">Present</div>
-
-                    </div>
-                </app-card>
             </div>
         </div>
 
-        <button id="download" class="animated-btn" (click)="Backend.DownloadCV()">
+        <button id="download" class="animated-btn" (click)="Backend.DownloadResume()">
             Download Resume 
         </button>
     </div>
