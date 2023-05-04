@@ -1,5 +1,5 @@
 <app-page>
-    <div id="content" class="white-theme" [ngClass]="{'dark-theme': Theme.is_dark}">
+    <div id="content" class="white-theme" [ngClass]="{'dark-theme': theme.is_dark}">
         <div id="container" class="container about">
 
             <img class="me" src="assets/images/profile-2.jpg" [cdkContextMenuTriggerFor]="Image" (click)="ModalView()" /> 
@@ -16,8 +16,8 @@
                 </p>
 
                 <div class="buttons">
-                    <button id="resume" class="animated-btn" (click)="Router.navigateByUrl('resume')">View resume</button>
-                    <button id="contact" class="animated-btn" (click)="Router.navigateByUrl('contact')">Contact me</button>
+                    <button id="resume" class="animated-btn" (click)="router.navigateByUrl('resume')">View resume</button>
+                    <button id="contact" class="animated-btn" (click)="router.navigateByUrl('contact')">Contact me</button>
                 </div>
             </span>
         </div>

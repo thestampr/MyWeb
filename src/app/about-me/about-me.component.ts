@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { AppearanceService } from '../appearance.service';
-import { BackendService } from '../backend.service';
 
 import * as utils from '../utils';
 
@@ -17,7 +16,11 @@ const MOUSE_PARALLAX: Boolean = false;
 })
 export class AboutMeComponent implements OnInit {
     
-    constructor(public Theme: AppearanceService, public Backend: BackendService, public Router: Router) {}
+    constructor(
+        public theme: AppearanceService, 
+        public router: Router
+    ) {}
+
 
     ngOnInit(): void {
         if (MOUSE_PARALLAX) {

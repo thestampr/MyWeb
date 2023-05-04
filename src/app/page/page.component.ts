@@ -1,6 +1,7 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
 
 import { AppearanceService } from '../appearance.service';
+import { BackendService } from '../backend.service';
 
 
 @Component({
@@ -10,10 +11,12 @@ import { AppearanceService } from '../appearance.service';
 })
 export class PageComponent implements OnInit {
 
-    constructor(public Theme: AppearanceService, private elementRef: ElementRef) {
+    constructor(public theme: AppearanceService, private backend: BackendService, private elementRef: ElementRef) {
     }
 
     ngOnInit() {
-        this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = this.Theme.background_color;
+        this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = this.theme.background_color;
+
+        this.backend.updateMeta();
     }
 }

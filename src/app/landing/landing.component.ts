@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
-
-import { AppearanceService } from '../appearance.service';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -8,7 +7,11 @@ import { AppearanceService } from '../appearance.service';
   templateUrl: './landing.component.html',
   styleUrls: ['./landing.component.css']
 })
-export class LandingComponent {
+export class LandingComponent implements OnInit {
 
-    constructor(public Theme: AppearanceService) {}
+    constructor(public router: Router) {}
+
+    ngOnInit(): void {
+        this.router.navigateByUrl('aboutme');
+    }
 }
