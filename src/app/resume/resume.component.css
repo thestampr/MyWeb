@@ -4,6 +4,8 @@
 
 p {
     margin-top: 0px;
+
+    font-size: 16px;
 }
 
 .card div {
@@ -127,6 +129,18 @@ li {
 
 .side-field {
     display: flex;
+    position: relative;
+
+    /* background-color: aqua; */
+}
+
+.side-field ::ng-deep app-card #card {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
+    align-items: start;
 }
 
 .auto-height {
@@ -302,6 +316,10 @@ mat-progress-bar {
         font-size: 12px;
     }
 
+    p {
+        font-size: 12px;
+    }
+
     .timeline-dot {
         min-width: 14px;
         min-height: 14px;
@@ -365,6 +383,10 @@ mat-progress-bar {
         font-size: 14px;
     }
 
+    p {
+        font-size: 14px;
+    }
+
     /* .auto-height > ul > li {
         font-size: 12px;
     } */
@@ -390,9 +412,24 @@ mat-progress-bar {
         height: 10px;
         width: 65%;
     }
+
+    .side-field {
+        position: unset;
+    }
+    
+    .side-field ::ng-deep app-card #card {
+        width: unset;
+        height: unset;
+    
+        position: unset;
+    }
 }
 
 @media only screen and (max-width: 600px) {
+    p {
+        font-size: 12px;
+    }
+
     .grid-item  {
         width: 300px;
     }
