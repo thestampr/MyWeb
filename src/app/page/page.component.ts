@@ -1,4 +1,4 @@
-import { Component, ElementRef, AfterViewInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 
 import { AppearanceService } from '../appearance.service';
 
@@ -8,12 +8,12 @@ import { AppearanceService } from '../appearance.service';
   templateUrl: './page.component.html',
   styleUrls: ['./page.component.css']
 })
-export class PageComponent implements AfterViewInit {
+export class PageComponent implements OnInit {
 
     constructor(public Theme: AppearanceService, private elementRef: ElementRef) {
     }
 
-    ngAfterViewInit() {
+    ngOnInit() {
         this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = this.Theme.background_color;
     }
 }

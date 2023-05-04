@@ -13,7 +13,7 @@ export class TopbarComponent implements OnInit {
     constructor(public Theme: AppearanceService, private elementRef: ElementRef, public Router: Router) {}
 
     ngOnInit(): void {
-        this._changeTheme();
+        // this._changeTheme();
     }
 
     ToogleTheme(): void {
