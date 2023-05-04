@@ -25,7 +25,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ResumeComponent } from './resume/resume.component';
 import { FooterComponent } from './footer/footer.component';
 import { FlexCardBoxComponent } from './flex-card-box/flex-card-box.component';
-import { GalleryComponent } from './gallery/gallery.component';
+import { SwiperComponent } from './swiper/swiper.component';
+import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
 
 
 const routes: Routes = [
@@ -94,7 +95,7 @@ const routes: Routes = [
         ResumeComponent,
         FooterComponent,
         FlexCardBoxComponent,
-        GalleryComponent,
+        SwiperComponent,
     ],
     imports: [
         RouterModule.forRoot(routes),
@@ -107,6 +108,7 @@ const routes: Routes = [
         ClipboardModule, 
         MatSnackBarModule, 
         MatProgressBarModule, 
+        NgxUsefulSwiperModule, 
     ],
     providers: [
         AppearanceService, 
