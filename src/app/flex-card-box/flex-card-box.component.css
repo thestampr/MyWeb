@@ -58,6 +58,11 @@
     opacity: 0.75;
 }
 
+.descriptions p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 h2 {
     font-size: 25px;
     font-weight: 300;

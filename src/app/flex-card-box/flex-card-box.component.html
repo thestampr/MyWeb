@@ -12,7 +12,10 @@
                 {{item.title}}
             </h3>
             <div class="descriptions">
-                {{item.descriptions}}
+                <p *ngFor="let description of item.descriptions;">
+                    {{description}}
+                </p>
+                <br>
             </div>
         </div>
     </div>
