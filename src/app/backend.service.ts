@@ -35,7 +35,7 @@ export class BackendService {
             }),
             filter((route) => route.outlet === 'primary'),
             mergeMap((route) => route.data)).subscribe((event) => {
-                this.title.setTitle(event['title'] + " ∙ Stampr");
+                this.title.setTitle(event['title'] + " ∙ Peeradon");
                 this.meta.updateTag({ name: 'description', content: event['description'] });
             }, 
         );
