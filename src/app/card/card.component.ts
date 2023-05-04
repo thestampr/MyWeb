@@ -9,5 +9,5 @@ import { AppearanceService } from '../appearance.service';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent {
-    constructor (public Theme: AppearanceService) {}
+    constructor (public theme: AppearanceService) {}
 }

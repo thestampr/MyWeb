@@ -10,5 +10,5 @@ import { AppearanceService } from '../appearance.service';
 })
 export class FooterComponent {
 
-    constructor(public Theme: AppearanceService) {}
+    constructor(public theme: AppearanceService) {}
 }

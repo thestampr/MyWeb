@@ -11,5 +11,5 @@ import { AppearanceService } from '../appearance.service';
 })
 export class PageNotFoundComponent {
 
-    constructor(public Theme: AppearanceService, public Router: Router) {}
+    constructor(public theme: AppearanceService, public router: Router) {}
 }

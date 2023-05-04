@@ -11,5 +11,5 @@ import { BackendService } from '../backend.service';
 })
 export class ResumeComponent {
 
-    constructor(public Theme: AppearanceService, public Backend: BackendService) {}
+    constructor(public theme: AppearanceService, public backend: BackendService) {}
 }

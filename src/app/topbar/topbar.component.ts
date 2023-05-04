@@ -10,19 +10,19 @@ import { AppearanceService } from '../appearance.service';
   styleUrls: ['./topbar.component.css']
 })
 export class TopbarComponent implements OnInit {
-    constructor(public Theme: AppearanceService, private elementRef: ElementRef, public Router: Router) {}
+    constructor(public theme: AppearanceService, private elementRef: ElementRef, public router: Router) {}
 
     ngOnInit(): void {
         // this._changeTheme();
     }
 
     ToogleTheme(): void {
-        this.Theme.is_dark = !this.Theme.is_dark;
+        this.theme.is_dark = !this.theme.is_dark;
         this._changeTheme();
     }
 
     private _changeTheme(): void {
         let body: HTMLElement = this.elementRef.nativeElement.ownerDocument.body;
-        body.style.backgroundColor = this.Theme.background_color;
+        body.style.backgroundColor = this.theme.background_color;
     }
 }

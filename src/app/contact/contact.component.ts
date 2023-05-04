@@ -13,7 +13,7 @@ import * as utils from '../utils';
 })
 export class ContactComponent {
 
-    constructor(public Theme: AppearanceService, private _snackBar: MatSnackBar) {}
+    constructor(public theme: AppearanceService, private _snackBar: MatSnackBar) {}
 
     async HireMe() {
         let card: HTMLElement = document.getElementById("card")!;

@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <app-page>
-    <div id="content" class="white-theme" [ngClass]="{'dark-theme': Theme.is_dark}">
+    <div id="content" class="white-theme" [ngClass]="{'dark-theme': theme.is_dark}">
         <h1>Contact me</h1><br>
 
         <div id="buttons">
@@ -33,7 +33,7 @@
 
         <app-card>
             <div id="personal">
-                <div class="personal-item" [ngClass]="{'dark-theme': Theme.is_dark, 'white-theme': !Theme.is_dark}">
+                <div class="personal-item" [ngClass]="{'dark-theme': theme.is_dark, 'white-theme': !theme.is_dark}">
                     <i id="icon-small" class="fa fa-envelope"></i>
                     thestampmc@gmail.com
                     <button id="clone-btn" [cdkCopyToClipboard]="'thestampmc@gmail.com'" 
@@ -43,7 +43,7 @@
                     </button>
                 </div>
                 <br>
-                <div class="personal-item" [ngClass]="{'dark-theme': Theme.is_dark, 'white-theme': !Theme.is_dark}">
+                <div class="personal-item" [ngClass]="{'dark-theme': theme.is_dark, 'white-theme': !theme.is_dark}">
                     <i id="icon-small" class="fa fa-phone"></i>
                     090-935-1529
                     <button id="clone-btn" [cdkCopyToClipboard]="'0909351529'" 
