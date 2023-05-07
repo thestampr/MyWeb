@@ -8,7 +8,7 @@
             [ngClass]="{'fullsize': one_col}" 
             *ngFor="let item of items; let i = index">
             <h3>
-                <i id="icon-large" class="fa {{item.icon}}"></i>
+                <i id="icon-large" class="fa {{item.icon}}" *ngIf="item.icon != ''"></i>
                 {{item.title}}
             </h3>
             <div class="descriptions">

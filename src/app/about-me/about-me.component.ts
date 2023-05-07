@@ -29,7 +29,7 @@ export class AboutMeComponent implements OnInit {
     }
 
     MouseParallax(event: MouseEvent): void {
-        let modal_img: HTMLElement = document.getElementById("my-img")!;
+        let modal_img: HTMLElement = document.getElementById("modal-image")!;
         let x: number = (50 - event.clientX - (window.innerWidth / 2)) * 0.01
         let y: number = (50 - event.clientY - (window.innerHeight / 2)) * 0.01
 
@@ -40,7 +40,7 @@ export class AboutMeComponent implements OnInit {
         let modal: HTMLElement = document.getElementById("modal-img")!;
 
         if (MOUSE_PARALLAX) {
-            let modal_img: HTMLElement = document.getElementById("my-img")!;
+            let modal_img: HTMLElement = document.getElementById("modal-image")!;
             modal_img.style.transition = "none";
         }
         
@@ -52,7 +52,7 @@ export class AboutMeComponent implements OnInit {
         let me: HTMLElement = document.querySelector("#modal-img .me")!;
 
         if (MOUSE_PARALLAX) {
-            let modal_img: HTMLElement = document.getElementById("my-img")!;
+            let modal_img: HTMLElement = document.getElementById("modal-image")!;
             modal_img.style.transition = "all 0.2s ease-in-out";
         }
 

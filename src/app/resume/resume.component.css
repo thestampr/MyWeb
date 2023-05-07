@@ -30,6 +30,8 @@ p {
     clip-path: circle(50% at 50% 50%);
 
     object-fit: cover;
+
+    /* cursor: pointer; */
 }
 
 .card-name {
@@ -74,11 +76,11 @@ p {
 }
 
 .section-spacing {
-    margin-top: 20px;
+    margin-top: 18px;
 }
 
 .section-name {
-    margin-top: 20px;
+    margin-top: 18px;
 
     opacity: 0.4;
     font-size: 14px;

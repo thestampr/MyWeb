@@ -28,6 +28,20 @@
                             090-935-1529
                         </div>
 
+                        <div class="section-linebreak linebreak" [ngClass]="{'line-dark': theme.is_dark, 'line-white': !theme.is_dark}"></div>
+
+                        <div class="section-name">
+                            Date of birth
+                        </div>
+                        <div class="section-value">
+                            5 Apr 2001
+                        </div>
+
+                        <div class="section-name">Age</div>
+                        <div class="section-value">
+                            22 years
+                        </div>
+
                         <div class="section-name">Gender</div>
                         <div class="section-value">
                             Male
@@ -98,6 +112,38 @@
                         
                     </div>
                 </app-card>
+
+                <app-card class="card">
+                    <div class="auto-height">
+                        <div class="card-name">Projects</div>
+                        <div class="linebreak" [ngClass]="{'line-dark': theme.is_dark, 'line-white': !theme.is_dark}"></div>
+
+                        <ul>
+                            <li>
+                                <div class="section-name">Graduation project</div>
+                                <div class="section-value">
+                                    Water pH Conditioner
+                                </div>
+
+                                <p>
+                                    A graduation project to control the pH of water by an application that was made out of Blynk and Cpp for the software.
+                                </p>
+                            </li>
+                            <li>
+                                <div class="section-name">Personal project</div>
+                                <div class="section-value">
+                                    Discord music bot
+                                </div>
+
+                                <p>
+                                    A Discord music application that supports YouTube, Spotify, SoundCloud, Last.fm, and mp3 files (or message urls that have any mp3 files attached).
+                                </p>
+                            </li>
+                        </ul>
+
+                    </div>
+                </app-card>
+
                 <app-card class="card">
                     <div class="auto-height">
                         <div class="card-name">Skills</div>
@@ -149,6 +195,7 @@
                         </div>
                     </div>
                 </app-card>
+
                 <app-card class="card">
                     <div class="auto-height">
                         <div class="card-name">Work Experiences</div>
@@ -224,6 +271,7 @@
 
                     </div>
                 </app-card>
+
                 <app-card class="card">
                     <div class="auto-height">
                         <div class="card-name">Educations</div>
