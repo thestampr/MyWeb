@@ -27,7 +27,7 @@ import { FooterComponent } from './footer/footer.component';
 import { FlexCardBoxComponent } from './flex-card-box/flex-card-box.component';
 import { SwiperComponent } from './swiper/swiper.component';
 import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
-import { ModalViewComponent } from './modal-view/modal-view.component';
+import { ModalViewDirective } from './modal-view.directive';
 
 
 const routes: Routes = [
@@ -97,7 +97,7 @@ const routes: Routes = [
         FooterComponent,
         FlexCardBoxComponent,
         SwiperComponent,
-        ModalViewComponent,
+        ModalViewDirective,
     ],
     imports: [
         RouterModule.forRoot(routes),

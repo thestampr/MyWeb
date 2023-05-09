@@ -8,7 +8,7 @@
                         <!-- <div class="card-name">Personal information</div> -->
 
                         <div class="image">
-                            <img class="me" src="assets/images/me-rotated.jpg" /> 
+                            <img class="me" src="assets/images/me-rotated.jpg" ModalView /> 
                         </div>
 
                         <div class="section-linebreak linebreak" [ngClass]="{'line-dark': theme.is_dark, 'line-white': !theme.is_dark}"></div>
@@ -66,12 +66,24 @@
                         <div class="linebreak" [ngClass]="{'line-dark': theme.is_dark, 'line-white': !theme.is_dark}"></div>
 
                         <div class="section-name">Languages</div>
-                        <div class="section-value">
-                            English
-                            <div class="section-extra">
-                                Advance
-                            </div>
-                        </div>
+                        <ul>
+                            <li>
+                                <!-- <div class="section-value"> -->
+                                    Thai
+                                    <div class="section-extra">
+                                        Native
+                                    </div>
+                                <!-- </div> -->
+                            </li>
+                            <li>
+                                <!-- <div class="section-value"> -->
+                                    English
+                                    <div class="section-extra">
+                                        Advance
+                                    </div>
+                                <!-- </div> -->
+                            </li>
+                        </ul>
 
                         <div class="section-name">Toeic</div>
                         <div class="section-value">
@@ -319,3 +331,9 @@
     </div>
     <app-footer />
 </app-page>
+
+<div ModalView>
+    <div id="modal-frame">
+        <img id="modal-image" src="assets/images/me-rotated.jpg" (contextmenu)="false" />
+    </div>
+</div>
