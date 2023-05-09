@@ -1,14 +1,12 @@
 <app-page>
-    <div id="content" class="white-theme" [ngClass]="{'dark-theme': theme.is_dark}">
+    <div id="content" class="white-theme" [ngClass]="{'dark-theme': theme.is_dark}" >
 
         <div class="grid-content">
             <div class="side-field grid-item">
                 <app-card class="card">
                     <div class="personal">
-                        <!-- <div class="card-name">Personal information</div> -->
-
                         <div class="image">
-                            <img class="me" src="assets/images/me-rotated.jpg" ModalView /> 
+                            <img class="me" src="assets/images/me-rotated.jpg" [cdkContextMenuTriggerFor]="Image" ModalView /> 
                         </div>
 
                         <div class="section-linebreak linebreak" [ngClass]="{'line-dark': theme.is_dark, 'line-white': !theme.is_dark}"></div>
@@ -332,8 +330,20 @@
     <app-footer />
 </app-page>
 
-<div ModalView>
+<div (contextmenu)="false" ModalView>
     <div id="modal-frame">
-        <img id="modal-image" src="assets/images/me-rotated.jpg" (contextmenu)="false" />
+        <img id="modal-image" src="assets/images/me-rotated.jpg" />
     </div>
 </div>
+
+<ng-template #Download>
+    <div class="ContextMenu" cdkMenu>
+        <button class="ContextMenu-Item" cdkMenuItem (contextmenu)="false" (click)="backend.DownloadResume()">Download resume</button>
+    </div>
+</ng-template>
+
+<ng-template #Image>
+    <div class="ContextMenu" cdkMenu>
+        <button class="ContextMenu-Item" cdkMenuItem (contextmenu)="false" ModalView>View image</button>
+    </div>
+</ng-template>

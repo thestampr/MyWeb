@@ -2,7 +2,6 @@
     <div id="content" class="white-theme" [ngClass]="{'dark-theme': theme.is_dark}">
         <div id="container" class="container about">
 
-            <!-- <img class="me" src="assets/images/profile-2.jpg" [cdkContextMenuTriggerFor]="Image" (click)="ModalView()" />  -->
             <img class="me" src="assets/images/profile-2.jpg" [cdkContextMenuTriggerFor]="Image" ModalView /> 
 
             <span id="greeting">
@@ -53,15 +52,14 @@
     <app-footer />
 </app-page>
 
-<div ModalView>
+<div (contextmenu)="false" ModalView>
     <div id="modal-frame">
-        <img id="modal-image" src="assets/images/profile-2.jpg" (contextmenu)="false" />
+        <img id="modal-image" src="assets/images/profile-2.jpg" />
     </div>
 </div>
 
 <ng-template #Image>
     <div class="ContextMenu" cdkMenu>
         <button class="ContextMenu-Item" cdkMenuItem (contextmenu)="false" ModalView>View image</button>
-        <!-- <button class="ContextMenu-Item" cdkMenuItem>Download</button> -->
     </div>
 </ng-template>
