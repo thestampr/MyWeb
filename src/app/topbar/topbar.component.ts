@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { AppearanceService } from '../appearance.service';
@@ -9,12 +9,8 @@ import { AppearanceService } from '../appearance.service';
   templateUrl: './topbar.component.html',
   styleUrls: ['./topbar.component.css']
 })
-export class TopbarComponent implements OnInit {
+export class TopbarComponent{
     constructor(public theme: AppearanceService, private elementRef: ElementRef, public router: Router) {}
-
-    ngOnInit(): void {
-        // this._changeTheme();
-    }
 
     ToogleTheme(): void {
         this.theme.is_dark = !this.theme.is_dark;
@@ -22,7 +18,7 @@ export class TopbarComponent implements OnInit {
     }
 
     isActive(path: string): boolean {
-        return path === document.location.pathname.slice(1);
+        return document.location.pathname.endsWith(path);
     }
 
     private _changeTheme(): void {
