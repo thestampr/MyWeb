@@ -72,13 +72,17 @@ const routes: Routes = [
         } 
     },
     { 
-        path: '**', 
+        path: '404', 
         component: PageNotFoundComponent ,
         data: {
             title: 'Hmmm 404',
             description:"What are you looking for?",
             // ogUrl: 'your og url'
         }  
+    },
+    { 
+        path: '**', 
+        redirectTo: '404'
     },
 ];
 

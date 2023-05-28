@@ -98,14 +98,12 @@ nav a:hover {
     color: var(--scheme-color);
 }
 
-#mobile-nav-open, #mobile-nav-close {
+#mobile-nav-open {
     width: auto;
 
-    font-size: 30px;
-}
+    margin-right: 5px;
 
-#mobile-nav-open {
-    margin-right: 10px;
+    font-size: 20px;
 
     display: none;
 }
@@ -115,6 +113,8 @@ nav a:hover {
 }
 
 #mobile-nav-close {
+    width: auto;
+
     position: absolute;
 
     top: 20px;
@@ -147,6 +147,7 @@ nav a:hover {
 
 #mobile-nav {
     /* background-color: var(--white3); */
+    box-shadow: -1px 0 10px rgba(0, 0, 0, 0.1);
 
     width: 50%;
     height: auto;
@@ -169,7 +170,7 @@ nav a:hover {
     height: auto;
 
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
 
     padding-bottom: 80px;
     gap: 10px;
@@ -188,6 +189,10 @@ nav a:hover {
     padding-right: 20px;
 }
 
+#mobile-nav>button:hover, .buttom-nav>button:hover {
+    color: var(--scheme-color);
+}
+
 #mobile-nav-bg.open>#mobile-nav {
     margin-right: 0px;
 }
@@ -200,7 +205,7 @@ nav a:hover {
     background-color: var(--white3);
     color: var(--dark2);
 
-    border-left: 1px solid var(--alpha-dark);
+    /* border-left: 1px solid var(--alpha-dark); */
 }
 
 .whitepage-nav *:not(.active, :hover) {
@@ -211,7 +216,7 @@ nav a:hover {
     background-color: var(--dark2);
     color: var(--white3);
 
-    border-left: 1px solid var(--alpha-white);
+    /* border-left: 1px solid var(--alpha-white); */
 }
 
 .darkpage-nav *:not(.active, :hover) {
@@ -250,6 +255,8 @@ nav a:hover {
         margin-right: 10px;
 
         font-size: 20px;
+
+        display: none;
     }
 
     #mobile-nav-open {

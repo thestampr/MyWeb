@@ -6,7 +6,7 @@
     </nav>
 
     <button id="option-btn" mat-button [cdkMenuTriggerFor]="Option">⁝</button>
-    <button id="mobile-nav-open" (click)="OpenNav()">≡</button>
+    <button id="mobile-nav-open" class="fa fa-bars" aria-hidden="true" (click)="OpenNav()"></button>
 </header>
 
 <ng-template #Option>
@@ -25,9 +25,9 @@
         <button (click)="router.navigateByUrl('contact')" [ngClass]="{'active': isActive('contact')}">Contact</button>
         
         <div class="buttom-nav">
-            <button class="bottom" (click)="ToogleTheme()">{{theme.is_dark? "Light mode" : "Dark mode"}}</button>
-    
             <div class="linebreak" [ngClass]="{'line-dark': theme.is_dark, 'line-white': !theme.is_dark}"></div>
+            
+            <button class="bottom" (click)="ToogleTheme()">{{theme.is_dark? "Light mode" : "Dark mode"}}</button>
         </div>
     </div>
 </div>

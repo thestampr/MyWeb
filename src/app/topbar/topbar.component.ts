@@ -10,7 +10,7 @@ import { AppearanceService } from '../appearance.service';
   styleUrls: ['./topbar.component.css']
 })
 export class TopbarComponent{
-    constructor(public theme: AppearanceService, private elementRef: ElementRef, public router: Router) {}
+    constructor(public theme: AppearanceService, public router: Router, private elementRef: ElementRef) {}
 
     private _changeTheme(): void {
         let body: HTMLElement = this.elementRef.nativeElement.ownerDocument.body;
