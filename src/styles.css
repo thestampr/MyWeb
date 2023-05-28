@@ -449,6 +449,25 @@ mat-progress-bar {
     margin-left: .25em;
 }
 
+.linebreak {
+    width: 80%;
+    height: 1px;
+    opacity: 0.6;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    justify-self: center;
+}
+
+.line-white {
+    background-color: var(--alpha-dark);
+}
+
+.line-dark {
+    background-color: var(--alpha-white);
+}
+
 .flex-container {
     display: flex;
     flex-wrap: wrap;

@@ -157,31 +157,12 @@ li {
     padding-bottom: 10px;
 }
 
-.linebreak {
-    width: 80%;
-    height: 1px;
-    opacity: 0.6;
-
-    margin-left: auto;
-    margin-right: auto;
-
-    justify-self: center;
-}
-
 .grid-linebreak {
     display: none;
 }
 
 .section-linebreak {
     margin-top: 20px;
-}
-
-.line-white {
-    background-color: var(--alpha-dark);
-}
-
-.line-dark {
-    background-color: var(--alpha-white);
 }
 
 .timeline-item {
