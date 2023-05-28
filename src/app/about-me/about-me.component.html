@@ -1,55 +1,67 @@
 <app-page>
-    <div id="content" class="white-theme" [ngClass]="{'dark-theme': theme.is_dark}">
-        <div id="container" class="container about">
+    <div id="content">
+        <section class="scroll-reveal">
+            <div id="container" class="container about">
+                
+                <!-- <div class="aura"> -->
+                    <img class="me" src="assets/images/profile-2.jpg" [cdkContextMenuTriggerFor]="Image" ModalView /> 
+                <!-- </div> -->
+    
+                <span id="greeting">
+                    <h1>Peeradon Rungkanawut</h1>
+    
+                    <p>
+                        I have passion in programming and primarily use Python  <br>
+                        as my main programming language. Currently, I'm also studying Angular <br>
+                        for web development.<br>
+                        <br>
+                        I enjoy learning different things to meet my developmental goals. <br>
+                    </p>
+    
+                    <div class="buttons">
+                        <button id="resume" class="animated-btn" (click)="router.navigateByUrl('resume')">View resume</button>
+                        <button id="contact" class="animated-btn" (click)="router.navigateByUrl('contact')">Contact me</button>
+                    </div>
+                </span>
+            </div>
+        </section>
 
-            <img class="me" src="assets/images/profile-2.jpg" [cdkContextMenuTriggerFor]="Image" ModalView /> 
+        <section class="scroll-reveal">
+            <app-flex-card-box 
+                name="What I do"
+                [items]="[
+                    {icon: 'fa-code', title: 'Coding', descriptions: ['C / C++ / Python / JavaScript / TypeScript']}, 
+                    {icon: 'fa-sticky-note-o ', title: 'Web Design', descriptions: ['Angular / VueJs']}, 
+                    {icon: 'fa-cube', title: '3D Art', descriptions: ['Modeling, Lighting, Rendering', 'Blender']}, 
+                ]"
+            />
+        </section>
 
-            <span id="greeting">
-                <h1>Peeradon Rungkanawut</h1>
+        <section class="scroll-reveal">
+            <app-flex-card-box 
+                name="What I offer"
+                [items]="[
+                    {icon: '', title: 'Cool things', descriptions: ['Lorem ipsum dolor sit amet consectetur adipisicing elit']}, 
+                    {icon: '', title: 'Clean work', descriptions: ['Lorem ipsum dolor sit amet consectetur adipisicing elit']}, 
+                ]"
+            />
+        </section>
 
-                <p>
-                    I am interested in backend programming and primarily use Python  <br>
-                    as my main programming language. Currently, I'm also studying Angular <br>
-                    for web development.<br>
-                    <br>
-                    I enjoy learning different things to meet my developmental goals. <br>
-                </p>
-
-                <div class="buttons">
-                    <button id="resume" class="animated-btn" (click)="router.navigateByUrl('resume')">View resume</button>
-                    <button id="contact" class="animated-btn" (click)="router.navigateByUrl('contact')">Contact me</button>
-                </div>
-            </span>
-        </div>
-
-        <app-flex-card-box 
-            name="What I do"
-            [items]="[
-                {icon: 'fa-code', title: 'Coding', descriptions: ['C / Cpp / Python / TypeScript']}, 
-                {icon: 'fa-code', title: 'Web Design', descriptions: ['Angular / VueJs']}, 
-                {icon: 'fa-cube', title: '3D Art', descriptions: ['Modeling, Lighting, Rendering', 'Blender']}, 
-            ]"
-        />
-
-        <!-- <app-flex-card-box 
-            name="What I offer"
-            [items]="[
-                {icon: '', title: 'Cool things', descriptions: ['Lorem ipsum dolor sit amet consectetur adipisicing elit']}, 
-                {icon: '', title: 'Clean code', descriptions: ['Lorem ipsum dolor sit amet consectetur adipisicing elit']}, 
-            ]"
-        />
-
-        <app-swiper 
-            name="Lifestyle picture" 
-            [portrait]="true"
-            [images]="[
-                'assets/images/profile.jpg', 
-                'assets/images/profile-2.jpg', 
-            ]"
-        /> -->
+        <section class="scroll-reveal">
+            <app-swiper 
+                name="Lifestyle picture" 
+                [portrait]="true"
+                [images]="[
+                    'assets/images/lifestyle/0.jpg', 
+                    'assets/images/lifestyle/1.jpg', 
+                    'assets/images/lifestyle/2.jpg', 
+                    'assets/images/lifestyle/3.jpg', 
+                    'assets/images/lifestyle/4.jpg', 
+                ]"
+            />
+        </section>
 
     </div>
-    <app-footer />
 </app-page>
 
 <div (contextmenu)="false" ModalView>

@@ -59,12 +59,13 @@ nav {
 nav a {
     font-weight: 400;
     font-size: 15px;
-    text-decoration: none;
+    /* text-decoration: none; */
 
     text-underline-offset: 2px;
 }
 
 nav a:hover {
+    /* color: var(--scheme-color); */
     text-decoration: underline;
 }
 
@@ -72,16 +73,15 @@ nav a:hover {
     /* position: fixed; */
     top: 0;
 
-    z-index: 100;
+    z-index: 9999;
 }
 
 .whitepage-header {
     background-color: var(--white3);
     color: var(--dark2);
-    /* border-bottom: 1px solid var(--alpha-dark); */
 }
 
-.whitepage-header * {
+.whitepage-header *:not(.active, :hover:not(#option-btn)) {
     color: var(--dark2);
 }
 
@@ -91,8 +91,12 @@ nav a:hover {
     border-bottom: 1px solid var(--alpha-white);
 }
 
-.darkpage-header * {
+.darkpage-header *:not(.active, :hover:not(#option-btn)) {
     color: var(--white3);
+}
+
+.active {
+    color: var(--scheme-color);
 }
 
 

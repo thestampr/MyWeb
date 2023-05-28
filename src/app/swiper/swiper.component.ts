@@ -11,6 +11,7 @@ export class SwiperComponent {
     @Input() name: string;
     @Input() images: string[];
     @Input() portrait?: boolean;
+    @Input() fullscreen?: boolean;
     
     config: SwiperOptions = {
         pagination: { 
@@ -21,6 +22,9 @@ export class SwiperComponent {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev'
         },
-        spaceBetween: 30
+        spaceBetween: 30, 
+        autoplay: true, 
+        effect: 'slide', 
+        loop: false
     }; 
 }

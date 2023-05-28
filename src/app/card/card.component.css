@@ -27,18 +27,32 @@
     animation: WalkIn ease 1s;
 }
 
-.whitepage {
+/* .whitepage {
     background-color: rgba(255, 255, 255, 0.75);
-    /* border: 1px solid var(--alpha-dark); */
+    border: 1px solid var(--alpha-dark);
     color: var(--dark3);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .darkpage {
     background-color: rgba(28, 28, 28, 0.75);
-    /* border: 1px solid var(--alpha-white); */
+    border: 1px solid var(--alpha-white);
     color: var(--white3);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.9);
+} */
+
+.whitepage {
+    background-color: var(--alpha-white2);
+    /* border: 1px solid var(--alpha-dark); */
+    color: var(--dark3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.darkpage {
+    background-color: var(--alpha-dark2);
+    /* border: 1px solid var(--alpha-white); */
+    color: var(--white3);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.35);
 }
 
 
@@ -49,18 +63,4 @@
 }
 
 @media only screen and (max-width: 600px) {
-}
-
-
-@keyframes WalkIn {
-    0% {
-        opacity: 0;
-        /* margin-top: 20px; */
-        transform: translateY(10px);
-    }
-    100% {
-        opacity: 1;
-        /* margin-top: 10px; */
-        transform: translateY(0px);
-     }
 }

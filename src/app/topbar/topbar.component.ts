@@ -21,6 +21,10 @@ export class TopbarComponent implements OnInit {
         this._changeTheme();
     }
 
+    isActive(path: string): boolean {
+        return path === document.location.pathname.slice(1);
+    }
+
     private _changeTheme(): void {
         let body: HTMLElement = this.elementRef.nativeElement.ownerDocument.body;
         body.style.backgroundColor = this.theme.background_color;

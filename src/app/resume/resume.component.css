@@ -279,6 +279,9 @@ mat-progress-bar {
 
     right: 0;
     margin-left: auto;
+
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 :host ::ng-deep mat-progress-bar .mdc-linear-progress__bar-inner {

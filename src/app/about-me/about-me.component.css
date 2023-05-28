@@ -17,6 +17,10 @@
     object-fit: cover;
 }
 
+.aura {
+    filter: drop-shadow(0 0 10px var(--alpha-scheme-color))
+}
+
 .hidden-modal {
     animation: fadeOut ease 0.2s;
 }
@@ -35,7 +39,6 @@
 
 .about {
     margin-top: 50px;
-    margin-bottom: 150px;
 }
 
 .container {
@@ -59,6 +62,18 @@
     border: unset;
     background-color: var(--scheme-color);
     color: var(--white1);
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+#resume {
+    border: unset;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+section {
+    margin-bottom: 150px;
 }
 
 

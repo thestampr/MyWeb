@@ -1,8 +1,13 @@
 :root {
-    --dark1: #111111;
+    /* --dark1: #111111;
     --dark2: #1c1c1c;
     --dark3: #252525;
-    --dark4: #404040;
+    --dark4: #404040; */
+
+    --dark1: #17181e;
+    --dark2: #1f2129;
+    --dark3: #272934;
+    --dark4: #36383f;
 
     --white1: #FFFFFF;
     --white2: #EFEFEF;
@@ -10,10 +15,15 @@
     --white4: #C1C1C1;
     --white5: #a6a6a6;
 
-    --alpha-dark: rgba(28, 28, 28, 0.2);
+    /* --alpha-dark: rgba(28, 28, 28, 0.2); */
+    --alpha-dark: rgba(31, 33, 41, 0.2);
+    --alpha-dark2: rgba(31, 33, 41, 0.75);
+    
     --alpha-white: rgba(255, 255, 255, 0.1);
+    --alpha-white2: rgba(255, 255, 255, 0.75);
 
     --scheme-color: #7C83C8;
+    --alpha-scheme-color: rgba(124, 131, 200, 0.2);
 }
 
 
@@ -24,6 +34,7 @@
     outline: none;
 
     transition: background-color 0.2s ease-in-out, 
+    color 0.2s ease-in-out, 
     filter 0.5s ease-in-out, 
     -moz-filter 0.5s ease-in-out, 
     -webkit-filter 0.5s ease-in-out, 
@@ -139,13 +150,25 @@ h1 {
 }
 
 .white-theme button {
-    border: 1px solid var(--alpha-dark);
+    /* border: 1px solid var(--alpha-dark);
+    background-color: var(--white1); */
+
+    border: none;
+    color: var(--dark3);
     background-color: var(--white1);
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .dark-theme button {
-    border: 1px solid var(--alpha-white);
+    /* border: 1px solid var(--alpha-white);
+    background-color: var(--dark3); */
+
+    border: none;
+    color: var(--white1);
     background-color: var(--dark3);
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 .whitepage {
@@ -160,6 +183,24 @@ h1 {
     color: var(--white3);
 }
 
+/* same as .white-theme button */
+.white-btn {
+    border: none;
+    color: var(--dark3);
+    background-color: var(--white1);
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* same as .dark-theme button */
+.dark-btn {
+    border: none;
+    color: var(--white1);
+    background-color: var(--dark3);
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
 
 /* webkit */
 ::-webkit-scrollbar {
@@ -171,6 +212,7 @@ h1 {
     display: block;
 
     transition: background-color 0.2s ease-in-out;
+    -webkit-transition: background-color 0.2s ease-in-out;
 }
 
 ::-webkit-scrollbar-track {
@@ -178,7 +220,7 @@ h1 {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.2);
 
     border-radius: 10px;
     border: solid 3px transparent;
@@ -186,10 +228,29 @@ h1 {
 
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    
+    transition: background-color 0.2s ease-in-out;
+    -webkit-transition: background-color 0.2s ease-in-out;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.white-theme::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.white-theme::-webkit-scrollbar-thumb:hover  {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.white-theme::-webkit-scrollbar-thumb:active {
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 
@@ -504,6 +565,15 @@ mat-progress-bar {
     object-fit: cover;
 }
 
+.scroll-reveal {
+    opacity: 0;
+}
+
+.revealed {
+    opacity: 1;
+    animation: WalkIn-from-right ease 1s;
+}
+
 /* directive component */
 img[ModalView] {
     cursor: pointer;
@@ -609,4 +679,30 @@ div[ModalView] {
         opacity: 0;
         scale: 75%;
     }
+}
+
+@keyframes WalkIn {
+    0% {
+        opacity: 0;
+        /* margin-top: 20px; */
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        /* margin-top: 10px; */
+        transform: translateY(0px);
+     }
+}
+
+@keyframes WalkIn-from-right {
+    0% {
+        opacity: 0;
+        /* margin-top: 20px; */
+        transform: translateX(10px);
+    }
+    100% {
+        opacity: 1;
+        /* margin-top: 10px; */
+        transform: translateX(0px);
+     }
 }

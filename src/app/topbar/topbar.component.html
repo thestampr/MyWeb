@@ -1,11 +1,11 @@
-<header class="floating whitepage-header" [ngClass]="{'darkpage-header': theme.is_dark}" (contextmenu)="false">
+<header class="floating" [ngClass]="{'darkpage-header': theme.is_dark, 'whitepage-header': !theme.is_dark}" (contextmenu)="false">
     <nav>
-        <a (click)="router.navigateByUrl('aboutme')">About me</a>
+        <a (click)="router.navigateByUrl('aboutme')" [ngClass]="{'active': isActive('aboutme')}">About me</a>
         <!-- <a (click)="router.navigateByUrl('resume')">Resume</a> -->
-        <a (click)="router.navigateByUrl('contact')">Contact</a>
+        <a (click)="router.navigateByUrl('contact')" [ngClass]="{'active': isActive('contact')}">Contact</a>
     </nav>
 
-    <button id="option-btn" class="white-theme" [ngClass]="{'dark-theme': theme.is_dark}" mat-button [cdkMenuTriggerFor]="Option">⁝</button>
+    <button id="option-btn" mat-button [cdkMenuTriggerFor]="Option">⁝</button>
 </header>
 
 <ng-template #Option>

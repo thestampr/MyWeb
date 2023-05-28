@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 
 const theme_key: string = "dark_theme";
 
-const dark: string = "#111111";
+// const dark: string = "#111111";
+const dark: string = "#17181e";
 const white: string = "#E0E0E0";
 
 

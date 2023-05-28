@@ -7,6 +7,7 @@ import * as utils from './utils';
     selector: '[ModalView]'
 })
 export class ModalViewDirective implements OnInit {
+    private _source: string;
     private _el_type: string;
 
     @Input() parallax: boolean;
@@ -16,6 +17,10 @@ export class ModalViewDirective implements OnInit {
     ngOnInit(): void {
         let el: HTMLElement = this.elementRef.nativeElement;
         this._el_type = el.nodeName;
+
+        if (this._el_type === "IMG") {
+            this._source = (<HTMLImageElement>el).src;
+        }
 
         if (this.parallax) {
             document.addEventListener("mousemove", this.MouseParallax);
@@ -44,7 +49,7 @@ export class ModalViewDirective implements OnInit {
             
             modal.style.display = "flex";
         } else {
-            // then close
+            // then close if click on div
 
             let modal: HTMLElement = document.querySelector("div[ModalView]")!;
             let modal_img: HTMLElement = document.getElementById("modal-image")!;
