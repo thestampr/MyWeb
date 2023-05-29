@@ -57,7 +57,7 @@ export class ModelViewerComponent implements AfterViewInit, OnDestroy {
         return this.canvas.clientWidth / this.canvas.clientHeight;
     }
 
-    private _createControls = () => {
+    private _createControls(): void {
         this.controler = new OrbitControls(this.camera, this.renderer.domElement);
         this.controler.autoRotate = this.doRotate;
         this.controler.enableZoom = true;
@@ -120,6 +120,9 @@ export class ModelViewerComponent implements AfterViewInit, OnDestroy {
     }
 
     private _loadModel(): void {
+        let preloader: HTMLElement = document.getElementById('loader')!;
+        let preloaderText: HTMLElement = document.querySelector('#loader>p')!;
+
         this.modelLoader.load(
             this.file, (gltf: GLTF) => {
                 let box = new THREE.Box3().setFromObject(gltf.scene);
@@ -129,5 +132,29 @@ export class ModelViewerComponent implements AfterViewInit, OnDestroy {
                 this.scene.add(gltf.scene);
             }
         );
+        
+        const manager = new THREE.LoadingManager();
+        this.modelLoader.manager = manager;
+
+        manager.onStart = function ( url, itemsLoaded, itemsTotal ) {
+            console.log( 'Started loading file: ' + url + '.\nLoaded ' + itemsLoaded + ' of ' + itemsTotal + ' files.' );
+        };
+
+        manager.onLoad = function ( ) {
+            console.log( 'Loading complete!');
+
+            preloader.style.opacity = '0';
+            preloader.style.visibility = 'hidden';
+        };
+
+        manager.onProgress = function ( url, itemsLoaded, itemsTotal ) {
+            console.log( 'Loading file: ' + url + '.\nLoaded ' + itemsLoaded + ' of ' + itemsTotal + ' files.' );
+        };
+
+        manager.onError = function ( url ) {
+            console.log( 'There was an error loading ' + url );
+
+            preloaderText.innerText = 'Error';
+        };
     }
 }
