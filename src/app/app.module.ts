@@ -28,6 +28,7 @@ import { FlexCardBoxComponent } from './flex-card-box/flex-card-box.component';
 import { SwiperComponent } from './swiper/swiper.component';
 import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
 import { ModalViewDirective } from './modal-view.directive';
+import { ModelViewerComponent } from './model-viewer/model-viewer.component';
 
 
 const routes: Routes = [
@@ -72,6 +73,10 @@ const routes: Routes = [
         } 
     },
     { 
+        path: '3d', 
+        component: ModelViewerComponent 
+    },
+    { 
         path: '404', 
         component: PageNotFoundComponent ,
         data: {
@@ -102,6 +107,7 @@ const routes: Routes = [
         FlexCardBoxComponent,
         SwiperComponent,
         ModalViewDirective,
+        ModelViewerComponent,
     ],
     imports: [
         RouterModule.forRoot(routes),

@@ -70,7 +70,7 @@ h2 {
     margin-top: 0px;
 }
 
-h3 {
+h3, h3>p {
     font-size: 40px;
     font-weight: 500;
 
@@ -89,6 +89,22 @@ h3 {
 
 .flexable.fullsize {
     width: 800px;
+}
+
+.clickable, .clickable * {
+    cursor: pointer;
+}
+
+/* .clickable:hover {
+    scale: 1.01;
+} */
+
+.white-theme .clickable:hover {
+    background-color: var(--white1);
+}
+
+.dark-theme .clickable:hover {
+    background-color: var(--dark3);
 }
 
 

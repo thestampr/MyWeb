@@ -1,5 +1,6 @@
 export interface IconCard {
-    icon: string;
+    icon?: string;
     title: string;
-    descriptions: string[];
+    descriptions?: string[];
+    url?: string;
 }

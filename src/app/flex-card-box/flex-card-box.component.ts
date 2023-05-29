@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { IconCard } from '../icon-card';
 
@@ -12,4 +13,6 @@ export class FlexCardBoxComponent {
     @Input() name: string = "";
     @Input() one_col: boolean = false;
     @Input() items: IconCard[] = [];
+
+    constructor(public router: Router) {}
 }

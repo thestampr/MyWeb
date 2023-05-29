@@ -1,5 +1,5 @@
 import { Component, ElementRef } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, NavigationStart, NavigationEnd } from '@angular/router';
 
 import { AppearanceService } from '../appearance.service';
 import { BackendService } from '../backend.service';
@@ -21,7 +21,15 @@ export class PageComponent{
         private backend: BackendService, 
         private elementRef: ElementRef
     ) {
-        router.events.subscribe(() => {
+        router.events.subscribe((event) => {
+            if ( event instanceof NavigationStart ) {
+                // console.log('start');
+            }
+
+            if ( event instanceof NavigationEnd ) {
+                // console.log('end');
+            }
+
             this.OnEnter();
         });
     }
