@@ -76,6 +76,13 @@ export class PageComponent{
             to_top.style.opacity = "0";
             to_top.style.visibility = "hidden";
         }
+        
+        // let topbar: HTMLElement = document.getElementById("topbar")!;
+        // if (scroll_page.scrollTop > 100) {
+        //     topbar.classList.add("floating");
+        // } else {
+        //     topbar.classList.remove("floating");
+        // }
     }
 
     ToTop(): void {

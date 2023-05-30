@@ -67,7 +67,7 @@ nav a:hover {
     text-decoration: underline;
 }
 
-.floating {
+#topbar {
     width: 100%;
     height: 100%;
 
@@ -78,8 +78,6 @@ nav a:hover {
     position: absolute;
     top: 0;
     left: 0;
-
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
 
     z-index: 1000;
 }
@@ -93,14 +91,21 @@ nav a:hover {
     color: var(--dark2);
 }
 
+.whitepage-header>.floating {
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
 .darkpage-header {
     background-color: var(--dark1);
     color: var(--white3);
-    border-bottom: 1px solid var(--alpha-white);
 }
 
 .darkpage-header *:not(.active, :hover:not(#option-btn)) {
     color: var(--white3);
+}
+
+.darkpage-header>.floating {
+    border-bottom: 1px solid var(--alpha-white);
 }
 
 .active {
