@@ -23,8 +23,12 @@ export class SwiperComponent {
             prevEl: '.swiper-button-prev'
         },
         spaceBetween: 30, 
-        autoplay: true, 
+        autoplay: {
+            disableOnInteraction: false, 
+        }, 
         effect: 'slide', 
-        loop: false
+        loop: false, 
+        observer: true, 
+        observeParents: true
     }; 
 }
