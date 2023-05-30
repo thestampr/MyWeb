@@ -6,12 +6,11 @@ header {
     width: 100%;
     height: 60px;
 
+    position: relative;
+
     display: flex;
-    justify-content: right;
-    align-items: center;
 
     top: 0;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
 }
 
 button {
@@ -69,10 +68,20 @@ nav a:hover {
 }
 
 .floating {
-    /* position: fixed; */
-    top: 0;
+    width: 100%;
+    height: 100%;
 
-    z-index: 9999;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+
+    z-index: 1000;
 }
 
 .whitepage-header {
@@ -108,8 +117,8 @@ nav a:hover {
     display: none;
 }
 
-#mobile-nav-open:active {
-    color: var(--scheme-color);
+#mobile-nav-open:focus {
+    color: unset;
 }
 
 #mobile-nav-close {
