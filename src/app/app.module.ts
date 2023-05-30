@@ -34,55 +34,50 @@ import { ModelViewerComponent } from './model-viewer/model-viewer.component';
 const routes: Routes = [
     { 
         path: '', 
-        component: LandingComponent  ,
+        component: LandingComponent,
         data: {
             title: 'Home',
             description:"Hi I'm Stamp, nice to meet you!",
             Image: 'assets/images/profile.jpg',
-            // ogUrl: 'your og url'
         } 
     },
     { 
         path: 'aboutme', 
-        component: AboutMeComponent ,
+        component: AboutMeComponent,
         data: {
             title: 'About me',
             description:"Hi I'm Stamp, nice to meet you!",
             Image: 'assets/images/profile.jpg',
-            // ogUrl: 'your og url'
         } 
     },
     { 
         path: 'contact', 
-        component: ContactComponent ,
+        component: ContactComponent,
         data: {
             title: 'Contact me',
             description:"Feel free to contact me!",
             Image: 'assets/images/profile.jpg',
-            // ogUrl: 'your og url'
         } 
     },
     { 
         path: 'resume', 
-        component: ResumeComponent ,
+        component: ResumeComponent,
         data: {
             title: 'Resume',
             description:"Stamp's resume is here!",
             Image: 'assets/images/profile.jpg',
-            // ogUrl: 'your og url'
         } 
     },
     { 
         path: '3d', 
-        component: ModelViewerComponent 
+        component: ModelViewerComponent
     },
     { 
         path: '404', 
-        component: PageNotFoundComponent ,
+        component: PageNotFoundComponent,
         data: {
             title: 'Hmmm 404',
             description:"What are you looking for?",
-            // ogUrl: 'your og url'
         }  
     },
     { 
