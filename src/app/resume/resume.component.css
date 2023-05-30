@@ -264,13 +264,15 @@ progress {
     margin-bottom: auto;
 
     border: 0;
-    border-radius: 20px;
+    border-radius: 100px;
 }
 
 progress::-webkit-progress-bar {
     border: 0;
     height: 10px;
-    border-radius: 20px;
+    border-radius: 100px;
+
+    transition: background-color 0.2s ease-in-out;
 }
 
 :host ::ng-deep .white-theme progress::-webkit-progress-bar {
@@ -282,22 +284,27 @@ progress::-webkit-progress-bar {
 }
 
 progress::-webkit-progress-value {
-    border: 0;
     height: 10px;
-    border-radius: 20px;
+
+    border: 0;
+    border-radius: 100px;
 
     background-color: var(--scheme-color);
+
+    transition: width 1s ease-in-out;
+    animation: progressBar 3s ease-in-out;
+    animation-fill-mode: both; 
 }
 
 progress::-moz-progress-bar {
     border: 0;
     height: 10px;
-    border-radius: 20px;
+    border-radius: 100px;
 }
 
 progress[value] {
     background-color: none;
-    border-radius: 40px;
+    border-radius: 100px;
 }
 
 
@@ -471,5 +478,15 @@ progress[value] {
     
     .section-extra {
         font-size: 12px;
+    }
+}
+
+
+@keyframes progressBar {
+    0% { 
+        width: 0%; 
+    }
+    100% { 
+        width: 100%; 
     }
 }

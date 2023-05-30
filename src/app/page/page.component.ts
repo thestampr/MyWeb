@@ -38,15 +38,15 @@ export class PageComponent{
         this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = this.theme.background_color;
         this.backend.updateMeta();
 
-        let sections: NodeListOf<HTMLElement> = document.querySelectorAll(".scroll-reveal");
+        let revealItems: HTMLCollectionOf<Element> = document.getElementsByClassName("scroll-reveal");
         let scroll_page: HTMLElement = document.getElementById("scroll-page")!;
 
-        for (let i = 0; i < sections.length; i++) {
+        for (let i = 0; i < revealItems.length; i++) {
             let windowHeight = window.innerHeight;
-            let elementTop = sections[i].getBoundingClientRect().top;
+            let elementTop = revealItems[i].getBoundingClientRect().top;
         
             if (elementTop < windowHeight/VISIBLE) {
-                sections[i].classList.add("revealed");
+                revealItems[i].classList.add("revealed");
             }
         }
 
@@ -56,16 +56,16 @@ export class PageComponent{
     }
     
     OnScroll(): void {
-        let sections: NodeListOf<HTMLElement>  = document.querySelectorAll(".scroll-reveal");
+        let revealItems: HTMLCollectionOf<Element> = document.getElementsByClassName("scroll-reveal");
         let scroll_page: HTMLElement = document.getElementById("scroll-page")!;
         let to_top: HTMLElement = document.getElementById("to-top")!;
 
-        for (let i = 0; i < sections.length; i++) {
+        for (let i = 0; i < revealItems.length; i++) {
             let windowHeight = window.innerHeight;
-            let elementTop = sections[i].getBoundingClientRect().top;
+            let elementTop = revealItems[i].getBoundingClientRect().top;
         
             if (elementTop < windowHeight/VISIBLE) {
-                sections[i].classList.add("revealed");
+                revealItems[i].classList.add("revealed");
             }
         }
         
@@ -87,7 +87,6 @@ export class PageComponent{
 
     ToTop(): void {
         let scroll_page: HTMLElement = document.getElementById("scroll-page")!;
-
         scroll_page.scrollTo(0, 0);
     }
 }
