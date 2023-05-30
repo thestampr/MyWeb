@@ -41,6 +41,14 @@ p {
 .card-name {
     opacity: 0.4;
     font-size: 14px;
+
+    position: relative;
+}
+
+.card-name>.section-extra {
+    right: 0;
+
+    opacity: 1;
 }
 
 #content {
@@ -243,16 +251,8 @@ li {
     padding-left: 5px;
 }
 
-/* .darktheme .timeline-dot {
-    border: 4px solid var(--alpha-white);
-}
 
-.darktheme .timeline-line {
-    background-color: var(--alpha-white);
-} */
-
-
-mat-progress-bar {
+progress {
     height: 10px;
     width: 70%;
 
@@ -260,16 +260,59 @@ mat-progress-bar {
 
     right: 0;
     margin-left: auto;
-
     margin-top: auto;
     margin-bottom: auto;
+
+    border: 0;
+    border-radius: 20px;
 }
 
-:host ::ng-deep mat-progress-bar .mdc-linear-progress__bar-inner {
-    border-color: var(--scheme-color);
-    border-top-width: 20px; /* full height */
+progress::-webkit-progress-bar {
+    border: 0;
+    height: 10px;
+    border-radius: 20px;
+}
 
-    /* border-radius: 1000px; */
+:host ::ng-deep .white-theme progress::-webkit-progress-bar {
+    background-color: var(--alpha-dark);
+}
+
+:host ::ng-deep .dark-theme progress::-webkit-progress-bar {
+    background-color: var(--alpha-white);
+}
+
+progress::-webkit-progress-value {
+    border: 0;
+    height: 10px;
+    border-radius: 20px;
+
+    background-color: var(--scheme-color);
+}
+
+progress::-moz-progress-bar {
+    border: 0;
+    height: 10px;
+    border-radius: 20px;
+}
+
+progress[value] {
+    background-color: none;
+    border-radius: 40px;
+}
+
+
+.mat-expansion-panel-header {
+    height: 40px;
+    padding: 0;
+}
+
+.mat-expansion-panel {
+    background: unset;
+    box-shadow: unset;
+}
+
+.mat-expansion-panel, .mat-expansion-panel * {
+    cursor: pointer;
 }
 
 
@@ -326,9 +369,8 @@ mat-progress-bar {
         margin-right: 5px;
     }
 
-    mat-progress-bar {
+    progress {
         height: 8px;
-        /* width: 70%; */
     }
 }
 
@@ -401,9 +443,9 @@ mat-progress-bar {
         padding-top: 3px;
     }
 
-    mat-progress-bar {
+    progress {
         height: 10px;
-        width: 65%;
+        width: 50%;
     }
 
     .side-field {
@@ -429,9 +471,5 @@ mat-progress-bar {
     
     .section-extra {
         font-size: 12px;
-    }
-
-    mat-progress-bar {
-        width: 50%;
     }
 }

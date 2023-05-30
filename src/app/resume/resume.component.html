@@ -157,38 +157,95 @@
 
                 <app-card class="card">
                     <div class="auto-height">
-                        <div class="card-name">Skills</div>
+                        <div class="card-name">
+                            Skills
+                            <div class="section-extra">click for more details</div>
+                        </div>
                         <div class="linebreak" [ngClass]="{'line-dark': theme.is_dark, 'line-white': !theme.is_dark}"></div>
+                        <div class="section-spacing"></div>
 
-                        <div class="section-spacing"></div>
-                        <div class="section-value">
-                            C, C++
-                            <mat-progress-bar mode="determinate" value="70" matTooltipPosition="left" matTooltip="Experienced"/>
-                        </div>
-                        
-                        <div class="section-spacing"></div>
-                        <div class="section-value">
-                            Python
-                            <mat-progress-bar mode="determinate" value="85" matTooltipPosition="left" matTooltip="Experienced" />
-                        </div>
-                        
-                        <div class="section-spacing"></div>
-                        <div class="section-value">
-                            TypeScript
-                            <mat-progress-bar mode="determinate" value="50" matTooltipPosition="left" matTooltip="Intermediate" />
-                        </div>
-                        
-                        <div class="section-spacing"></div>
-                        <div class="section-value">
-                            Angular
-                            <mat-progress-bar mode="determinate" value="40" matTooltipPosition="left" matTooltip="Intermediate" />
-                        </div>
-                        
-                        <div class="section-spacing"></div>
-                        <div class="section-value">
-                            Self-Learning
-                            <mat-progress-bar mode="determinate" value="99" matTooltipPosition="left" matTooltip="Expert" />
-                        </div>
+                        <mat-accordion>
+                            <mat-expansion-panel hideToggle>
+                                <mat-expansion-panel-header>
+                                    <div class="section-value">
+                                        C, C++
+                                        <progress max="100" value="70" matTooltipPosition="left" matTooltip="Experienced"></progress>
+                                        <!-- <mat-progress-bar mode="determinate" value="70" matTooltipPosition="left" matTooltip="Experienced"/> -->
+                                    </div>
+                                </mat-expansion-panel-header>
+                                <ul>
+                                    <li>Console application</li>
+                                    <li>Arduino, NodeMcu</li>
+                                    <li>Microcontroller, iot</li>
+                                    <li>Data types, OOP</li>
+                                    <li>etc.</li>
+                                </ul>
+                            </mat-expansion-panel>
+
+                            <mat-expansion-panel hideToggle>
+                                <mat-expansion-panel-header>
+                                    <div class="section-value">
+                                        Python
+                                        <progress max="100" value="85" matTooltipPosition="left" matTooltip="Experienced"></progress>
+                                        <!-- <mat-progress-bar mode="determinate" value="85" matTooltipPosition="left" matTooltip="Experienced" /> -->
+                                    </div>
+                                </mat-expansion-panel-header>
+                                <ul>
+                                    <li>Console application</li>
+                                    <li>Annotation, Type-Hint</li>
+                                    <li>Documentation, Clean code</li>
+                                    <li>Data types, OOP, Enum, Module</li>
+                                    <li>requests, socket, pymongo</li>
+                                    <li>etc.</li>
+                                </ul>
+                            </mat-expansion-panel>
+
+                            <mat-expansion-panel hideToggle>
+                                <mat-expansion-panel-header>
+                                    <div class="section-value">
+                                        TypeScript
+                                        <progress max="100" value="60" matTooltipPosition="left" matTooltip="Experienced"></progress>
+                                        <!-- <mat-progress-bar mode="determinate" value="60" matTooltipPosition="left" matTooltip="Intermediate" /> -->
+                                    </div>
+                                </mat-expansion-panel-header>
+                                <ul>
+                                    <li>Type-Hint, Basic how-to</li>
+                                    <li>Angular things</li>
+                                    <li>etc.</li>
+                                </ul>
+                            </mat-expansion-panel>
+
+                            <mat-expansion-panel hideToggle>
+                                <mat-expansion-panel-header>
+                                    <div class="section-value">
+                                        Angular
+                                        <progress max="100" value="50" matTooltipPosition="left" matTooltip="Experienced"></progress>
+                                        <!-- <mat-progress-bar mode="determinate" value="50" matTooltipPosition="left" matTooltip="Intermediate" /> -->
+                                    </div>
+                                </mat-expansion-panel-header>
+                                <ul>
+                                    <li>Html, Css, TypeScript</li>
+                                    <li>Injection, Service, Interface</li>
+                                    <li>Component, Cdk, etc.</li>
+                                </ul>
+                            </mat-expansion-panel>
+
+                            <mat-expansion-panel hideToggle>
+                                <mat-expansion-panel-header>
+                                    <div class="section-value">
+                                        Self learning
+                                        <progress max="100" value="95" matTooltipPosition="left" matTooltip="Experienced"></progress>
+                                        <!-- <mat-progress-bar mode="determinate" value="95" matTooltipPosition="left" matTooltip="Expert" /> -->
+                                    </div>
+                                </mat-expansion-panel-header>
+                                <ul>
+                                    <li>Open to learn</li>
+                                    <li>Basic of how-to</li>
+                                    <li>Finding keywords</li>
+                                    <li>Solves any problem</li>
+                                </ul>
+                            </mat-expansion-panel>
+                        </mat-accordion>
                     </div>
                 </app-card>
 
@@ -219,27 +276,6 @@
                                 </div>
                             </div>
                         </div>
-
-                        <!-- <div class="timeline-item" [ngClass]="{'darktheme': theme.is_dark}">
-                            <div class="timeline-head">
-                                <span class="timeline-dot"></span>
-                                <span class="timeline-line"></span>
-                            </div>
-                            <div class="timeline-content">
-                                <div class="section-name">2020 - Present</div>
-                                <div class="section-value">
-                                    Developer
-                                    <div class="section-extra">self-employed</div>
-                                </div>
-                                <div class="auto-height">
-                                    <ul>
-                                        <li>A discord music application that supports <b>YouTube</b>, <b>Spotify</b>, <b>SoundCloud</b>, and <b>Last.fm </b>                                       </li>
-                                        <li>Using discord.py lib, Google, Spotify api and database <b>MongoDB</b>.</li>
-                                        <li>UX design and development.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div> -->
 
                         <div class="timeline-item" [ngClass]="{'darktheme': theme.is_dark}">
                             <div class="timeline-head">
@@ -298,7 +334,7 @@
                                 <div class="section-value">
                                     Rajamangala University of Technology Thanyaburi
                                 </div>
-                                <div class="section-name">Bachelor of Engineering</div>
+                                <div class="section-name">Bachelor of Engineering, Electronics</div>
                             </div>
                         </div>
                         <div class="section-name">Present</div>
