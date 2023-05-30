@@ -588,10 +588,6 @@ mat-progress-bar {
     opacity: 0;
 }
 
-progress.scroll-reveal {
-    opacity: 1;
-}
-
 .revealed {
     opacity: 1;
     animation: WalkIn-from-right ease 1s;
