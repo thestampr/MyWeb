@@ -2,6 +2,14 @@
     transition: all 0.2s ease-in-out;
 }
 
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
 #container {
     width: 80%;
     height: auto;
@@ -22,6 +30,12 @@
 #model-viewer {
     width: 100%;
     height: 100%;
+
+    cursor: grab;
+}
+
+#model-viewer:active {
+    cursor: grabbing;
 }
 
 #loader {
@@ -42,15 +56,35 @@
     transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
 }
 
-#loader>p {
-    width: 100%;
+#loader>div {
+    width: fit-content;
 
-    position: absolute;
-    top: 50%;
-    left: 0;
     margin: 0;
 
     text-align: center;
+    color: var(--dark1);
+}
+
+#loader-bar {
+    width: 100%;
+    height: 5px;
+
+    background-color: var(--alpha-dark);
+    border-radius: 100px;
+
+    margin-top: 5px;
+
+    overflow: hidden;
+}
+
+#loader-bar-progress {
+    width: 0%;
+    height: 100%;
+
+    background-color: var(--scheme-color);
+    border-radius: 100px;
+    
+    transition: width 0.5s ease-in-out;
 }
 
 

@@ -122,6 +122,7 @@ export class ModelViewerComponent implements AfterViewInit, OnDestroy {
     private _loadModel(): void {
         let preloader: HTMLElement = document.getElementById('loader')!;
         let preloaderText: HTMLElement = document.querySelector('#loader>p')!;
+        let loader_bar_progress: HTMLElement = document.getElementById('loader-bar-progress')!;
 
         this.modelLoader.load(
             this.file, (gltf: GLTF) => {
@@ -149,6 +150,8 @@ export class ModelViewerComponent implements AfterViewInit, OnDestroy {
 
         manager.onProgress = function ( url, itemsLoaded, itemsTotal ) {
             console.log( 'Loading file: ' + url + '.\nLoaded ' + itemsLoaded + ' of ' + itemsTotal + ' files.' );
+
+            loader_bar_progress.style.width = String(itemsLoaded/itemsTotal*100) + '%';
         };
 
         manager.onError = function ( url ) {
