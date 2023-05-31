@@ -112,6 +112,11 @@ nav a:hover {
     color: var(--scheme-color);
 }
 
+
+button[mat-icon-button] {
+    align-items: center;
+}
+
 #mobile-nav-open {
     width: auto;
 
@@ -139,10 +144,12 @@ nav a:hover {
 }
 
 #mobile-nav-bg {
-    background-color: rgba(0, 0, 0, 0.5);
-
     width: 100vw;
     height: 100vh;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     
     display: flex;
     justify-content: right;
@@ -274,7 +281,7 @@ nav a:hover {
     }
 
     #mobile-nav-open {
-        display: block;
+        display: flex;
     }
 
     #mobile-nav {

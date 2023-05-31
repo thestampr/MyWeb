@@ -7,7 +7,9 @@
         </nav>
     
         <button id="option-btn" mat-button [cdkMenuTriggerFor]="Option">⁝</button>
-        <button id="mobile-nav-open" class="fa fa-bars" aria-hidden="true" (click)="OpenNav()"></button>
+        <button id="mobile-nav-open" mat-icon-button (click)="OpenNav()">
+            <mat-icon>menu</mat-icon>
+        </button>
     </div>
 </header>
 

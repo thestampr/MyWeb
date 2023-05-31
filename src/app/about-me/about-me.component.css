@@ -37,13 +37,11 @@
     align-items: center;
 }
 
-.about {
-    margin-top: 50px;
-}
-
-.container {
+#about {
     display: flex;
     align-items: center;
+
+    margin-top: 50px;
 }
 
 #greeting h1 {
@@ -83,14 +81,14 @@ section {
         height: 200px;
     }
 
-    .container {
+    #about {
         font-size: 80%;
         line-height: 140%;
     }
 }
 
 @media only screen and (max-width: 900px) {
-    .container {
+    #about {
         flex-direction: column;
         font-size: 70%;
     }
@@ -112,7 +110,7 @@ section {
         margin: 25px;
     }
 
-    .container {
+    #about {
         font-size: 55%;
     }
 

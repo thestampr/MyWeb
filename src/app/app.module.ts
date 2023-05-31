@@ -8,6 +8,7 @@ import { ClipboardModule } from '@angular/cdk/clipboard';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatIconModule } from '@angular/material/icon';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -118,6 +119,7 @@ const routes: Routes = [
         MatProgressBarModule, 
         NgxUsefulSwiperModule, 
         MatExpansionModule,
+        MatIconModule,
     ],
     providers: [
         AppearanceService, 

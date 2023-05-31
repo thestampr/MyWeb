@@ -40,19 +40,22 @@
     animation-fill-mode: forwards;
 
     overflow-y: overlay;
+    
+    /* background-size: 400% 400%;
 
-    /* background-color: gold; */
+    -webkit-animation: animatedGradient 20s ease infinite;
+    -moz-animation: animatedGradient 20s ease infinite;
+    -o-animation: animatedGradient 20s ease infinite;
+    animation: animatedGradient 20s ease infinite; */
 }
 
-.whitepage {
-    background-color: var(--white2);
-    color: var(--dark3);
+/* .white-theme {
+    background: linear-gradient(306deg, var(--white2), var(--alpha-scheme-color));
 }
 
-.darkpage {
-    background-color: var(--dark2);
-    color: var(--white3);
-}
+.dark-theme {
+    background: linear-gradient(306deg, var(--dark1), var(--alpha-scheme-color));
+} */
 
 div {
     margin: 0;
@@ -109,4 +112,26 @@ div {
     #to-top {
         margin: 14px;
     }
+}
+
+
+@-webkit-keyframes animatedGradient {
+    0%{background-position:0% 19%}
+    50%{background-position:100% 82%}
+    100%{background-position:0% 19%}
+}
+@-moz-keyframes animatedGradient {
+    0%{background-position:0% 19%}
+    50%{background-position:100% 82%}
+    100%{background-position:0% 19%}
+}
+@-o-keyframes animatedGradient {
+    0%{background-position:0% 19%}
+    50%{background-position:100% 82%}
+    100%{background-position:0% 19%}
+}
+@keyframes animatedGradient {
+    0%{background-position:0% 19%}
+    50%{background-position:100% 82%}
+    100%{background-position:0% 19%}
 }
