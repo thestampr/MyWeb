@@ -45,13 +45,25 @@ export class BackendService {
 
 
     // Assets services
-    DownloadResume(): void {
+    private _downloadFile(path: string, name: string): void {
         let link = document.createElement('a');
         link.setAttribute('type', 'hidden');
-        link.href = 'assets/files/resume.pdf';
-        link.download = "Peeradon's resume.pdf";
+        link.href = path;
+        link.download = name;
         document.body.appendChild(link);
         link.click();
         link.remove();
+    }
+
+    DownloadResume(): void {
+        this._downloadFile("assets/files/resume.pdf", "Peeradon's resume");
+    }
+
+    DownloadTranscriptTh(): void {
+        this._downloadFile("assets/files/transcript-thai.pdf", "Peeradon's transcript-th");
+    }
+
+    DownloadTranscriptEn(): void {
+        this._downloadFile("assets/files/transcript-english.pdf", "Peeradon's transcript-en");
     }
 }
