@@ -164,6 +164,8 @@ button[mat-icon-button] {
 
     visibility: hidden;
     opacity: 0;
+
+    transition: width 0s, opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
 }
 
 #mobile-nav {
@@ -172,6 +174,8 @@ button[mat-icon-button] {
 
     width: 50%;
     height: auto;
+    max-width: 300px;
+    min-width: 150px;
     
     display: none;
     flex-direction: column;

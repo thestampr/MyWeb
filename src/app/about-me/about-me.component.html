@@ -4,7 +4,7 @@
             <div id="about">
                 
                 <!-- <div class="aura"> -->
-                    <img class="me" src="assets/images/profile-2.jpg" [cdkContextMenuTriggerFor]="Image" ModalView /> 
+                    <img id="me" src="assets/images/profile-2.jpg" [cdkContextMenuTriggerFor]="Image" ModalView /> 
                 <!-- </div> -->
     
                 <span id="greeting">
@@ -64,14 +64,8 @@
     </div>
 </app-page>
 
-<div (contextmenu)="false" ModalView>
-    <div id="modal-frame">
-        <img id="modal-image" src="assets/images/profile-2.jpg" />
-    </div>
-</div>
-
 <ng-template #Image>
     <div class="ContextMenu" cdkMenu>
-        <button class="ContextMenu-Item" cdkMenuItem (contextmenu)="false" ModalView>View image</button>
+        <button class="ContextMenu-Item" cdkMenuItem (contextmenu)="false" ModalView [src]="'assets/images/profile-2.jpg'">View image</button>
     </div>
 </ng-template>

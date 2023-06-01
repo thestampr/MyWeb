@@ -14,7 +14,7 @@
     padding: 10px;
 }
 
-#container, #content {
+#container {
     width: 100%;
     /* height: auto; */
     margin: 0;
@@ -91,10 +91,6 @@ div {
         height: calc(100% - 50px);
     }
 
-    #content {
-        height: calc(100% + 10px);
-    }
-
     #to-top {
         margin: 30px;
     }
@@ -103,10 +99,6 @@ div {
 @media only screen and (max-width: 600px) {
     #container {
         height: calc(100% - 40px);
-    }
-
-    #content {
-        height: calc(100% + 20px);
     }
 
     #to-top {

@@ -12,6 +12,7 @@ export class CardComponent {
     
     @Input() fullWidth: boolean;
     @Input() fullHeight: boolean;
+    @Input() justBorder: boolean;
 
     constructor (public theme: AppearanceService) {}
 }

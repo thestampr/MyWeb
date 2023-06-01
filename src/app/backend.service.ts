@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
-
 import { Title, Meta } from '@angular/platform-browser';
 import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
-import { filter, map, mergeMap } from 'rxjs/operators';
+import { catchError, filter, map, mergeMap } from 'rxjs/operators';
+import { Observable, of } from 'rxjs';
+
+import { HttpClient } from '@angular/common/http';
 
 
 @Injectable({
@@ -14,7 +16,8 @@ export class BackendService {
         private title: Title, 
         private meta: Meta, 
         private router: Router, 
-        private activatedRoute: ActivatedRoute
+        private activatedRoute: ActivatedRoute, 
+        private httpClient: HttpClient
     ) { }
 
 
@@ -55,15 +58,22 @@ export class BackendService {
         link.remove();
     }
 
-    DownloadResume(): void {
+    public DownloadResume(): void {
         this._downloadFile("assets/files/resume.pdf", "Peeradon's resume");
     }
 
-    DownloadTranscriptTh(): void {
+    public DownloadTranscriptTh(): void {
         this._downloadFile("assets/files/transcript-thai.pdf", "Peeradon's transcript-th");
     }
 
-    DownloadTranscriptEn(): void {
+    public DownloadTranscriptEn(): void {
         this._downloadFile("assets/files/transcript-english.pdf", "Peeradon's transcript-en");
+    }
+
+    public isFileExist(file: string): boolean {
+        var http = new XMLHttpRequest();
+        http.open('HEAD', file, false);
+        http.send();
+        return http.status != 404;
     }
 }

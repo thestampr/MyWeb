@@ -3,7 +3,7 @@
 
         <div class="grid-content">
             <div class="side-field grid-item">
-                <app-card class="card">
+                <app-card class="card" [fullHeight]="true">
                     <div class="personal">
                         <div class="image">
                             <img class="me" src="assets/images/me-rotated.jpg" [cdkContextMenuTriggerFor]="Image" ModalView /> 
@@ -345,12 +345,6 @@
     </div>
 </app-page>
 
-<div (contextmenu)="false" ModalView>
-    <div id="modal-frame">
-        <img id="modal-image" src="assets/images/me-rotated.jpg" />
-    </div>
-</div>
-
 <ng-template #Download>
     <div class="ContextMenu" cdkMenu>
         <button class="ContextMenu-Item" cdkMenuItem (contextmenu)="false" (click)="backend.DownloadResume()">Download resume</button>
@@ -367,6 +361,6 @@
 
 <ng-template #Image>
     <div class="ContextMenu" cdkMenu>
-        <button class="ContextMenu-Item" cdkMenuItem (contextmenu)="false" ModalView>View image</button>
+        <button class="ContextMenu-Item" cdkMenuItem (contextmenu)="false" ModalView [src]="'assets/images/me-rotated.jpg'">View image</button>
     </div>
 </ng-template>

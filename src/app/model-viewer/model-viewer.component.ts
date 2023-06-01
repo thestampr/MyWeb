@@ -14,11 +14,11 @@ export class ModelViewerComponent implements AfterViewInit, OnDestroy {
 
     @ViewChild('canvas') private canvasRef: ElementRef;
 
-    @Input() public file: string = 'assets/3D/Auture/obj.gltf';
-    @Input() public doRotate: boolean = false;
-    @Input() public fieldOfView: number = 1;
-    @Input('nearClipping') public nearClippingPane: number = 1;
-    @Input('farClipping') public farClippingPane: number = 1000;
+    @Input() file: string = '';
+    @Input() doRotate: boolean = false;
+    @Input() fieldOfView: number = 1;
+    @Input('nearClipping') nearClippingPane: number = 1;
+    @Input('farClipping') farClippingPane: number = 1000;
 
     private light1: THREE.PointLight;
     private light2: THREE.PointLight;
@@ -121,7 +121,8 @@ export class ModelViewerComponent implements AfterViewInit, OnDestroy {
 
     private _loadModel(): void {
         let preloader: HTMLElement = document.getElementById('loader')!;
-        let preloaderText: HTMLElement = document.querySelector('#loader>p')!;
+        let loading_status: HTMLElement = document.getElementById('loading-state')!;
+        let loader_bar: HTMLElement = document.getElementById('loader-bar')!;
         let loader_bar_progress: HTMLElement = document.getElementById('loader-bar-progress')!;
 
         this.modelLoader.load(
@@ -157,7 +158,8 @@ export class ModelViewerComponent implements AfterViewInit, OnDestroy {
         manager.onError = function ( url ) {
             console.log( 'There was an error loading ' + url );
 
-            preloaderText.innerText = 'Error';
+            loader_bar.style.display = 'none';
+            loading_status.innerText = 'Error';
         };
     }
 }

@@ -9,6 +9,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatIconModule } from '@angular/material/icon';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -31,6 +32,8 @@ import { SwiperComponent } from './swiper/swiper.component';
 import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
 import { ModalViewDirective } from './modal-view.directive';
 import { ModelViewerComponent } from './model-viewer/model-viewer.component';
+import { ModelsComponent } from './models/models.component';
+import { ModelDetailsComponent } from './model-details/model-details.component';
 
 
 const routes: Routes = [
@@ -72,7 +75,11 @@ const routes: Routes = [
     },
     { 
         path: '3d', 
-        component: ModelViewerComponent
+        component: ModelsComponent
+    },
+    { 
+        path: '3d/:model', 
+        component: ModelDetailsComponent
     },
     { 
         path: '404', 
@@ -105,11 +112,14 @@ const routes: Routes = [
         SwiperComponent,
         ModalViewDirective,
         ModelViewerComponent,
+        ModelsComponent,
+        ModelDetailsComponent,
     ],
     imports: [
         RouterModule.forRoot(routes),
         BrowserModule,
         AppRoutingModule, 
+        HttpClientModule, 
         DragDropModule, 
         BrowserAnimationsModule, 
         MatTooltipModule, 

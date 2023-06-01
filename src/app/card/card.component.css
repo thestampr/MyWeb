@@ -61,7 +61,24 @@
 
 #card.fullheight {
     height: 100%;
+
     align-items: flex-start;
+    flex-direction: column;
+}
+
+#card.justborder {
+    background-color: transparent;
+    box-shadow: unset;
+}
+
+#card.justborder.whitepage {
+    border: 1px solid var(--alpha-dark);
+    color: var(--dark3);
+}
+
+#card.justborder.darkpage {
+    border: 1px solid var(--alpha-white);
+    color: var(--white3);
 }
 
 

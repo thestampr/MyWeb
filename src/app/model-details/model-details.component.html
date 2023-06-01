@@ -1,0 +1,14 @@
+<app-page>
+    <div id="container" class="row">
+        <div id="viewer" class="column">
+            <app-model-viewer file="assets/3D/{{model}}/obj.gltf" />
+        </div>
+        
+        <div id="details" class="column">
+            <app-card [justBorder]="true" [fullHeight]="true">
+                <h1>{{model}}</h1>
+                <div class="linebreak"></div>
+            </app-card>
+        </div>
+    </div>
+</app-page>
