@@ -55,6 +55,15 @@
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.35);
 }
 
+#card.fullwidth {
+    width: 100%;
+}
+
+#card.fullheight {
+    height: 100%;
+    align-items: flex-start;
+}
+
 
 @media only screen and (max-width: 1200px) {
 }

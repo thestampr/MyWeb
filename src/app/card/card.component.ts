@@ -9,5 +9,9 @@ import { AppearanceService } from '../appearance.service';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent {
+    
+    @Input() fullWidth: boolean;
+    @Input() fullHeight: boolean;
+
     constructor (public theme: AppearanceService) {}
 }
