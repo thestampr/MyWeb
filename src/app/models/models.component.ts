@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-models',
@@ -6,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./models.component.css']
 })
 export class ModelsComponent {
-
+    constructor(public router: Router) {}
 }

@@ -364,16 +364,22 @@ mat-progress-bar {
     line-height: 36px;
 
     padding: 0 16px;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    flex: 1;
 
     z-index: 100;
 
     display: flex;
     align-items: center;
+    flex-direction: row;
+    flex: 1;
     justify-content: space-between;
+}
+
+.ContextMenu-Item[role='menuitemcheckbox'] {
+    padding-left: 30px;
+}
+
+.ContextMenu-Item[role='menuitemcheckbox'][aria-checked='true'] {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .ContextMenu-Item:hover {

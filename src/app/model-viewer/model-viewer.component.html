@@ -1,5 +1,5 @@
-<div id="frame">
-    <canvas #canvas id="model-viewer"></canvas>
+<div id="viewport">
+    <canvas id="model-viewer" #canvas></canvas>
     <div id="loader">
         <div class="center">
             <p id="loading-state">
@@ -10,4 +10,18 @@
             </div>
         </div>
     </div>
+    <div id="viewport-bottom">
+        <div id="model-tools" >
+            <a id="setting" class="fa fa-gear" [cdkMenuTriggerFor]="Settings" [cdkMenuPosition]="positions"></a>
+            <a id="expand" class="fa {{isFullscreen? 'fa-compress': 'fa-expand'}}" (click)="toggleFullscreen()"></a>
+        </div>
+    </div>
 </div>
+
+<ng-template #Settings>
+    <div class="ContextMenu" cdkMenu>
+        <button class="ContextMenu-Item" *ngFor="let res of Resolutions" cdkMenuItemCheckbox [cdkMenuItemChecked]="resolution === res" (click)="setResolution(res)">
+            {{res}}
+        </button>
+    </div>
+</ng-template>

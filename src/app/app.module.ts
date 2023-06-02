@@ -10,6 +10,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
+import { MatMenuModule } from '@angular/material/menu';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -130,6 +131,7 @@ const routes: Routes = [
         NgxUsefulSwiperModule, 
         MatExpansionModule,
         MatIconModule,
+        MatMenuModule,
     ],
     providers: [
         AppearanceService, 

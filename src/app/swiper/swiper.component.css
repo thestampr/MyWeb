@@ -20,19 +20,19 @@
     margin-left: auto;
     margin-right: auto;
     
-    border-radius: 5px;
+    border-radius: var(--rounded);
 
     /* background-color: gold; */
 }
 
 .landscape {
     width: 1000px;
-    height: 500px;
+    aspect-ratio: 3/2;
 }
 
 .portrait {
     width: 500px;
-    height: 600px;
+    aspect-ratio: 4/5;
 }
 
 .fullscreen {
@@ -66,7 +66,7 @@
 
 img {
     width: 100%;
-    border-radius: 5px;
+    border-radius: var(--rounded);
 }
 
 button {
@@ -126,12 +126,10 @@ h2 {
 
     .landscape {
         width: 800px;
-        height: 400px;
     }
 
     .portrait {
         width: 400px;
-        height: 480px;
     }
 }
 
@@ -142,12 +140,10 @@ h2 {
 
     .landscape {
         width: 500px;
-        height: 250px;
     }
 
     .portrait {
         width: 250px;
-        height: 300px;
     }
 
     h2 {
@@ -162,7 +158,6 @@ h2 {
 
     .landscape {
         width: 300px;
-        height: 150px;
     }
 
     /* button {

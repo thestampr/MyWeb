@@ -42,7 +42,6 @@ export class TopbarComponent{
         let teY = event.changedTouches[0].clientY;
 
         let percent = 100-(teX/window.innerWidth*100);
-        console.log(percent);
     }
 
     @HostListener("window:touchend", ["$event"])
