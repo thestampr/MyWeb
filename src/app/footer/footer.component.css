@@ -29,11 +29,13 @@ footer {
     padding-left: 100px;
     padding-right: 100px;
 
-    font-size: 15px;
-
     transition: width 0s;
 
     /* background-color: gold; */
+}
+
+footer:not(#github-btn) {
+    font-size: 15px;
 }
 
 footer * {
@@ -68,19 +70,23 @@ a:hover {
 
 @media only screen and (max-width: 900px) {
     footer {
-        font-size: 12px;
-
         padding-left: 70px;
         padding-right: 70px;
+    }
+
+    footer:not(#github-btn) {
+        font-size: 12px;
     }
 }
 
 @media only screen and (max-width: 600px) {
     footer {
-        font-size: 10px;
-
         padding-left: 40px;
         padding-right: 40px;
+    }
+
+    footer:not(#github-btn) {
+        font-size: 10px;
     }
 
     nav {

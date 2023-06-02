@@ -4,21 +4,24 @@
     <h2>{{name}}</h2>
 
     <div class="flex-container">
-        <div class="flex-container-item flexable-item {{item.url===undefined? '': 'clickable'}}" 
+        <div id="flexable-item" class="flex-container-item {{item.url===undefined? '': 'clickable'}}" 
             [ngClass]="{'fullsize': one_col}" 
             *ngFor="let item of items; let i = index"
             (click)="item.url===undefined? false: router.navigateByUrl(item.url)">
-            
-            <h3>
-                <i id="icon-large" class="fa {{item.icon}}"></i>
-                {{item.title}}
-            </h3>
 
-            <div class="descriptions">
-                <p *ngFor="let description of item.descriptions;">
-                    {{description}}
-                </p>
-                <br>
+            <div id="item-icon">
+                <i id="item-icon" class="fa {{item.icon}} icon-large" ></i>
+            </div>
+
+            <div id="item-details">
+                <h3>
+                    {{item.title}}
+                </h3>
+                <div id="item-description">
+                    <p *ngFor="let description of item.descriptions;">
+                        {{description}} <br>
+                    </p>
+                </div>
             </div>
         </div>
     </div>

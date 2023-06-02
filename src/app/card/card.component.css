@@ -10,7 +10,7 @@
     padding: 20px;
 
     border: none;
-    border-radius: 20px;
+    border-radius: var(--rounded);
     flex: 1 0 200px;
 
     backdrop-filter: blur(7.5px);

@@ -101,9 +101,12 @@
     color: var(--white3);
 }
 
-#icon-small {
-    margin-top: 5px;
+#icon {
+    margin-top: 10px;
     margin-bottom: 0px;
+
+    background-color: transparent;
+    box-shadow: none;
 }
 
 

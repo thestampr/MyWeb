@@ -24,6 +24,8 @@
 
     --scheme-color: #7C83C8;
     --alpha-scheme-color: rgba(124, 131, 200, 0.2);
+
+    --rounded: 20px;
 }
 
 
@@ -223,7 +225,7 @@ h1 {
 ::-webkit-scrollbar-thumb {
     background-color: rgba(255, 255, 255, 0.2);
 
-    border-radius: 10px;
+    border-radius: 100px;
     border: solid 3px transparent;
     background-clip: padding-box;
 
@@ -260,7 +262,18 @@ h1 {
 
 @media only screen and (max-width: 900px) {
     ::-webkit-scrollbar {
+        width: 25px;
+
         display: none;
+    }
+
+    ::-webkit-scrollbar-thumb, 
+    ::-webkit-scrollbar-thumb:hover, 
+    ::-webkit-scrollbar-thumb:active, 
+    .white-theme::-webkit-scrollbar-thumb, 
+    .white-theme::-webkit-scrollbar-thumb:hover, 
+    .white-theme::-webkit-scrollbar-thumb:active {
+        background-color: transparent;
     }
 }
 
@@ -481,14 +494,14 @@ mat-progress-bar {
     width: 50%;
 }
 
-#icon-small {
-    width: 45px;
-    height: 45px;
+.icon-small {
+    width: 45px !important;
+    height: 45px !important;
 
     min-width: unset;
     min-height: unset;
 
-    font-size: 20px;
+    font-size: 20px !important;
     text-align: center;
     text-decoration: none;
 
@@ -496,51 +509,51 @@ mat-progress-bar {
     background-color: unset;
     box-shadow: none;
 
-    margin-bottom: 5px;
-    border-radius: 50%;
+    margin-bottom: 5px !important;
+    border-radius: 50% !important;
 }
 
-#icon-mid {
-    width: 60px;
-    height: 60px;
+.icon-mid {
+    width: 60px !important;
+    height: 60px !important;
 
     min-width: unset;
     min-height: unset;
 
-    font-size: 32px;
+    font-size: 32px !important;
     text-align: center;
     text-decoration: none;
-    padding-top: 12px;
+    padding-top: 12px !important;
 
     border: none;
     background-color: unset;
     box-shadow: none;
 
-    margin-bottom: 5px;
-    border-radius: 50%;
+    margin-bottom: 5px !important;
+    border-radius: 50% !important;
 }
 
-#icon-large {
-    width: 80px;
-    height: 80px;
+.icon-large {
+    width: 80px !important;
+    height: 80px !important;
 
     min-width: unset;
     min-height: unset;
 
-    font-size: 46px;
+    font-size: 46px !important;
     text-align: center;
     text-decoration: none;
-    padding-top: 15px;
+    padding-top: 15px !important;
 
     border: none;
     background-color: unset;
     box-shadow: none;
 
-    margin-bottom: 5px;
-    border-radius: 50%;
+    margin-bottom: 5px !important;
+    border-radius: 50% !important;
 }
 
-.dark-theme #icon-small, .dark-theme #icon-mid, .dark-theme #icon-large {
+.dark-theme .icon-small, .dark-theme .icon-mid, .dark-theme .icon-large {
     color: var(--white3);
 }
 
@@ -633,19 +646,19 @@ img[ModalView] {
         width: 100%;
     }
     
-    #icon-large {
+    .icon-large {
         width: 60px;
         height: 60px;
     
-        font-size: 32px;
+        font-size: 32px !important;
         padding-top: 12px;
     }
 
-    #icon-mid {
+    .icon-mid {
         width: 52px;
         height: 52px;
     
-        font-size: 25px;
+        font-size: 25px !important;
         padding-top: 9px;
     }
     
