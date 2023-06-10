@@ -51,9 +51,11 @@ p {
     opacity: 1;
 }
 
-#content {
+#resume-content {
     width: 1300px;
-    margin-top: 50px;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
 
     display: flex;
     flex-direction: column;
@@ -62,17 +64,120 @@ p {
     /* background-color: gold; */
 }
 
-#download {
-    align-self: center;
-    margin: 50px;
-    width: 200px;
+#content-footer {
+    width: 100%;
     height: 50px;
-    border: none;
 
-    font-weight: 500;
+    position: relative;
+    /* margin-bottom: 50px; */
+}
+
+#download {
+    width: 300px;
+    max-height: 50px;
 
     background-color: var(--white1);
     color: var(--dark3);
+
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow: hidden;
+
+    border: none;
+    border-radius: 25px;
+
+    font-weight: 500;
+    cursor: pointer;
+
+    /* transition: max-height 0.2s ease-in-out, padding-top 0.2s ease-in-out; */
+}
+
+#download>button {
+    height: 40px;
+    min-height: unset;
+
+    box-shadow: unset;
+    background-color: transparent;
+    color: var(--dark3);
+
+    border-radius: 20px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    /* text-align: left; */
+    
+    /* background-color: aqua; */
+}
+
+#download>button:hover {
+    background-color: var(--scheme-color);
+    color: var(--white1);
+    /* color: var(--scheme-color); */
+}
+
+#download>#download-expand-header {
+    width: 250px;
+    height: 50px;
+
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    color: var(--dark3);
+
+    padding-top: 14px;
+    margin: 0;
+
+    text-align: center;
+    cursor: pointer;
+
+    font-size: 16px;
+}
+
+#download>.linebreak {
+    width: 250px;
+    height: 1px;
+
+    background-color: var(--alpha-dark);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#download a {
+    color: var(--dark3);
+    cursor: pointer;
+
+    margin-left: 10px;
+}
+
+#download.expand {
+    max-height: 300px;
+    cursor: default;
+
+    padding-top: 60px;
+    padding-bottom: 10px;
+}
+
+#download.expand>#download-expand-header {
+    border-bottom: 1px solid var(--alpha-dark);
+}
+
+#download.expand>button {
+    visibility: visible;
+    opacity: 1;
+
+    z-index: -1;
 }
 
 .animated-card:hover {
@@ -251,6 +356,17 @@ li {
     padding-left: 5px;
 }
 
+#bar {
+    height: 10px;
+    width: 70%;
+
+    display: inline-block;
+
+    right: 0;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
 
 progress {
     height: 10px;
@@ -275,15 +391,15 @@ progress::-webkit-progress-bar {
     transition: background-color 0.2s ease-in-out;
 }
 
-:host ::ng-deep .white-theme progress::-webkit-progress-bar {
+.white-theme progress::-webkit-progress-bar {
     background-color: var(--alpha-dark);
 }
 
-:host ::ng-deep .dark-theme progress::-webkit-progress-bar {
+.dark-theme progress::-webkit-progress-bar {
     background-color: var(--alpha-white);
 }
 
-progress::-webkit-progress-value {
+/* progress::-webkit-progress-value {
     height: 10px;
 
     border: 0;
@@ -305,20 +421,20 @@ progress::-moz-progress-bar {
 progress[value] {
     background-color: none;
     border-radius: 100px;
-}
+} */
 
 
-.mat-expansion-panel-header {
+#skills .mat-expansion-panel-header {
     height: 40px;
     padding: 0;
 }
 
-.mat-expansion-panel {
+#skills .mat-expansion-panel {
     background: unset;
     box-shadow: unset;
 }
 
-.mat-expansion-panel, .mat-expansion-panel * {
+#skills .mat-expansion-panel, .mat-expansion-panel * {
     cursor: pointer;
 }
 
@@ -448,6 +564,10 @@ progress[value] {
 
     .timeline-content {
         padding-top: 3px;
+    }
+
+    #bar {
+        width: 50%;
     }
 
     progress {

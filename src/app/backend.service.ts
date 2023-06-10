@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
 import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
-import { catchError, filter, map, mergeMap } from 'rxjs/operators';
-import { Observable, of } from 'rxjs';
+import { filter, map, mergeMap } from 'rxjs/operators';
 
 import { HttpClient } from '@angular/common/http';
 
@@ -17,8 +16,23 @@ export class BackendService {
         private meta: Meta, 
         private router: Router, 
         private activatedRoute: ActivatedRoute, 
-        private httpClient: HttpClient
     ) { }
+
+    public get isMobile(): boolean {
+        const toMatch = [
+            /Android/i,
+            /webOS/i,
+            /iPhone/i,
+            /iPad/i,
+            /iPod/i,
+            /BlackBerry/i,
+            /Windows Phone/i
+        ];
+        
+        return toMatch.some((toMatchItem) => {
+            return navigator.userAgent.match(toMatchItem);
+        });
+    }
 
 
     // SEO services
@@ -48,7 +62,14 @@ export class BackendService {
 
 
     // Assets services
-    private _downloadFile(path: string, name: string): void {
+    public isFileExist(file: string): boolean {
+        var http = new XMLHttpRequest();
+        http.open('HEAD', file, false);
+        http.send();
+        return http.status != 404;
+    }
+
+    public Download(path: string, name: string): void {
         let link = document.createElement('a');
         link.setAttribute('type', 'hidden');
         link.href = path;
@@ -59,21 +80,14 @@ export class BackendService {
     }
 
     public DownloadResume(): void {
-        this._downloadFile("assets/files/resume.pdf", "Peeradon's resume");
+        this.Download("assets/files/resume.pdf", "Peeradon's resume");
     }
 
     public DownloadTranscriptTh(): void {
-        this._downloadFile("assets/files/transcript-thai.pdf", "Peeradon's transcript-th");
+        this.Download("assets/files/transcript-thai.pdf", "Peeradon's transcript-th");
     }
 
     public DownloadTranscriptEn(): void {
-        this._downloadFile("assets/files/transcript-english.pdf", "Peeradon's transcript-en");
-    }
-
-    public isFileExist(file: string): boolean {
-        var http = new XMLHttpRequest();
-        http.open('HEAD', file, false);
-        http.send();
-        return http.status != 404;
+        this.Download("assets/files/transcript-english.pdf", "Peeradon's transcript-en");
     }
 }

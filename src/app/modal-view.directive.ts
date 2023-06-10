@@ -13,7 +13,7 @@ export class ModalViewDirective implements OnInit {
 
     private _source: string;
 
-    private modal_frame: HTMLDivElement;
+    private modal_bg: HTMLDivElement;
     private modal_image: HTMLImageElement;
 
     constructor(private elementRef: ElementRef) {}
@@ -30,22 +30,22 @@ export class ModalViewDirective implements OnInit {
 
     @HostListener('click') 
     private openMoal() {
-        this.modal_frame.classList.add("open");
+        this.modal_bg.classList.add("open");
     }
     
     private _createElement() {
-        this.modal_frame = document.createElement('div');
-        this.modal_frame.id = "modal-frame";
+        this.modal_bg = document.createElement('div');
+        this.modal_bg.classList.add("modal-bg");
 
         this.modal_image = document.createElement('img');
         this.modal_image.id = "modal-image";
         this.modal_image.src = this._source;
 
-        this.modal_frame.appendChild(this.modal_image);
-        document.body.appendChild(this.modal_frame);
+        this.modal_bg.appendChild(this.modal_image);
+        document.body.appendChild(this.modal_bg);
 
-        this.modal_frame.addEventListener("click", () => {
-            this.modal_frame.classList.remove("open");
+        this.modal_bg.addEventListener("click", () => {
+            this.modal_bg.classList.remove("open");
         });
 
         if (this.parallax) {

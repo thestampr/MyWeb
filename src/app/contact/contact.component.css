@@ -109,6 +109,10 @@
     box-shadow: none;
 }
 
+.dark-theme #icon {
+    color: var(--white3);
+}
+
 
 @media only screen and (max-width: 1200px) {
 }

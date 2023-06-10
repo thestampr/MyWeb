@@ -1,5 +1,5 @@
 <app-page>
-    <div id="content" [cdkContextMenuTriggerFor]="Download" >
+    <div id="resume-content" [cdkContextMenuTriggerFor]="Download" [ngClass]="{'dark-theme': theme.is_dark, 'white-theme': !theme.is_dark}">
 
         <div class="grid-content">
             <div class="side-field grid-item">
@@ -9,7 +9,7 @@
                             <img class="me" src="assets/images/me-rotated.jpg" [cdkContextMenuTriggerFor]="Image" ModalView /> 
                         </div>
 
-                        <div class="section-linebreak linebreak" [ngClass]="{'line-dark': theme.is_dark, 'line-white': !theme.is_dark}"></div>
+                        <div class="section-linebreak linebreak" [ngClass]="{'line-white': theme.is_dark, 'line-dark': !theme.is_dark}"></div>
 
                         <div class="section-name">Name</div>
                         <div class="section-value">
@@ -26,7 +26,7 @@
                             090-935-1529
                         </div>
 
-                        <div class="section-linebreak linebreak" [ngClass]="{'line-dark': theme.is_dark, 'line-white': !theme.is_dark}"></div>
+                        <div class="section-linebreak linebreak" [ngClass]="{'line-white': theme.is_dark, 'line-dark': !theme.is_dark}"></div>
 
                         <div class="section-name">
                             Date of birth
@@ -50,7 +50,7 @@
                             Thai
                         </div>
 
-                        <div class="section-linebreak linebreak" [ngClass]="{'line-dark': theme.is_dark, 'line-white': !theme.is_dark}"></div>
+                        <div class="section-linebreak linebreak" [ngClass]="{'line-white': theme.is_dark, 'line-dark': !theme.is_dark}"></div>
 
                         <div class="section-name">Interests</div>
                         <div class="section-value">
@@ -61,7 +61,7 @@
                             </ul>
                         </div>
 
-                        <div class="linebreak" [ngClass]="{'line-dark': theme.is_dark, 'line-white': !theme.is_dark}"></div>
+                        <div class="linebreak" [ngClass]="{'line-white': theme.is_dark, 'line-dark': !theme.is_dark}"></div>
 
                         <div class="section-name">Languages</div>
                         <ul>
@@ -95,13 +95,13 @@
                 </app-card>
             </div>
 
-            <!-- <div class="grid-linebreak linebreak" [ngClass]="{'line-dark': theme.is_dark, 'line-white': !theme.is_dark}"></div> -->
+            <!-- <div class="grid-linebreak linebreak" [ngClass]="{'line-white': theme.is_dark, 'line-dark': !theme.is_dark}"></div> -->
 
             <div class="content-field grid-item">
                 <app-card class="card">
                     <div class="auto-height">
                         <div class="card-name">About me</div>
-                        <div class="linebreak" [ngClass]="{'line-dark': theme.is_dark, 'line-white': !theme.is_dark}"></div>
+                        <div class="linebreak" [ngClass]="{'line-white': theme.is_dark, 'line-dark': !theme.is_dark}"></div>
 
                         <div class="section-spacing"></div>
                         <p>
@@ -114,7 +114,7 @@
                             Ready to learn and grow my skills.
                         </p>
 
-                        <!-- <div class="linebreak" [ngClass]="{'line-dark': theme.is_dark, 'line-white': !theme.is_dark}"></div>
+                        <!-- <div class="linebreak" [ngClass]="{'line-white': theme.is_dark, 'line-dark': !theme.is_dark}"></div>
 
                         <div class="section-name">Career Objective</div>
                         <p>
@@ -127,7 +127,7 @@
                 <app-card class="card">
                     <div class="auto-height">
                         <div class="card-name">Projects</div>
-                        <div class="linebreak" [ngClass]="{'line-dark': theme.is_dark, 'line-white': !theme.is_dark}"></div>
+                        <div class="linebreak" [ngClass]="{'line-white': theme.is_dark, 'line-dark': !theme.is_dark}"></div>
 
                         <ul>
                             <li>
@@ -156,12 +156,12 @@
                 </app-card>
 
                 <app-card class="card">
-                    <div class="auto-height">
+                    <div id="skills" class="auto-height">
                         <div class="card-name">
                             Skills
                             <div class="section-extra">click for more details</div>
                         </div>
-                        <div class="linebreak" [ngClass]="{'line-dark': theme.is_dark, 'line-white': !theme.is_dark}"></div>
+                        <div class="linebreak" [ngClass]="{'line-white': theme.is_dark, 'line-dark': !theme.is_dark}"></div>
                         <div class="section-spacing"></div>
 
                         <mat-accordion>
@@ -169,7 +169,10 @@
                                 <mat-expansion-panel-header>
                                     <div class="section-value">
                                         C, C++
-                                        <progress max="100" value="70" matTooltipPosition="left" matTooltip="Experienced"></progress>
+                                        <!-- <progress max="100" value="70" matTooltipPosition="left" matTooltip="Experienced"></progress> -->
+                                        <div id="bar" matTooltipPosition="left" matTooltip="Experienced">
+                                            <app-progress-bar [percent]="70" />
+                                        </div>
                                     </div>
                                 </mat-expansion-panel-header>
                                 <ul>
@@ -185,7 +188,10 @@
                                 <mat-expansion-panel-header>
                                     <div class="section-value">
                                         Python
-                                        <progress max="100" value="85" matTooltipPosition="left" matTooltip="Experienced"></progress>
+                                        <!-- <progress max="100" value="85" matTooltipPosition="left" matTooltip="Experienced"></progress> -->
+                                        <div id="bar" matTooltipPosition="left" matTooltip="Experienced">
+                                            <app-progress-bar [percent]="85" />
+                                        </div>
                                     </div>
                                 </mat-expansion-panel-header>
                                 <ul>
@@ -202,7 +208,10 @@
                                 <mat-expansion-panel-header>
                                     <div class="section-value">
                                         TypeScript
-                                        <progress max="100" value="60" matTooltipPosition="left" matTooltip="Experienced"></progress>
+                                        <!-- <progress max="100" value="60" matTooltipPosition="left" matTooltip="Skilfull"></progress> -->
+                                        <div id="bar" matTooltipPosition="left" matTooltip="Skilfull">
+                                            <app-progress-bar [percent]="60" />
+                                        </div>
                                     </div>
                                 </mat-expansion-panel-header>
                                 <ul>
@@ -216,7 +225,10 @@
                                 <mat-expansion-panel-header>
                                     <div class="section-value">
                                         Angular
-                                        <progress max="100" value="50" matTooltipPosition="left" matTooltip="Experienced"></progress>
+                                        <!-- <progress max="100" value="50" matTooltipPosition="left" matTooltip="Skilfull"></progress> -->
+                                        <div id="bar" matTooltipPosition="left" matTooltip="Skilfull">
+                                            <app-progress-bar [percent]="50" />
+                                        </div>
                                     </div>
                                 </mat-expansion-panel-header>
                                 <ul>
@@ -230,7 +242,10 @@
                                 <mat-expansion-panel-header>
                                     <div class="section-value">
                                         Self learning
-                                        <progress max="100" value="95" matTooltipPosition="left" matTooltip="Experienced"></progress>
+                                        <!-- <progress max="100" value="95" matTooltipPosition="left" matTooltip="Expert"></progress> -->
+                                        <div id="bar" matTooltipPosition="left" matTooltip="Expert">
+                                            <app-progress-bar [percent]="95" />
+                                        </div>
                                     </div>
                                 </mat-expansion-panel-header>
                                 <ul>
@@ -247,7 +262,7 @@
                 <app-card class="card">
                     <div class="auto-height">
                         <div class="card-name">Work Experiences</div>
-                        <div class="linebreak" [ngClass]="{'line-dark': theme.is_dark, 'line-white': !theme.is_dark}"></div>
+                        <div class="linebreak" [ngClass]="{'line-white': theme.is_dark, 'line-dark': !theme.is_dark}"></div>
                         <div class="section-spacing"></div>
 
                         <div class="timeline-item" [ngClass]="{'darktheme': theme.is_dark}">
@@ -278,7 +293,7 @@
                                 <span class="timeline-line"></span>
                             </div>
                             <div class="timeline-content">
-                                <div class="section-name">Jan - Oct 2022</div>
+                                <div class="section-name">Jun - Oct 2022</div>
                                 <div class="section-value">
                                     Internship
                                     <div class="section-extra">Cooperative Education</div>
@@ -302,7 +317,7 @@
                 <app-card class="card">
                     <div class="auto-height">
                         <div class="card-name">Educations</div>
-                        <div class="linebreak" [ngClass]="{'line-dark': theme.is_dark, 'line-white': !theme.is_dark}"></div>
+                        <div class="linebreak" [ngClass]="{'line-white': theme.is_dark, 'line-dark': !theme.is_dark}"></div>
                         <div class="section-spacing"></div>
                         
                         <div class="timeline-item" [ngClass]="{'darktheme': theme.is_dark}">
@@ -338,29 +353,58 @@
                 </app-card>
             </div>
         </div>
+    </div>
 
-        <button id="download" class="animated-btn" (click)="backend.DownloadResume()">
-            Download Resume 
-        </button>
+    <!-- <button id="download" [cdkMenuTriggerFor]="Download">
+        Download 
+        <a class="fa fa-caret-down"></a>
+    </button> -->
+
+    <div id="content-footer">
+        <div id="download" class="dropshadow" [ngClass]="{'expand': expand_download}">
+            <p id="download-expand-header" (click)="expand_download =! expand_download">
+                Download 
+                <a class="fa {{expand_download? 'fa-caret-up': 'fa-caret-down'}}"></a>
+            </p>
+            <button (click)="backend.DownloadResume()">Save as PDF</button>
+            <button (click)="SaveAsPng()">Save as PNG</button>
+
+            <div class="linebreak"></div>
+        
+            <!-- <button (click)="backend.DownloadTranscriptTh()">Transcript thai</button> -->
+            <button (click)="backend.DownloadTranscriptEn()">Transcript</button>
+        </div>
     </div>
 </app-page>
 
 <ng-template #Download>
-    <div class="ContextMenu" cdkMenu>
-        <button class="ContextMenu-Item" cdkMenuItem (contextmenu)="false" (click)="backend.DownloadResume()">Download resume</button>
-        <!-- <button class="ContextMenu-Item" cdkMenuItem (contextmenu)="false" [cdkMenuTriggerFor]="Transcript">Download transcript</button> -->
+    <div class="ContextMenu" cdkMenu (contextmenu)="false">
+        <button class="ContextMenu-Item" cdkMenuItem (click)="backend.DownloadResume()">Save as PDF</button>
+        <button class="ContextMenu-Item" cdkMenuItem (click)="SaveAsPng()">Save as PNG</button>
+        
+        <div class="linebreak line-white"></div>
+
+        <button class="ContextMenu-Item" cdkMenuItem (click)="backend.DownloadTranscriptEn()">Download Transcript</button>
+
+        <!-- <button *ngIf="!backend.isMobile" class="ContextMenu-Item" cdkMenuItem [cdkMenuTriggerFor]="Transcript">
+            Download transcript
+            <a class="fa fa-caret-right"></a>
+        </button>
+        
+        <button *ngIf="backend.isMobile" class="ContextMenu-Item" cdkMenuItem (click)="backend.DownloadTranscriptTh()">Transcript thai</button>
+        <button *ngIf="backend.isMobile" class="ContextMenu-Item" cdkMenuItem (click)="backend.DownloadTranscriptEn()">Transcript english</button> -->
     </div>
 </ng-template>
 
 <ng-template #Transcript>
     <div class="ContextMenu" cdkMenu>
-        <button class="ContextMenu-Item" cdkMenuItem (contextmenu)="false">Thai</button>
-        <button class="ContextMenu-Item" cdkMenuItem (contextmenu)="false">English</button>
+        <button class="ContextMenu-Item" cdkMenuItem (click)="backend.DownloadTranscriptTh()">Thai</button>
+        <button class="ContextMenu-Item" cdkMenuItem (click)="backend.DownloadTranscriptEn()">English</button>
     </div>
 </ng-template>
 
 <ng-template #Image>
     <div class="ContextMenu" cdkMenu>
-        <button class="ContextMenu-Item" cdkMenuItem (contextmenu)="false" ModalView [src]="'assets/images/me-rotated.jpg'">View image</button>
+        <button class="ContextMenu-Item" cdkMenuItem ModalView [src]="'assets/images/me-rotated.jpg'">View image</button>
     </div>
 </ng-template>

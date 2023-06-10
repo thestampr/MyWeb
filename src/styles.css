@@ -1,9 +1,6 @@
-:root {
-    /* --dark1: #111111;
-    --dark2: #1c1c1c;
-    --dark3: #252525;
-    --dark4: #404040; */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 
+:root {
     --dark1: #17181e;
     --dark2: #1f2129;
     --dark3: #272934;
@@ -15,7 +12,6 @@
     --white4: #C1C1C1;
     --white5: #a6a6a6;
 
-    /* --alpha-dark: rgba(28, 28, 28, 0.2); */
     --alpha-dark: rgba(31, 33, 41, 0.2);
     --alpha-dark2: rgba(31, 33, 41, 0.75);
     
@@ -144,6 +140,14 @@ h1 {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
+.white-theme {
+    background-color: var(--white3);
+}
+
+.dark-theme {
+    background-color: var(--dark1);
+}
+
 .white-theme * {
     color: var(--dark3);
 }
@@ -171,6 +175,14 @@ h1 {
     color: var(--white1);
     background-color: var(--dark3);
 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.white-theme .dropshadow {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dark-theme .dropshadow {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
@@ -213,6 +225,9 @@ h1 {
     /* overflow: scroll; */
     margin: 3px;
     display: block;
+    /* display: none; */
+
+    /* border-radius: 100px; */
 
     transition: background-color 0.2s ease-in-out;
     -webkit-transition: background-color 0.2s ease-in-out;
@@ -220,6 +235,8 @@ h1 {
 
 ::-webkit-scrollbar-track {
     background-color: transparent;
+
+    /* background-color: red; */
 }
 
 ::-webkit-scrollbar-thumb {
@@ -229,11 +246,11 @@ h1 {
     border: solid 3px transparent;
     background-clip: padding-box;
 
-    backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
     
-    transition: background-color 0.2s ease-in-out;
     -webkit-transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -248,7 +265,7 @@ h1 {
     background-color: rgba(0, 0, 0, 0.2);
 }
 
-.white-theme::-webkit-scrollbar-thumb:hover  {
+.white-theme::-webkit-scrollbar-thumb:hover {
     background-color: rgba(0, 0, 0, 0.3);
 }
 
@@ -335,7 +352,7 @@ mat-progress-bar {
 .ContextMenu {
     display: inline-flex;
     flex-direction: column;
-    min-width: 180px;
+    min-width: 200px;
     max-width: 300px;
     
     /* From https://css.glass */
@@ -352,7 +369,7 @@ mat-progress-bar {
 }
 
 .ContextMenu-Item {
-    min-width: 64px;
+    min-width: 100px;
 
     background-color: transparent;
     color: rgb(255, 255, 255);
@@ -379,7 +396,7 @@ mat-progress-bar {
 }
 
 .ContextMenu-Item[role='menuitemcheckbox'][aria-checked='true'] {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.15);
 }
 
 .ContextMenu-Item:hover {
@@ -481,11 +498,11 @@ mat-progress-bar {
 }
 
 .line-white {
-    background-color: var(--alpha-dark);
+    background-color: var(--alpha-white);
 }
 
 .line-dark {
-    background-color: var(--alpha-white);
+    background-color: var(--alpha-dark);
 }
 
 .flex-container {
@@ -577,7 +594,7 @@ img[ModalView] {
     cursor: pointer;
 }
 
-#modal-frame {
+.modal-bg {
     width: 100%;
     height: 100%;
     left: 0;
@@ -629,12 +646,12 @@ img[ModalView] {
     scale 0.3s ease;
 }
 
-#modal-frame.open {
+.modal-bg.open {
     opacity: 1;
     visibility: visible;
 }
 
-#modal-frame.open>#modal-image {
+.modal-bg.open>#modal-image {
     scale: 100%;
     opacity: 1;
 }

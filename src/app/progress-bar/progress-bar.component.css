@@ -1,0 +1,57 @@
+* {
+    transition: background-color 0.2s ease-in-out;
+}
+
+#progress-bg {
+    width: 100%;
+    height: 10px;
+
+    border: 0;
+    border-radius: 100px;
+}
+
+.white-bg {
+    background-color: var(--alpha-white);
+}
+
+.dark-bg {
+    background-color: var(--alpha-dark);
+}
+
+#progress-buffer {
+    width: 0%;
+    height: 100%;
+
+    transition: width 1s ease-in-out;
+    animation: progressBar 2s ease-in-out;
+    animation-fill-mode: both; 
+}
+
+#progress-bar {
+    height: 100%;
+
+    border: 0;
+    border-radius: 100px;
+
+    background-color: var(--scheme-color);
+}
+
+
+@media only screen and (max-width: 1200px) {
+}
+
+@media only screen and (max-width: 900px) {
+}
+
+@media only screen and (max-width: 600px) {
+}
+
+
+@keyframes progressBar {
+    0% { 
+        width: 0%; 
+    }
+    100% { 
+        width: 100%; 
+    }
+}

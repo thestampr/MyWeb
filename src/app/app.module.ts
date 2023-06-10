@@ -35,6 +35,7 @@ import { ModalViewDirective } from './modal-view.directive';
 import { ModelViewerComponent } from './model-viewer/model-viewer.component';
 import { ModelsComponent } from './models/models.component';
 import { ModelDetailsComponent } from './model-details/model-details.component';
+import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 
 
 const routes: Routes = [
@@ -115,6 +116,7 @@ const routes: Routes = [
         ModelViewerComponent,
         ModelsComponent,
         ModelDetailsComponent,
+        ProgressBarComponent,
     ],
     imports: [
         RouterModule.forRoot(routes),

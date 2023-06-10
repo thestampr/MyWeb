@@ -1,9 +1,10 @@
 <div id="card" [ngClass]="{
-    'darkpage': theme.is_dark, 
-    'whitepage': !theme.is_dark, 
+    'darkcard': theme.is_dark, 
+    'whitecard': !theme.is_dark, 
     'fullwidth': fullWidth, 
     'fullheight': fullHeight, 
-    'justborder': justBorder
+    'justborder': justBorder, 
+    'transparent': transparent, 
 }">
     <ng-content />
 </div>

@@ -29,7 +29,7 @@
         <button (click)="router.navigateByUrl('contact')" [ngClass]="{'active': isActive('contact')}">Contact</button>
         
         <div class="buttom-nav">
-            <div class="linebreak" [ngClass]="{'line-dark': theme.is_dark, 'line-white': !theme.is_dark}"></div>
+            <div class="linebreak" [ngClass]="{'line-white': theme.is_dark, 'line-dark': !theme.is_dark}"></div>
             
             <button class="bottom" (click)="ToogleTheme()">{{theme.is_dark? "Light mode" : "Dark mode"}}</button>
         </div>

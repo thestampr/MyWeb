@@ -13,9 +13,6 @@
     border-radius: var(--rounded);
     flex: 1 0 200px;
 
-    backdrop-filter: blur(7.5px);
-    -webkit-backdrop-filter: blur(7.5px);
-
     /* justify-content: center; */
     align-items: center;
     
@@ -27,29 +24,34 @@
     animation: WalkIn ease 1s;
 }
 
-/* .whitepage {
-    background-color: rgba(255, 255, 255, 0.75);
-    border: 1px solid var(--alpha-dark);
-    color: var(--dark3);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+#card.transparent {
+    backdrop-filter: blur(7.5px);
+    -webkit-backdrop-filter: blur(7.5px);
 }
 
-.darkpage {
-    background-color: rgba(28, 28, 28, 0.75);
-    border: 1px solid var(--alpha-white);
-    color: var(--white3);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.9);
-} */
-
-.whitepage {
+.whitecard {
     background-color: var(--alpha-white2);
     /* border: 1px solid var(--alpha-dark); */
     color: var(--dark3);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-.darkpage {
+.darkcard {
     background-color: var(--alpha-dark2);
+    /* border: 1px solid var(--alpha-white); */
+    color: var(--white3);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.35);
+}
+
+.whitecard:not(.transparent) {
+    background-color: var(--white2);
+    /* border: 1px solid var(--alpha-dark); */
+    color: var(--dark3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.darkcard:not(.transparent) {
+    background-color: var(--dark2);
     /* border: 1px solid var(--alpha-white); */
     color: var(--white3);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.35);
@@ -67,16 +69,19 @@
 }
 
 #card.justborder {
-    background-color: transparent;
-    box-shadow: unset;
+    background-color: transparent !important;
+    box-shadow: none !important;
+
+    backdrop-filter: unset !important;
+    -webkit-backdrop-filter: unset !important;
 }
 
-#card.justborder.whitepage {
+#card.justborder.whitecard {
     border: 1px solid var(--alpha-dark);
     color: var(--dark3);
 }
 
-#card.justborder.darkpage {
+#card.justborder.darkcard {
     border: 1px solid var(--alpha-white);
     color: var(--white3);
 }
