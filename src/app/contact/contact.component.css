@@ -23,6 +23,8 @@
     flex-direction: row;
     align-items: center;
 
+    background-color: transparent;
+
     width: 400px;
 }
 

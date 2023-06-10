@@ -25,8 +25,14 @@
     <div id="mobile-nav" [ngClass]="{'darkpage-nav': theme.is_dark, 'whitepage-nav': !theme.is_dark}" (contextmenu)="false">
         <button id="modal-close" (click)="CloseNav()">⨉</button>
     
-        <button (click)="router.navigateByUrl('aboutme')" [ngClass]="{'active': isActive('aboutme')}">About me</button>
-        <button (click)="router.navigateByUrl('contact')" [ngClass]="{'active': isActive('contact')}">Contact</button>
+        <button (click)="router.navigateByUrl('aboutme')" [ngClass]="{'active': isActive('aboutme')}">
+            <!-- <a class="fa fa-info-circle"></a> -->
+            About me
+        </button>
+        <button (click)="router.navigateByUrl('contact')" [ngClass]="{'active': isActive('contact')}">
+            <!-- <a class="fa fa-phone"></a> -->
+            Contact
+        </button>
         
         <div class="buttom-nav">
             <div class="linebreak" [ngClass]="{'line-white': theme.is_dark, 'line-dark': !theme.is_dark}"></div>

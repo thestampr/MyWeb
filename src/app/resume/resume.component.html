@@ -366,11 +366,14 @@
                 Download 
                 <a class="fa {{expand_download? 'fa-caret-up': 'fa-caret-down'}}"></a>
             </p>
-            <button (click)="backend.DownloadResume()">
+
+            <div class="linebreak no-margin-top"></div>
+
+            <button (click)="backend.DownloadResume()" matRipple>
                 Save as PDF
                 <a class="fa fa-file-pdf-o"></a>
             </button>
-            <button (click)="SaveAsPng()">
+            <button (click)="SaveAsPng()" matRipple>
                 Save as PNG
                 <a class="fa fa-file-image-o"></a>
             </button>
@@ -378,7 +381,7 @@
             <div class="linebreak"></div>
         
             <!-- <button (click)="backend.DownloadTranscriptTh()">Transcript thai</button> -->
-            <button (click)="backend.DownloadTranscriptEn()">
+            <button (click)="backend.DownloadTranscriptEn()" matRipple>
                 Transcript
                 <a class="fa fa-file-text-o"></a>
             </button>

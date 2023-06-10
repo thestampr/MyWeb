@@ -11,6 +11,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatRippleModule } from '@angular/material/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -134,6 +135,7 @@ const routes: Routes = [
         MatExpansionModule,
         MatIconModule,
         MatMenuModule,
+        MatRippleModule,
     ],
     providers: [
         AppearanceService, 

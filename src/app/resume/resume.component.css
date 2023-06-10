@@ -96,7 +96,6 @@ p {
     border-radius: 25px;
 
     font-weight: 500;
-    cursor: pointer;
 
     /* transition: max-height 0.2s ease-in-out, padding-top 0.2s ease-in-out; */
 }
@@ -144,7 +143,7 @@ p {
 }
 
 #download>#download-expand-header {
-    width: 250px;
+    width: 100%;
     height: 50px;
 
     position: absolute;
@@ -181,21 +180,24 @@ p {
 
 #download.expand {
     max-height: 300px;
-    cursor: default;
 
-    padding-top: 60px;
+    /* padding-top: 60px; */
     padding-bottom: 10px;
 }
 
-#download.expand>#download-expand-header {
+/* #download.expand>#download-expand-header {
     border-bottom: 1px solid var(--alpha-dark);
-}
+} */
 
 #download.expand>button {
     visibility: visible;
     opacity: 1;
 
     z-index: -1;
+}
+
+.no-margin-top {
+    margin-top: 0px !important;
 }
 
 .animated-card:hover {
