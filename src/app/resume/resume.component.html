@@ -366,25 +366,43 @@
                 Download 
                 <a class="fa {{expand_download? 'fa-caret-up': 'fa-caret-down'}}"></a>
             </p>
-            <button (click)="backend.DownloadResume()">Save as PDF</button>
-            <button (click)="SaveAsPng()">Save as PNG</button>
+            <button (click)="backend.DownloadResume()">
+                Save as PDF
+                <a class="fa fa-file-pdf-o"></a>
+            </button>
+            <button (click)="SaveAsPng()">
+                Save as PNG
+                <a class="fa fa-file-image-o"></a>
+            </button>
 
             <div class="linebreak"></div>
         
             <!-- <button (click)="backend.DownloadTranscriptTh()">Transcript thai</button> -->
-            <button (click)="backend.DownloadTranscriptEn()">Transcript</button>
+            <button (click)="backend.DownloadTranscriptEn()">
+                Transcript
+                <a class="fa fa-file-text-o"></a>
+            </button>
         </div>
     </div>
 </app-page>
 
 <ng-template #Download>
     <div class="ContextMenu" cdkMenu (contextmenu)="false">
-        <button class="ContextMenu-Item" cdkMenuItem (click)="backend.DownloadResume()">Save as PDF</button>
-        <button class="ContextMenu-Item" cdkMenuItem (click)="SaveAsPng()">Save as PNG</button>
-        
+        <button class="ContextMenu-Item" cdkMenuItem (click)="backend.DownloadResume()">
+            Save as PDF
+            <a class="fa fa-file-pdf-o"></a>
+        </button>
+        <button class="ContextMenu-Item" cdkMenuItem (click)="SaveAsPng()">
+            Save as PNG
+            <a class="fa fa-file-image-o"></a>
+        </button>
+
         <div class="linebreak line-white"></div>
 
-        <button class="ContextMenu-Item" cdkMenuItem (click)="backend.DownloadTranscriptEn()">Download Transcript</button>
+        <button class="ContextMenu-Item" cdkMenuItem (click)="backend.DownloadTranscriptEn()">
+            Download Transcript
+            <a class="fa fa-file-text-o"></a>
+        </button>
 
         <!-- <button *ngIf="!backend.isMobile" class="ContextMenu-Item" cdkMenuItem [cdkMenuTriggerFor]="Transcript">
             Download transcript

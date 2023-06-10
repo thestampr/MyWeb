@@ -131,18 +131,6 @@ button[mat-icon-button] {
     color: unset;
 }
 
-#mobile-nav-close {
-    width: auto;
-
-    position: absolute;
-
-    top: 20px;
-    left: 20px;
-
-    font-size: 20px;
-    padding: 0;
-}
-
 #mobile-nav-bg {
     width: 100vw;
     height: 100vh;
@@ -206,7 +194,7 @@ button[mat-icon-button] {
     bottom: 0;
 }
 
-#mobile-nav>button:not(#mobile-nav-close), .buttom-nav>button {
+#mobile-nav>button:not(#modal-close), .buttom-nav>button {
     width: 100%;
     text-align: left;
 
@@ -327,7 +315,7 @@ button[mat-icon-button] {
         font-weight: 400;
     }
 
-    #mobile-nav>button:not(#mobile-nav-close), .buttom-nav>button {
+    #mobile-nav>button:not(#modal-close), .buttom-nav>button {
         font-size: 16px;
     }
 }

@@ -381,6 +381,7 @@ mat-progress-bar {
     line-height: 36px;
 
     padding: 0 16px;
+    gap: 45px;
 
     z-index: 100;
 
@@ -644,6 +645,18 @@ img[ModalView] {
     height 0.2s ease-in-out, 
     opacity 0.3s ease-in-out, 
     scale 0.3s ease;
+}
+
+#modal-close {
+    width: auto;
+
+    position: absolute;
+
+    top: 20px;
+    left: 20px;
+
+    font-size: 20px;
+    padding: 0;
 }
 
 .modal-bg.open {

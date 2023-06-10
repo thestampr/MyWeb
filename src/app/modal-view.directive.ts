@@ -1,7 +1,5 @@
 import { Directive, Input, HostListener, OnInit, ElementRef } from '@angular/core';
 
-import * as utils from './utils';
-
 
 @Directive({
     selector: '[ModalView]'
@@ -32,6 +30,17 @@ export class ModalViewDirective implements OnInit {
     private openMoal() {
         this.modal_bg.classList.add("open");
     }
+
+    @HostListener('document:keydown', ['$event']) 
+    private onEscape(event: KeyboardEvent) {
+        if (event.key === "Escape" && this.modal_bg.classList.contains("open")) {
+            this.modal_bg.classList.remove("open");
+        }
+    }
+
+    private _contextmenu(): boolean {
+        return false;
+    }
     
     private _createElement() {
         this.modal_bg = document.createElement('div');
@@ -40,6 +49,9 @@ export class ModalViewDirective implements OnInit {
         this.modal_image = document.createElement('img');
         this.modal_image.id = "modal-image";
         this.modal_image.src = this._source;
+
+        this.modal_bg.oncontextmenu = this._contextmenu;
+        this.modal_image.oncontextmenu = this._contextmenu;
 
         this.modal_bg.appendChild(this.modal_image);
         document.body.appendChild(this.modal_bg);

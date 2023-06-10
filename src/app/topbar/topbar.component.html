@@ -23,7 +23,7 @@
 
 <div id="mobile-nav-bg" (click)="CloseNav()">
     <div id="mobile-nav" [ngClass]="{'darkpage-nav': theme.is_dark, 'whitepage-nav': !theme.is_dark}" (contextmenu)="false">
-        <button id="mobile-nav-close" (click)="CloseNav()">⨉</button>
+        <button id="modal-close" (click)="CloseNav()">⨉</button>
     
         <button (click)="router.navigateByUrl('aboutme')" [ngClass]="{'active': isActive('aboutme')}">About me</button>
         <button (click)="router.navigateByUrl('contact')" [ngClass]="{'active': isActive('contact')}">Contact</button>
