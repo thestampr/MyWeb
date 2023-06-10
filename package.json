@@ -24,7 +24,6 @@
     "angular-cookies": "^1.8.3",
     "fs": "^0.0.1-security",
     "html-to-image": "^1.11.11",
-    "html2canvas": "^1.4.1",
     "ngx-cookie": "^6.0.1",
     "ngx-useful-swiper": "^10.0.1",
     "rxjs": "~7.8.0",
