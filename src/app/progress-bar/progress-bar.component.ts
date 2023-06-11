@@ -10,8 +10,7 @@ import { AppearanceService } from '../appearance.service';
 })
 export class ProgressBarComponent {
     @Input() percent: number = 0;
-
-    public str_percent: string = String(this.percent);
+    @Input() clickable: boolean;
 
     constructor(public theme: AppearanceService) {}
 }

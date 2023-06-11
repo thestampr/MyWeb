@@ -25,4 +25,13 @@ export class ResumeComponent {
             backend.Download(resume_img, "Peeradon's resume.png");
         });
     }
+
+    OpenModal(): void {
+        let modal = document.getElementById("download-modal")!;
+        modal.classList.add("open");
+
+        modal.addEventListener("click", () => {
+            modal.classList.remove("open");
+        })
+    }
 }

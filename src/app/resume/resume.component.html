@@ -171,7 +171,7 @@
                                         C, C++
                                         <!-- <progress max="100" value="70" matTooltipPosition="left" matTooltip="Experienced"></progress> -->
                                         <div id="bar" matTooltipPosition="left" matTooltip="Experienced">
-                                            <app-progress-bar [percent]="70" />
+                                            <app-progress-bar [percent]="70" [clickable]="true"/>
                                         </div>
                                     </div>
                                 </mat-expansion-panel-header>
@@ -190,7 +190,7 @@
                                         Python
                                         <!-- <progress max="100" value="85" matTooltipPosition="left" matTooltip="Experienced"></progress> -->
                                         <div id="bar" matTooltipPosition="left" matTooltip="Experienced">
-                                            <app-progress-bar [percent]="85" />
+                                            <app-progress-bar [percent]="85" [clickable]="true"/>
                                         </div>
                                     </div>
                                 </mat-expansion-panel-header>
@@ -210,7 +210,7 @@
                                         TypeScript
                                         <!-- <progress max="100" value="60" matTooltipPosition="left" matTooltip="Skilfull"></progress> -->
                                         <div id="bar" matTooltipPosition="left" matTooltip="Skilfull">
-                                            <app-progress-bar [percent]="60" />
+                                            <app-progress-bar [percent]="60" [clickable]="true"/>
                                         </div>
                                     </div>
                                 </mat-expansion-panel-header>
@@ -227,7 +227,7 @@
                                         Angular
                                         <!-- <progress max="100" value="50" matTooltipPosition="left" matTooltip="Skilfull"></progress> -->
                                         <div id="bar" matTooltipPosition="left" matTooltip="Skilfull">
-                                            <app-progress-bar [percent]="50" />
+                                            <app-progress-bar [percent]="50" [clickable]="true"/>
                                         </div>
                                     </div>
                                 </mat-expansion-panel-header>
@@ -244,7 +244,7 @@
                                         Self learning
                                         <!-- <progress max="100" value="95" matTooltipPosition="left" matTooltip="Expert"></progress> -->
                                         <div id="bar" matTooltipPosition="left" matTooltip="Expert">
-                                            <app-progress-bar [percent]="95" />
+                                            <app-progress-bar [percent]="95" [clickable]="true"/>
                                         </div>
                                     </div>
                                 </mat-expansion-panel-header>
@@ -355,37 +355,10 @@
         </div>
     </div>
 
-    <!-- <button id="download" [cdkMenuTriggerFor]="Download">
-        Download 
-        <a class="fa fa-caret-down"></a>
-    </button> -->
-
     <div id="content-footer">
-        <div id="download" class="dropshadow" [ngClass]="{'expand': expand_download}">
-            <p id="download-expand-header" (click)="expand_download =! expand_download">
-                Download 
-                <a class="fa {{expand_download? 'fa-caret-up': 'fa-caret-down'}}"></a>
-            </p>
-
-            <div class="linebreak no-margin-top"></div>
-
-            <button (click)="backend.DownloadResume()" matRipple>
-                Save as PDF
-                <a class="fa fa-file-pdf-o"></a>
-            </button>
-            <button (click)="SaveAsPng()" matRipple>
-                Save as PNG
-                <a class="fa fa-file-image-o"></a>
-            </button>
-
-            <div class="linebreak"></div>
-        
-            <!-- <button (click)="backend.DownloadTranscriptTh()">Transcript thai</button> -->
-            <button (click)="backend.DownloadTranscriptEn()" matRipple>
-                Transcript
-                <a class="fa fa-file-text-o"></a>
-            </button>
-        </div>
+        <button id="download-btn" class="animated-btn" (click)="OpenModal()">
+            Download 
+        </button>
     </div>
 </app-page>
 
@@ -406,14 +379,6 @@
             Download Transcript
             <a class="fa fa-file-text-o"></a>
         </button>
-
-        <!-- <button *ngIf="!backend.isMobile" class="ContextMenu-Item" cdkMenuItem [cdkMenuTriggerFor]="Transcript">
-            Download transcript
-            <a class="fa fa-caret-right"></a>
-        </button>
-        
-        <button *ngIf="backend.isMobile" class="ContextMenu-Item" cdkMenuItem (click)="backend.DownloadTranscriptTh()">Transcript thai</button>
-        <button *ngIf="backend.isMobile" class="ContextMenu-Item" cdkMenuItem (click)="backend.DownloadTranscriptEn()">Transcript english</button> -->
     </div>
 </ng-template>
 
@@ -429,3 +394,31 @@
         <button class="ContextMenu-Item" cdkMenuItem ModalView [src]="'assets/images/me-rotated.jpg'">View image</button>
     </div>
 </ng-template>
+
+<div id="download-modal" class="modal-bg">
+    <div id="download-frame" class="dropshadow">
+        <p id="download-expand-header" (click)="expand_download =! expand_download">
+            Download 
+            <!-- <a class="fa {{expand_download? 'fa-caret-up': 'fa-caret-down'}}"></a> -->
+        </p>
+
+        <div class="linebreak no-margin-top"></div>
+
+        <button (click)="backend.DownloadResume()" matRipple>
+            Save as PDF
+            <a class="fa fa-file-pdf-o"></a>
+        </button>
+        <button (click)="SaveAsPng()" matRipple>
+            Save as PNG
+            <a class="fa fa-file-image-o"></a>
+        </button>
+
+        <div class="linebreak"></div>
+    
+        <!-- <button (click)="backend.DownloadTranscriptTh()">Transcript thai</button> -->
+        <button (click)="backend.DownloadTranscriptEn()" matRipple>
+            Transcript
+            <a class="fa fa-file-text-o"></a>
+        </button>
+    </div>
+</div>

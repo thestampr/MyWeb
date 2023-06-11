@@ -140,6 +140,10 @@ h1 {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
+.clickable {
+    cursor: pointer;
+}
+
 .white-theme {
     background-color: var(--white3);
 }

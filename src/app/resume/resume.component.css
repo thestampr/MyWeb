@@ -69,27 +69,35 @@ p {
     height: 50px;
 
     position: relative;
+    text-align: center;
     /* margin-bottom: 50px; */
 }
 
-#download {
+#download-btn {
+    width: 200px;
+    height: 50px;
+
+    background-color: var(--scheme-color);
+    color: var(--white1);
+}
+
+#download-frame {
     width: 300px;
-    max-height: 50px;
+    height: auto;
 
     background-color: var(--white1);
     color: var(--dark3);
 
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateY(-50%);
 
     display: flex;
     flex-direction: column;
 
+    padding: 10px;
     padding-top: 50px;
-    padding-left: 10px;
-    padding-right: 10px;
     overflow: hidden;
 
     border: none;
@@ -100,7 +108,7 @@ p {
     /* transition: max-height 0.2s ease-in-out, padding-top 0.2s ease-in-out; */
 }
 
-#download>button {
+#download-frame>button {
     height: 40px;
     min-height: unset;
 
@@ -109,40 +117,31 @@ p {
     color: var(--dark3);
 
     border-radius: 20px;
+    border: none;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    /* padding-right: 5px; */
-
-    opacity: 0;
-    visibility: hidden;
-
-    /* text-align: left; */
+    transition: color 0s, background-color 0s;
     
     /* background-color: aqua; */
 }
 
-/* #download>button a {
-    height: 100%;
-    aspect-ratio: 1;
+#download-frame>button a {
+    transition: color 0s, background-color 0s;
+}
 
-    border-radius: 50%;
-} */
-
-#download>button:hover {
+#download-frame>button:hover {
     background-color: var(--scheme-color);
     color: var(--white1);
-    /* color: var(--scheme-color); */
 }
 
-#download>button:hover a {
-    /* background-color: var(--alpha-dark); */
+#download-frame>button:hover a {
     color: var(--white1);
 }
 
-#download>#download-expand-header {
+#download-frame>#download-expand-header {
     width: 100%;
     height: 50px;
 
@@ -157,12 +156,10 @@ p {
     margin: 0;
 
     text-align: center;
-    cursor: pointer;
-
     font-size: 16px;
 }
 
-#download>.linebreak {
+#download-frame>.linebreak {
     width: 250px;
     height: 1px;
 
@@ -171,29 +168,11 @@ p {
     margin-bottom: 10px;
 }
 
-#download a {
+#download-frame a {
     color: var(--dark3);
     cursor: pointer;
 
     margin-left: 10px;
-}
-
-#download.expand {
-    max-height: 300px;
-
-    /* padding-top: 60px; */
-    padding-bottom: 10px;
-}
-
-/* #download.expand>#download-expand-header {
-    border-bottom: 1px solid var(--alpha-dark);
-} */
-
-#download.expand>button {
-    visibility: visible;
-    opacity: 1;
-
-    z-index: -1;
 }
 
 .no-margin-top {

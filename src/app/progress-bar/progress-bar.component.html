@@ -1,5 +1,5 @@
-<div id="progress-bg" [ngClass]="{'white-bg': theme.is_dark, 'dark-bg': !theme.is_dark}">
-    <div id="progress-buffer">
-        <div id="progress-bar" style="width: {{percent}}%"></div>
+<div id="progress-bg" [ngClass]="{'white-bg': theme.is_dark, 'dark-bg': !theme.is_dark, 'clickable': clickable}">
+    <div id="progress-buffer" [ngClass]="{'clickable': clickable}">
+        <div id="progress-bar" style="width: {{percent}}%" [ngClass]="{'clickable': clickable}"></div>
     </div>
 </div>
