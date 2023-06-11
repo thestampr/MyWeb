@@ -52,10 +52,10 @@ p {
 }
 
 #resume-content {
-    width: 1300px;
+    padding: 20px;
+    margin-bottom: 50px;
 
-    padding-top: 50px;
-    padding-bottom: 50px;
+    /* border-radius: 40px; */
 
     display: flex;
     flex-direction: column;
