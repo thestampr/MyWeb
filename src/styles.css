@@ -18,6 +18,9 @@
     --alpha-white: rgba(255, 255, 255, 0.1);
     --alpha-white2: rgba(255, 255, 255, 0.75);
 
+    --little-dark: rgba(31, 33, 41, 0.05);
+    --little-white: rgba(255, 255, 255, 0.03);
+
     --scheme-color: #7C83C8;
     --alpha-scheme-color: rgba(124, 131, 200, 0.2);
 
@@ -141,6 +144,10 @@ h1 {
 }
 
 .clickable {
+    cursor: pointer;
+}
+
+.clickable-all, .clickable-all * {
     cursor: pointer;
 }
 

@@ -25,8 +25,11 @@
 .flex-container {
     display: flex;
     flex-wrap: wrap;
+    /* gap: 20px; */
 
     justify-content: space-between;
+
+    border-radius: var(--rounded);
 }
 
 .flex-container-item {
@@ -47,11 +50,13 @@
     justify-items: start;
     flex-direction: row;
 
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 #item-icon {
     width: 25%;
+
+    text-align: center;
 }
 
 #item-details {
@@ -105,20 +110,12 @@ h3 {
     width: 800px;
 }
 
-.clickable, .clickable * {
-    cursor: pointer;
+.white-theme .clickable-all:hover {
+    background-color: var(--little-dark);
 }
 
-/* .clickable:hover {
-    scale: 1.01;
-} */
-
-.white-theme .clickable:hover {
-    background-color: var(--white1);
-}
-
-.dark-theme .clickable:hover {
-    background-color: var(--dark3);
+.dark-theme .clickable-all:hover {
+    background-color: var(--little-white);
 }
 
 

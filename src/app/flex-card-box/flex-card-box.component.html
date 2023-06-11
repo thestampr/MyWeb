@@ -1,11 +1,12 @@
 <div class="flexable" [ngClass]="{'fullsize': one_col}">
     <h2>{{name}}</h2>
 
-    <div class="flex-container">
-        <div id="flexable-item" class="flex-container-item {{item.url===undefined? '': 'clickable'}}" 
+    <div class="flex-container" [ngClass]="{'dark-theme': theme.is_dark, 'white-theme': !theme.is_dark}">
+        <div id="flexable-item" class="flex-container-item {{item.url===undefined? '': 'clickable-all'}}" 
             [ngClass]="{'fullsize': one_col}" 
             *ngFor="let item of items; let i = index"
-            (click)="item.url===undefined? false: router.navigateByUrl(item.url)">
+            (click)="item.url===undefined? false: router.navigateByUrl(item.url)"
+            matRipple>
 
             <div id="item-icon">
                 <i id="item-icon" class="fa {{item.icon}} icon-large" ></i>

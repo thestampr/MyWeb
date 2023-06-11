@@ -1,6 +1,8 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
+import { AppearanceService } from '../appearance.service';
+
 import { IconCard } from '../icon-card';
 
 
@@ -14,5 +16,5 @@ export class FlexCardBoxComponent {
     @Input() one_col: boolean = false;
     @Input() items: IconCard[] = [];
 
-    constructor(public router: Router) {}
+    constructor(public router: Router, public theme: AppearanceService) {}
 }
