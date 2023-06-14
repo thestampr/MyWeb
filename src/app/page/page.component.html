@@ -1,6 +1,12 @@
 <app-topbar />
-<div id="container" (contextmenu)="false">
-    <div id="scroll-page" [ngClass]="{'dark-theme': theme.is_dark, 'white-theme': !theme.is_dark}" (contextmenu)="false">
+<div id="container" [ngClass]="{'dark-theme': theme.is_dark, 'white-theme': !theme.is_dark}" (contextmenu)="false">
+    <div id="waves">
+        <div id="wave1" class="wave"></div>
+        <div id="wave2" class="wave"></div>
+        <div id="wave3" class="wave"></div>
+        <div id="wave4" class="wave"></div>
+    </div>
+    <div id="scroll-page">
         <ng-content />
         <app-footer />
     </div>

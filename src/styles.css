@@ -272,15 +272,15 @@ h1 {
     background-color: rgba(255, 255, 255, 0.4);
 }
 
-.white-theme::-webkit-scrollbar-thumb {
+.white-theme ::-webkit-scrollbar-thumb {
     background-color: rgba(0, 0, 0, 0.2);
 }
 
-.white-theme::-webkit-scrollbar-thumb:hover {
+.white-theme ::-webkit-scrollbar-thumb:hover {
     background-color: rgba(0, 0, 0, 0.3);
 }
 
-.white-theme::-webkit-scrollbar-thumb:active {
+.white-theme ::-webkit-scrollbar-thumb:active {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
@@ -298,9 +298,9 @@ h1 {
     ::-webkit-scrollbar-thumb, 
     ::-webkit-scrollbar-thumb:hover, 
     ::-webkit-scrollbar-thumb:active, 
-    .white-theme::-webkit-scrollbar-thumb, 
-    .white-theme::-webkit-scrollbar-thumb:hover, 
-    .white-theme::-webkit-scrollbar-thumb:active {
+    .white-theme ::-webkit-scrollbar-thumb, 
+    .white-theme ::-webkit-scrollbar-thumb:hover, 
+    .white-theme ::-webkit-scrollbar-thumb:active {
         background-color: transparent;
     }
 }

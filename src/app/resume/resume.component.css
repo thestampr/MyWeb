@@ -64,6 +64,10 @@ p {
     /* background-color: gold; */
 }
 
+.no-background {
+    background: none;
+}
+
 #content-footer {
     width: 100%;
     height: 50px;
@@ -456,7 +460,7 @@ progress[value] {
     }
     
     .section-name, .card-name {
-        font-size: 10px;
+        font-size: 12px;
     }
     
     .section-name, .section-linebreak {
@@ -475,12 +479,8 @@ progress[value] {
         padding-left: 16px;
     }
 
-    li {
-        font-size: 12px;
-    }
-
-    p {
-        font-size: 12px;
+    li, p {
+        font-size: 14px;
     }
 
     .timeline-dot {
@@ -522,7 +522,7 @@ progress[value] {
     }
     
     .section-name, .card-name {
-        font-size: 12px;
+        font-size: 14px;
     }
     
     .section-value {
@@ -593,15 +593,15 @@ progress[value] {
 
 @media only screen and (max-width: 600px) {
     p {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .grid-item  {
-        width: 300px;
+        width: 340px;
     }
     
     .section-extra {
-        font-size: 12px;
+        font-size: 14px;
     }
 }
 
