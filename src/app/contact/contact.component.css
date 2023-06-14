@@ -28,17 +28,18 @@
     width: 400px;
 }
 
-.personal-item:hover #clone-btn {
+.personal-item:hover .clone-btn {
     opacity: 100%;
 }
 
-#clone-btn {
+.clone-btn {
     width: 40px;
     height: 40px;
 
     min-width: unset;
     min-height: unset;
 
+    line-height: 22px;
     font-size: 15px;
     text-align: center;
     text-decoration: none;
@@ -51,8 +52,18 @@
     padding: 10px;
     margin-left: auto;
 
+    transition: opacity 0.1s;
+
     opacity: 0%;
 }
+
+/* .white-theme .clone-btn:hover {
+    background-color: var(--alpha-dark);
+}
+
+.dark-theme .clone-btn:hover {
+    background-color: var(--alpha-white);
+} */
 
 #content {
     margin-top: 100px;
@@ -99,7 +110,7 @@
     font-size: 15px;
 }
 
-.dark-theme #clone-btn {
+.dark-theme .clone-btn {
     color: var(--white3);
 }
 

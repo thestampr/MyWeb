@@ -1,5 +1,7 @@
 import { Directive, Input, HostListener, OnInit, ElementRef } from '@angular/core';
 
+import { BackendService } from './backend.service';
+
 
 @Directive({
     selector: '[ModalView]'
@@ -8,13 +10,14 @@ export class ModalViewDirective implements OnInit {
 
     @Input() src: string = "";
     @Input() parallax: boolean;
+    @Input() sensitive: number = 0.01;
 
     private _source: string;
 
     private modal_bg: HTMLDivElement;
     private modal_image: HTMLImageElement;
 
-    constructor(private elementRef: ElementRef) {}
+    constructor(private elementRef: ElementRef, private backend: BackendService) {}
 
     get element(): HTMLElement {
         return this.elementRef.nativeElement;
@@ -43,6 +46,28 @@ export class ModalViewDirective implements OnInit {
     }
     
     private _createElement() {
+        function handleMousemove(event: MouseEvent): void {
+            const x: number = (50 - event.clientX - (window.innerWidth / 2)) * self.sensitive;
+            const y: number = (50 - event.clientY - (window.innerHeight / 2)) * self.sensitive;
+    
+            self.modal_image.style.transform = `translateX(${x}px) translateY(${y}px)`;
+        }
+    
+        function handleGyroscope(event: DeviceOrientationEvent): void {
+            const x: number = (50 - event.beta!) * self.sensitive;
+            const y: number = (50 - event.gamma!) * self.sensitive;
+        
+            self.modal_image.style.transform = `translateX(${x}px) translateY(${y}px)`;
+        }
+
+        function createParallax(): void {
+            if (self.backend.isMobile && window.DeviceOrientationEvent) {
+                window.addEventListener('deviceorientation', handleGyroscope);
+            } else {
+                document.addEventListener("mousemove", handleMousemove);
+            }
+        }
+
         this.modal_bg = document.createElement('div');
         this.modal_bg.classList.add("modal-bg");
 
@@ -60,13 +85,13 @@ export class ModalViewDirective implements OnInit {
             this.modal_bg.classList.remove("open");
         });
 
+        this.modal_image.addEventListener("click", (event: MouseEvent) => {
+            event.stopPropagation? event.stopPropagation() : event.cancelBubble = true;
+        });
+
+        let self = this;
         if (this.parallax) {
-            document.addEventListener("mousemove", (event) => {
-                let x: number = (50 - event.clientX - (window.innerWidth / 2)) * 0.01
-                let y: number = (50 - event.clientY - (window.innerHeight / 2)) * 0.01
-        
-                this.modal_image.style.transform = `translateX(${x}px) translateY(${y}px)`;
-            });
+            createParallax();
         }
     }
 }
