@@ -18,6 +18,26 @@ h1 {
 
     font-size: 150px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    position: relative;
+}
+
+h1 > span {
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    float: left;
+}
+
+h1 > #broken0 {
+    transform-origin: 50% 80%;
+    animation: broken0 5s forwards ease-in;
+}
+
+h1 > #broken4 {
+    float: right;
+    transform-origin: 60% 80%;
+    animation: broken4 5s forwards ease-in;
 }
 
 p {
@@ -28,4 +48,38 @@ p {
     border: unset;
     background-color: var(--white1);
     color: var(--dark3);
+}
+
+@keyframes broken0 {
+    0% {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+    }
+    60% {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-14deg);
+        -webkit-transform: rotate(-14deg);
+    }
+}
+
+@keyframes broken4 {
+    0% {
+        transform: rotate(-5deg);
+        -webkit-transform: rotate(-5deg);
+    }
+    45% {
+        transform: rotate(-5deg);
+        -webkit-transform: rotate(-5deg);
+    }
+    60% {
+        transform: rotate(-30deg);
+        -webkit-transform: rotate(-30deg);
+    }
+    100% {
+        transform: rotate(-30deg);
+        -webkit-transform: rotate(-30deg);
+    }
 }
