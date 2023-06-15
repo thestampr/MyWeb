@@ -47,12 +47,16 @@
     margin-top: 50px;
 }
 
+#greeting {
+    max-width: 520px;
+}
+
 #greeting h1 {
     text-align: left;
     margin-top: 0px;
 }
 
-.buttons {
+#buttons {
     display: flex;
     margin-top: 30px;
 
@@ -80,7 +84,9 @@
         height: 200px;
     }
 
-    #about {
+    #greeting {
+        max-width: 410px;
+
         font-size: 80%;
         line-height: 140%;
     }
@@ -89,14 +95,18 @@
 @media only screen and (max-width: 900px) {
     #about {
         flex-direction: column;
-        font-size: 70%;
+    }
+
+    #greeting {
+        max-width: 500px;
+        font-size: 80%;
     }
 
     #greeting h1 {
         text-align: center;
     }
 
-    .buttons {
+    #buttons {
         justify-content: center;
     }
 }
@@ -109,13 +119,11 @@
         margin: 25px;
     }
 
-    #about {
-        font-size: 55%;
-    }
-
     #greeting {
+        width: 300px;
         margin-top: 30px;
-        min-width: 300px;
+
+        font-size: 60%;
     }
 
     p {
