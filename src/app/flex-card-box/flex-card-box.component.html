@@ -1,7 +1,7 @@
 <div class="flexable" [ngClass]="{'fullsize': one_col}">
     <h2>{{name}}</h2>
 
-    <div class="flex-container" [ngClass]="{'dark-theme': theme.is_dark, 'white-theme': !theme.is_dark}">
+    <div id="flex-container" class="glass" [ngClass]="{'dark-theme': theme.is_dark, 'white-theme': !theme.is_dark}">
         <div id="flexable-item" class="flex-container-item {{item.url===undefined? '': 'clickable-all'}}" 
             [ngClass]="{'fullsize': one_col}" 
             *ngFor="let item of items; let i = index"

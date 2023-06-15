@@ -36,7 +36,12 @@
     animation-fill-mode: forwards;
 
     overflow-y: overlay !important;
+    overflow-x: hidden !important;
     scrollbar-gutter: stable both-edges;
+
+    /* overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: overlay; */
 
     /* background-color: gold; */
 }

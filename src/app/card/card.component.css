@@ -24,11 +24,6 @@
     animation: WalkIn ease 1s;
 }
 
-#card.transparent {
-    backdrop-filter: blur(7.5px);
-    -webkit-backdrop-filter: blur(7.5px);
-}
-
 .whitecard {
     background-color: var(--alpha-white2);
     /* border: 1px solid var(--alpha-dark); */
@@ -43,14 +38,14 @@
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.35);
 }
 
-.whitecard:not(.transparent) {
+.whitecard:not(.glass) {
     background-color: var(--white2);
     /* border: 1px solid var(--alpha-dark); */
     color: var(--dark3);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-.darkcard:not(.transparent) {
+.darkcard:not(.glass) {
     background-color: var(--dark2);
     /* border: 1px solid var(--alpha-white); */
     color: var(--white3);
@@ -84,6 +79,12 @@
 #card.justborder.darkcard {
     border: 1px solid var(--alpha-white);
     color: var(--white3);
+}
+
+
+
+#card ::ng-deep app-flex-card-box .flex-container {
+    border-radius: 10px;
 }
 
 

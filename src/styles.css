@@ -122,13 +122,6 @@ h1 {
     text-align: center;
 }
 
-.blur {
-    filter: blur(5px);
-    -moz-filter: blur(5px);
-    -webkit-filter: blur(5px);
-    -o-filter: blur(5px);
-}
-
 .animated-btn {
     transition: scale 0.15s ease-in-out, box-shadow 0.3s ease-in-out;
 }
@@ -599,6 +592,18 @@ mat-progress-bar {
 .revealed {
     opacity: 1;
     animation: WalkIn-from-right ease 1s;
+}
+
+.blur {
+    filter: blur(5px);
+    -moz-filter: blur(5px);
+    -webkit-filter: blur(5px);
+    -o-filter: blur(5px);
+}
+
+.glass {
+    backdrop-filter: blur(7.5px) !important;
+    -webkit-backdrop-filter: blur(7.5px) !important;
 }
 
 /* directive component */
