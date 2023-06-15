@@ -1,5 +1,5 @@
 <header [ngClass]="{'darkpage-header': theme.is_dark, 'whitepage-header': !theme.is_dark}" (contextmenu)="false">
-    <div id="topbar" class="floating">
+    <div id="topbar">
         <nav>
             <a (click)="router.navigateByUrl('aboutme')" [ngClass]="{'active': isActive('aboutme')}">About me</a>
             <!-- <a (click)="router.navigateByUrl('resume')" [ngClass]="{'active': isActive('resume')}">Resume</a> -->

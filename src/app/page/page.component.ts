@@ -56,6 +56,7 @@ export class PageComponent{
     }
     
     OnScroll(): void {
+        let topbar: HTMLElement = document.getElementById("topbar")!;
         let revealItems: HTMLCollectionOf<Element> = document.getElementsByClassName("scroll-reveal");
         let scroll_page: HTMLElement = document.getElementById("scroll-page")!;
         let to_top: HTMLElement = document.getElementById("to-top")!;
@@ -77,12 +78,11 @@ export class PageComponent{
             to_top.style.visibility = "hidden";
         }
         
-        // let topbar: HTMLElement = document.getElementById("topbar")!;
-        // if (scroll_page.scrollTop > 100) {
-        //     topbar.classList.add("floating");
-        // } else {
-        //     topbar.classList.remove("floating");
-        // }
+        if (scroll_page.scrollTop > 20) {
+            topbar.classList.add("floating");
+        } else {
+            topbar.classList.remove("floating");
+        }
     }
 
     ToTop(): void {

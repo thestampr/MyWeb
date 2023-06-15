@@ -100,12 +100,16 @@ nav a:hover {
     color: var(--white3);
 }
 
+.darkpage-header>#topbar {
+    border-bottom: 1px solid var(--dark1);
+}
+
 .darkpage-header *:not(.active, :hover:not(#option-btn)) {
     color: var(--white3);
 }
 
 .darkpage-header>.floating {
-    border-bottom: 1px solid var(--alpha-white);
+    border-bottom: 1px solid var(--alpha-white) !important;
 }
 
 .active {
