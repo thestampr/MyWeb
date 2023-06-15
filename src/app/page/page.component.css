@@ -162,6 +162,24 @@ div {
     }
 }
 
+@media only screen and (min-height: 1200px) {
+    #waves {
+        bottom: 0px;
+    }
+}
+
+@media only screen and (max-height: 900px) {
+    #waves {
+        bottom: -50px;
+    }
+}
+
+@media only screen and (max-height: 600px) {
+    #waves {
+        bottom: -200px;
+    }
+}
+
 
 @keyframes animateFw {
     0% {
