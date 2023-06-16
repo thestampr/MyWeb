@@ -31,6 +31,8 @@
 
     border-radius: var(--rounded);
     overflow: hidden;
+
+    /* background-color: transparent !important; */
 }
 
 .flex-container-item {
