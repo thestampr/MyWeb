@@ -87,7 +87,20 @@ div {
     bottom: 0;
 
     z-index: 0;
-    opacity: 0;
+    /* opacity: 0; */
+
+    transition: opacity 0s;
+
+    -moz-animation: onload 0s ease-in 0.5s forwards;
+    /* Firefox */
+    -webkit-animation: onload 0s ease-in 0.5s forwards;
+    /* Safari and Chrome */
+    -o-animation: onload 0s ease-in 0.5s forwards;
+    /* Opera */
+    animation: onload 0s ease-in 0.5s forwards;
+
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
 }
 
 .white-theme #waves {
@@ -184,6 +197,17 @@ div {
     }
 }
 
+@keyframes onload {
+    to {
+        transition: opacity 0.2s;
+    }
+}
+
+@-webkit-keyframes onload {
+    to {
+        transition: opacity 0.2s;
+    }
+}
 
 @keyframes animateFw {
     0% {
@@ -193,7 +217,6 @@ div {
         background-position-x: 0px;
     }
 }
-
 
 @keyframes animateBw {
     0% {
