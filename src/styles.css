@@ -29,8 +29,8 @@
     /* --scroll-w: 12px;
     --scroll-h: 12px;
     --scroll-margin: 2px; */
-    --scroll-w: 2px;
-    --scroll-h: 2px;
+    --scroll-w: 5px;
+    --scroll-h: 5px;
     --scroll-margin: 0px;
     --scroll-bg: var(--dark2);
 }
