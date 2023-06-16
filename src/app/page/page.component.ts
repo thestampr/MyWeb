@@ -70,7 +70,10 @@ export class PageComponent{
         
             if (element_top < windowHeight/VISIBLE) {
                 revealItems[i].classList.add("revealed");
-            }
+            } 
+            // else {
+            //     revealItems[i].classList.remove("revealed");
+            // }
         }
 
         let footer_top = footer.getBoundingClientRect().top;

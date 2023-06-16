@@ -25,8 +25,14 @@
     --alpha-scheme-color: rgba(124, 131, 200, 0.2);
 
     --rounded: 20px;
-    --scroll-w: 12px;
+
+    /* --scroll-w: 12px;
     --scroll-h: 12px;
+    --scroll-margin: 2px; */
+    --scroll-w: 2px;
+    --scroll-h: 2px;
+    --scroll-margin: 0px;
+    --scroll-bg: var(--dark2);
 }
 
 
@@ -229,7 +235,7 @@ h1 {
     height: var(--scroll-h);
 
     /* overflow: scroll; */
-    margin: 3px;
+    margin: var(--scroll-margin);
     display: block;
     /* display: none; */
 
@@ -240,7 +246,7 @@ h1 {
 }
 
 ::-webkit-scrollbar-track {
-    background-color: transparent;
+    background-color: var(--scroll-bg);
 
     /* background-color: red; */
 }
@@ -249,7 +255,7 @@ h1 {
     background-color: rgba(255, 255, 255, 0.2);
 
     border-radius: 100px;
-    border: solid 3px transparent;
+    border: solid var(--scroll-margin) transparent;
     background-clip: padding-box;
 
     -webkit-backdrop-filter: blur(10px);
@@ -266,7 +272,7 @@ h1 {
 ::-webkit-scrollbar-thumb:active {
     background-color: rgba(255, 255, 255, 0.4);
 }
-
+/* 
 .white-theme ::-webkit-scrollbar-thumb {
     background-color: rgba(0, 0, 0, 0.2);
 }
@@ -277,6 +283,13 @@ h1 {
 
 .white-theme ::-webkit-scrollbar-thumb:active {
     background-color: rgba(0, 0, 0, 0.4);
+} */
+
+#fake-scroll-track {
+    width: var(--scroll-w);
+    height: 100%;
+
+    background-color: var(--scroll-bg);
 }
 
 
@@ -297,6 +310,10 @@ h1 {
     .white-theme ::-webkit-scrollbar-thumb:hover, 
     .white-theme ::-webkit-scrollbar-thumb:active {
         background-color: transparent;
+    }
+
+    #fake-scroll-track {
+        display: none;
     }
 }
 

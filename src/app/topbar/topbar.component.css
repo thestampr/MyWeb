@@ -9,6 +9,7 @@ header {
     position: relative;
 
     display: flex;
+    flex-direction: row-reverse;
 
     top: 0;
 }
