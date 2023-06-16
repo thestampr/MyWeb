@@ -57,25 +57,33 @@ export class PageComponent{
     
     OnScroll(): void {
         let topbar: HTMLElement = document.getElementById("topbar")!;
+        let footer: HTMLElement = document.getElementById("footer")!;
+
         let revealItems: HTMLCollectionOf<Element> = document.getElementsByClassName("scroll-reveal");
         let scroll_page: HTMLElement = document.getElementById("scroll-page")!;
         let to_top: HTMLElement = document.getElementById("to-top")!;
 
+        let windowHeight = window.innerHeight;
+
         for (let i = 0; i < revealItems.length; i++) {
-            let windowHeight = window.innerHeight;
-            let elementTop = revealItems[i].getBoundingClientRect().top;
+            let element_top = revealItems[i].getBoundingClientRect().top;
         
-            if (elementTop < windowHeight/VISIBLE) {
+            if (element_top < windowHeight/VISIBLE) {
                 revealItems[i].classList.add("revealed");
             }
         }
+
+        let footer_top = footer.getBoundingClientRect().top;
+        if (footer_top < windowHeight) {
+            to_top.classList.add("sticky");
+        } else {
+            to_top.classList.remove("sticky");
+        }
         
         if (scroll_page.scrollTop > 300) {
-            to_top.style.opacity = "1";
-            to_top.style.visibility = "visible";
+            to_top.classList.add("visible");
         } else {
-            to_top.style.opacity = "0";
-            to_top.style.visibility = "hidden";
+            to_top.classList.remove("visible");
         }
         
         if (scroll_page.scrollTop > 20) {

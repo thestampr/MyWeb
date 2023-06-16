@@ -25,6 +25,8 @@
     --alpha-scheme-color: rgba(124, 131, 200, 0.2);
 
     --rounded: 20px;
+    --scroll-w: 12px;
+    --scroll-h: 12px;
 }
 
 
@@ -223,8 +225,8 @@ h1 {
 
 /* webkit */
 ::-webkit-scrollbar {
-    width: 12px;
-    height: 12px;
+    width: var(--scroll-w);
+    height: var(--scroll-h);
 
     /* overflow: scroll; */
     margin: 3px;

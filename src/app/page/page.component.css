@@ -69,6 +69,17 @@ div {
     right: 0;
 }
 
+#content-wrapper {
+    width: 100vw;
+    height: auto;
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    padding-bottom: 100px;
+}
+
 #to-top {
     position: fixed;
 
@@ -80,6 +91,20 @@ div {
     cursor: pointer;
     opacity: 0;
     visibility: hidden;
+
+    transition: margin-right 0s, 
+    opacity 0.2s ease-in-out,
+    visibility 0.2s ease-in-out;
+}
+
+#to-top.sticky {
+    position: absolute;
+    margin-right: calc(35px - var(--scroll-w));
+}
+
+#to-top.visible {
+    opacity: 1;
+    visibility: visible;
 }
 
 #waves {
@@ -168,6 +193,10 @@ div {
     #to-top {
         margin: 30px;
     }
+
+    #to-top.sticky {
+        margin-right: 30px;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -177,6 +206,10 @@ div {
 
     #to-top {
         margin: 14px;
+    }
+
+    #to-top.sticky {
+        margin-right: 14px;
     }
 }
 

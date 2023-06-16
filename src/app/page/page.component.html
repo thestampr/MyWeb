@@ -9,8 +9,10 @@
     </div>
 
     <div id="scroll-page">
-        <ng-content />
+        <div id="content-wrapper">
+            <ng-content />
+            <a id="to-top" class="animated-btn fa fa-arrow-up" (click)="ToTop()" [ngClass]="{'dark-btn': theme.is_dark, 'white-btn': !theme.is_dark}"></a>
+        </div>
         <app-footer />
     </div>
-    <a id="to-top" class="animated-btn fa fa-arrow-up" (click)="ToTop()" [ngClass]="{'dark-btn': theme.is_dark, 'white-btn': !theme.is_dark}"></a>
 </div>
