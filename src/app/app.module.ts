@@ -37,6 +37,7 @@ import { ModelViewerComponent } from './model-viewer/model-viewer.component';
 import { ModelsComponent } from './models/models.component';
 import { ModelDetailsComponent } from './model-details/model-details.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
+import { WavesComponent } from './waves/waves.component';
 
 
 const routes: Routes = [
@@ -118,6 +119,7 @@ const routes: Routes = [
         ModelsComponent,
         ModelDetailsComponent,
         ProgressBarComponent,
+        WavesComponent,
     ],
     imports: [
         RouterModule.forRoot(routes),

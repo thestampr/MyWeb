@@ -290,6 +290,13 @@ h1 {
     height: 100%;
 
     background-color: var(--scroll-bg);
+
+    visibility: visible;
+    transition: visibility 0s;
+}
+
+#fake-scroll-track.hide {
+    visibility: hidden;
 }
 
 
@@ -313,7 +320,7 @@ h1 {
     }
 
     #fake-scroll-track {
-        display: none;
+        visibility: hidden;
     }
 }
 
@@ -370,6 +377,10 @@ mat-progress-bar {
 :host ::ng-deep mat-progress-bar .mdc-linear-progress__bar-inner {
     border-color: var(--scheme-color);
     border-top-width: 1000px; /* full height */
+}
+
+*[cdkDrag] {
+    transition: transform 0s;
 }
 
 .ContextMenu {

@@ -1,4 +1,4 @@
-import { Component, ElementRef } from '@angular/core';
+import { Component, ElementRef, HostListener } from '@angular/core';
 import { Router, NavigationStart, NavigationEnd } from '@angular/router';
 
 import { AppearanceService } from '../appearance.service';
@@ -34,12 +34,22 @@ export class PageComponent{
         });
     }
 
+    @HostListener('window:resize')
+    private onResize(): void {
+        let topbar: HTMLElement = document.getElementById("topbar")!;
+        let scroll_wrapper: HTMLElement = document.getElementById("scroll-wrapper")!;
+
+        scroll_wrapper.style.height = String(window.innerHeight - topbar.offsetHeight);
+    }
+
     OnEnter(): void {
         this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = this.theme.background_color;
         this.backend.updateMeta();
 
         let revealItems: HTMLCollectionOf<Element> = document.getElementsByClassName("scroll-reveal");
         let scroll_page: HTMLElement = document.getElementById("scroll-page")!;
+        let content_wrapper: HTMLElement = document.getElementById("content-wrapper")!;
+        let fake_scroll_track: HTMLElement = document.getElementById("fake-scroll-track")!;
 
         for (let i = 0; i < revealItems.length; i++) {
             let windowHeight = window.innerHeight;
@@ -48,6 +58,12 @@ export class PageComponent{
             if (elementTop < windowHeight/VISIBLE) {
                 revealItems[i].classList.add("revealed");
             }
+        }
+
+        if (scroll_page.offsetHeight > content_wrapper.offsetHeight) {
+            fake_scroll_track.classList.add("hide");
+        } else {
+            fake_scroll_track.classList.remove("hide");
         }
 
         if (scroll_page) {
