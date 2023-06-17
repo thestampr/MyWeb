@@ -274,7 +274,7 @@
                                 <div class="section-name">2019 - 2020</div>
                                 <div class="section-value">
                                     3D Designer
-                                    <div class="section-extra">Freelance</div>
+                                    <a class="section-extra">Freelance</a>
                                 </div>
                                 <!-- <div class="section-name">Work from home</div> -->
                                 <div class="auto-height">
@@ -296,7 +296,7 @@
                                 <div class="section-name">Jun - Oct 2022</div>
                                 <div class="section-value">
                                     Internship
-                                    <div class="section-extra">Cooperative Education</div>
+                                    <a class="section-extra">Real Advance Co.,Ltd</a>
                                 </div>
                                 <!-- <div class="section-name">RealAdvance</div> -->
                                 <div class="auto-height">
@@ -364,7 +364,7 @@
 
 <ng-template #Download>
     <div class="ContextMenu" cdkMenu (contextmenu)="false">
-        <button class="ContextMenu-Item" cdkMenuItem (click)="backend.DownloadResume()">
+        <!-- <button class="ContextMenu-Item" cdkMenuItem (click)="backend.DownloadResume()">
             Save as PDF
             <a class="fa fa-file-pdf-o"></a>
         </button>
@@ -378,6 +378,11 @@
         <button class="ContextMenu-Item" cdkMenuItem (click)="backend.DownloadTranscriptEn()">
             Download Transcript
             <a class="fa fa-file-text-o"></a>
+        </button> -->
+
+        <button class="ContextMenu-Item" cdkMenuItem (click)="OpenModal()">
+            Download
+            <!-- <a class="fa fa-download"></a> -->
         </button>
     </div>
 </ng-template>
@@ -399,7 +404,6 @@
     <div id="download-frame" class="dropshadow" onclick="event.cancelBubble=true;if (event.stopPropagation) event.stopPropagation();">
         <p id="download-expand-header" (click)="expand_download =! expand_download">
             Download 
-            <!-- <a class="fa {{expand_download? 'fa-caret-up': 'fa-caret-down'}}"></a> -->
         </p>
 
         <div class="linebreak no-margin-top"></div>
@@ -415,7 +419,6 @@
 
         <div class="linebreak"></div>
     
-        <!-- <button (click)="backend.DownloadTranscriptTh()">Transcript thai</button> -->
         <button (click)="backend.DownloadTranscriptEn()" matRipple>
             Transcript
             <a class="fa fa-file-text-o"></a>

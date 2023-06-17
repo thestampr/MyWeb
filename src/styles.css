@@ -228,6 +228,16 @@ h1 {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
+a[href]:not(.fa) {
+    text-decoration: unset;
+    cursor: default;
+}
+
+a[href]:not(.fa):hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 
 /* webkit */
 ::-webkit-scrollbar {
