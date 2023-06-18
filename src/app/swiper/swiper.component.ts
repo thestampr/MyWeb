@@ -22,7 +22,7 @@ export class SwiperComponent {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev'
         },
-        spaceBetween: 30, 
+        spaceBetween: 20, 
         autoplay: {
             disableOnInteraction: false, 
         }, 

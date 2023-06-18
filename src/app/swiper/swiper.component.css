@@ -32,7 +32,8 @@
     transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
 }
 
-.swiper:hover *:not(.swiper-wrapper, .swiper-slide) {
+.swiper:hover *:not(.swiper-wrapper, .swiper-slide),
+.swiper:active *:not(.swiper-wrapper, .swiper-slide) {
     opacity: 1;
     visibility: visible;
 }
