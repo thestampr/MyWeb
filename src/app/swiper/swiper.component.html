@@ -1,14 +1,13 @@
 <div class="container">
     <h2>{{name}}</h2>
     <swiper 
-        [config]="config" 
-        class="swiper" 
-        [ngClass]="{
-            'fullscreen': fullscreen, 
-            'portrait': portrait&&!fullscreen, 
-            'landscape': !portrait&&!fullscreen
-        }"
-    >
+    [config]="config" 
+    class="swiper" 
+    [ngClass]="{
+        'fullscreen': fullscreen, 
+        'portrait': portrait&&!fullscreen, 
+        'landscape': !portrait&&!fullscreen
+    }">
         <div class="swiper-wrapper">
             <img class="swiper-slide" *ngFor="let image of images; let i = index" [src]="image" [alt]="i" />
         </div>
