@@ -78,7 +78,8 @@ export class ModelViewerComponent implements AfterViewInit, OnDestroy {
     }
 
     public get isFullscreen(): boolean {
-        return (window.innerWidth === screen.width) && (window.innerHeight === screen.height);
+        return (window.innerWidth === screen.width) && (window.innerHeight === screen.height)
+        && (this.viewPort.clientWidth === screen.width) && (this.viewPort.clientHeight === screen.height);
     }
 
     @HostListener('window:resize')
