@@ -303,10 +303,21 @@ a[href]:not(.fa):hover {
 
     visibility: visible;
     transition: visibility 0s;
+
+    position: absolute;
+    top: 0;
+    right: 0 !important;
 }
 
 #fake-scroll-track.hide {
     visibility: hidden;
+}
+
+#fake-scroll-track.long {
+    height: 100vh;
+    position: fixed;
+
+    z-index: 9999;
 }
 
 

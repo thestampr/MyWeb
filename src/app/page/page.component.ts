@@ -48,8 +48,11 @@ export class PageComponent{
 
         let revealItems: HTMLCollectionOf<Element> = document.getElementsByClassName("scroll-reveal");
         let scroll_page: HTMLElement = document.getElementById("scroll-page")!;
-        let content_wrapper: HTMLElement = document.getElementById("content-wrapper")!;
+        // let content_wrapper: HTMLElement = document.getElementById("content-wrapper")!;
         let fake_scroll_track: HTMLElement = document.getElementById("fake-scroll-track")!;
+
+        let topbar: HTMLElement = document.getElementById("topbar")!;
+        let footer: HTMLElement = document.getElementById("footer")!;
 
         for (let i = 0; i < revealItems.length; i++) {
             let windowHeight = window.innerHeight;
@@ -60,10 +63,10 @@ export class PageComponent{
             }
         }
 
-        if (scroll_page.offsetHeight > content_wrapper.offsetHeight) {
-            fake_scroll_track.classList.add("hide");
+        if (scroll_page.offsetHeight >= footer.getBoundingClientRect().bottom - topbar.offsetHeight) {
+            fake_scroll_track.classList.add("long");
         } else {
-            fake_scroll_track.classList.remove("hide");
+            fake_scroll_track.classList.remove("long");
         }
 
         if (scroll_page) {
