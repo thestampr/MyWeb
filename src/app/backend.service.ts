@@ -3,8 +3,6 @@ import { Title, Meta } from '@angular/platform-browser';
 import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
 import { filter, map, mergeMap } from 'rxjs/operators';
 
-import { HttpClient } from '@angular/common/http';
-
 
 @Injectable({
     providedIn: 'root'
@@ -32,6 +30,20 @@ export class BackendService {
         return toMatch.some((toMatchItem) => {
             return navigator.userAgent.match(toMatchItem);
         });
+    }
+
+    public get isHardwareAccelerationEnabled(): boolean {
+        // thanks, ChatGPT!. its not work
+
+        const testElement = document.createElement('div');
+        testElement.style.transform = 'translate3d(0, 0, 0)';
+        
+        const style = window.getComputedStyle(testElement);
+        const transformValue = style.getPropertyValue('transform');
+        
+        // Check if the transform property is preserved and not an empty string
+        // return transformValue !== '' && transformValue !== 'none';
+        return true
     }
 
 

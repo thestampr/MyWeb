@@ -5,6 +5,8 @@ import { GLTFLoader, GLTF } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { ConnectionPositionPair } from '@angular/cdk/overlay';
 
+import { BackendService } from '../backend.service';
+
 
 @Component({
   selector: 'app-model-viewer',
@@ -52,13 +54,17 @@ export class ModelViewerComponent implements AfterViewInit, OnDestroy {
     private renderer: THREE.WebGLRenderer;
     private renderId: number;
 
-    constructor() {}
+    constructor(private backend: BackendService) {}
 
     ngAfterViewInit() {
-        this._createScene();
-        this._createRenderer();
-        this._createControls();
-        this._loadModel();
+        if (this.backend.isHardwareAccelerationEnabled) {
+            this._createScene();
+            this._createRenderer();
+            this._createControls();
+            this._loadModel();
+        } else {
+            this._shouldEnableHardwareAcceleration();
+        }
     }
 
     ngOnDestroy(): void {
@@ -204,6 +210,14 @@ export class ModelViewerComponent implements AfterViewInit, OnDestroy {
             loader_bar.style.display = 'none';
             loading_status.innerText = 'Error';
         };
+    }
+
+    private _shouldEnableHardwareAcceleration(): void {
+        let loading_status: HTMLElement = document.getElementById('loading-state')!;
+        let loader_bar: HTMLElement = document.getElementById('loader-bar')!;
+
+        loader_bar.style.display = 'none';
+        loading_status.innerText = 'Please turn on "Hardware Acceleration"';
     }
 
     public setResolution(res: number): void {
