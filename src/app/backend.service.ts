@@ -32,6 +32,10 @@ export class BackendService {
         });
     }
 
+    public get shouldMobile(): boolean {
+        return window.innerWidth <= 600;
+    }
+
     public get isHardwareAccelerationEnabled(): boolean {
         // thanks, ChatGPT!. its not work
 

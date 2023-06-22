@@ -600,6 +600,19 @@ progress[value] {
         width: 340px;
     }
     
+    .timeline-content>.section-value {
+        justify-content: left;
+        flex-direction: column;
+        align-items: start;
+
+        padding-bottom: 10px;
+    }
+    
+    .timeline-content>.section-value>.section-extra {
+        position: unset;
+        text-align: left;
+    }
+    
     .section-extra {
         font-size: 14px;
     }
