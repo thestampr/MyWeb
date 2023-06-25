@@ -20,6 +20,10 @@ export class ContactComponent {
     }
 
     OnCopy() {
-        this._snackBar.open("Copied!", "Done", {duration: 3000});
+        this._snackBar.open("Copied!", "Done", {
+            duration: 3000, 
+            horizontalPosition: "center", 
+            verticalPosition: "bottom"
+        });
     }
 }

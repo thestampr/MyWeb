@@ -477,14 +477,23 @@ mat-progress-bar {
 }
 
 .mat-mdc-snack-bar-container {
-    background-color: rgba(37, 37, 37, 0.8);
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 5px;
 
-    --mat-mdc-snack-bar-button-color: #fff;
+    border-radius: 5px;
+    overflow: hidden !important;
+
+    --mat-mdc-snack-bar-button-color: var(--scheme-color);
     --mdc-snackbar-supporting-text-color: #fff;
+}
+
+.mdc-snackbar__surface {
+    background-color: var(--dark1) !important;
+
+    border-left: 5px solid var(--scheme-color);
+}
+
+.mat-mdc-button-touch-target, .mdc-button__label {
+    cursor: pointer !important;
 }
 
 .mat-mdc-snack-bar-container button {
