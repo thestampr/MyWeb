@@ -102,6 +102,10 @@ export class PageComponent{
             to_top.classList.remove("sticky");
         }
         
+        // if (scroll_page.scrollTop === 0) {
+        //     to_top.classList.remove("hide");
+        // }
+        
         if (scroll_page.scrollTop > 300) {
             to_top.classList.add("visible");
         } else {
@@ -116,7 +120,10 @@ export class PageComponent{
     }
 
     ToTop(): void {
+        // let to_top: HTMLElement = document.getElementById("to-top")!;
         let scroll_page: HTMLElement = document.getElementById("scroll-page")!;
+
+        // to_top.classList.add("hide");
         scroll_page.scrollTo(0, 0);
     }
 }
