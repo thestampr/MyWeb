@@ -4,7 +4,7 @@
 
         <div id="buttons">
             <a id="icon-btn" href="https://www.facebook.com/thestampr" target="_blank" 
-            class="animated-btn fa fa-facebook" matTooltipPosition="above" matTooltip="Facebook">
+            class="animated-btn  fa fa-facebook" matTooltipPosition="above" matTooltip="Facebook">
             </a>
 
             <a id="icon-btn" href="https://www.instagram.com/__stampr/" target="_blank" 
@@ -28,33 +28,35 @@
             <button id="hire" class="animated-btn" (click)="HireMe()"
             matTooltipPosition="above" matTooltip="Click to see the magic">Hire me</button>
         </div>
-
-        <app-card>
-            <div id="personal">
-                <div class="personal-item" [ngClass]="{'dark-theme': theme.is_dark, 'white-theme': !theme.is_dark}">
-                    <i id="icon" class="icon-small fa fa-envelope"></i>
-                    thestampmc@gmail.com
-                    <button #copy_email
-                    class="clone-btn fa fa-clone" 
-                    [cdkCopyToClipboard]="'thestampmc@gmail.com'" 
-                    (click)="OnCopy()"
-                    matTooltipPosition="above" matTooltip="Copy"
-                    matRipple>
-                    </button>
+        
+        <div id="personal_wrapper">
+            <app-card>
+                <div id="personal">
+                    <div class="personal-item" [ngClass]="{'dark-theme': theme.is_dark, 'white-theme': !theme.is_dark}">
+                        <i id="icon" class="icon-small fa fa-envelope"></i>
+                        thestampmc@gmail.com
+                        <button #copy_email
+                        class="clone-btn fa fa-clone" 
+                        [cdkCopyToClipboard]="'thestampmc@gmail.com'" 
+                        (click)="OnCopy()"
+                        matTooltipPosition="above" matTooltip="Copy"
+                        matRipple>
+                        </button>
+                    </div>
+                    <br>
+                    <div class="personal-item" [ngClass]="{'dark-theme': theme.is_dark, 'white-theme': !theme.is_dark}">
+                        <i id="icon" class="icon-small fa fa-phone"></i>
+                        090-935-1529
+                        <button #copy_tel 
+                        class="clone-btn fa fa-clone" 
+                        [cdkCopyToClipboard]="'0909351529'" 
+                        (click)="OnCopy()"
+                        matTooltipPosition="above" matTooltip="Copy"
+                        matRipple>
+                        </button>
+                    </div>
                 </div>
-                <br>
-                <div class="personal-item" [ngClass]="{'dark-theme': theme.is_dark, 'white-theme': !theme.is_dark}">
-                    <i id="icon" class="icon-small fa fa-phone"></i>
-                    090-935-1529
-                    <button #copy_tel 
-                    class="clone-btn fa fa-clone" 
-                    [cdkCopyToClipboard]="'0909351529'" 
-                    (click)="OnCopy()"
-                    matTooltipPosition="above" matTooltip="Copy"
-                    matRipple>
-                    </button>
-                </div>
-            </div>
-        </app-card>
+            </app-card>
+        </div>
     </div>
 </app-page>

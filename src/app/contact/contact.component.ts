@@ -15,12 +15,8 @@ export class ContactComponent {
 
     constructor(public theme: AppearanceService, private _snackBar: MatSnackBar) {}
 
-    async HireMe() {
-        let card: HTMLElement = document.getElementById("card")!;
-
-        card.style.scale = "1.05";
-        await utils.delay(750);
-        card.style.scale = "1.0";
+    HireMe() {
+        utils.animateCSS("#personal_wrapper", "pulse");
     }
 
     OnCopy() {
