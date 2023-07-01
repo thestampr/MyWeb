@@ -135,14 +135,28 @@ h1 {
     transition: scale 0.15s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.animated-btn:hover {
+.animated-btn:hover:not(:disabled) {
     scale: 1.02;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.12);
 }
 
-.animated-btn:active {
+.animated-btn:active:not(:disabled) {
     scale: 0.98;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+*:disabled {
+    opacity: 0.4;
+}
+
+*:disabled:hover {
+    scale: 1 !important;
+    /* box-shadow: initial !important; */
+}
+
+*:disabled:active {
+    scale: 1 !important;
+    /* box-shadow: initial !important; */
 }
 
 .clickable {
