@@ -146,7 +146,8 @@ h1 {
 }
 
 *:disabled {
-    opacity: 0.4;
+    opacity: 0.4 !important;
+    cursor: default !important;
 }
 
 *:disabled:hover {
