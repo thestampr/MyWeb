@@ -52,13 +52,13 @@ export class BackendService {
 
 
     // SEO services
-    updateMetaInfo(content: string, author: string, category: string): void {
+    public updateMetaInfo(content: string, author: string, category: string): void {
         this.meta.updateTag({ name: 'description', content: content });
         this.meta.updateTag({ name: 'author', content: author });
         this.meta.updateTag({ name: 'keywords', content: category });
     }
 
-    updateMeta(): void {
+    public updateMeta(): void {
         this.router.events.pipe(
             filter((event) => event instanceof NavigationEnd),
             map(() => this.activatedRoute),

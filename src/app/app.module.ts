@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { DragDropModule } from '@angular/cdk/drag-drop';
-import { Routes, RouterModule } from '@angular/router';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { CdkMenuModule } from '@angular/cdk/menu';
 import { ClipboardModule } from '@angular/cdk/clipboard';
@@ -12,6 +11,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatRippleModule } from '@angular/material/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,7 +26,6 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { LandingComponent } from './landing/landing.component';
 import { ContactComponent } from './contact/contact.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ResumeComponent } from './resume/resume.component';
 import { FooterComponent } from './footer/footer.component';
 import { FlexCardBoxComponent } from './flex-card-box/flex-card-box.component';
@@ -38,66 +37,6 @@ import { ModelsComponent } from './models/models.component';
 import { ModelDetailsComponent } from './model-details/model-details.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { WavesComponent } from './waves/waves.component';
-
-
-const routes: Routes = [
-    { 
-        path: '', 
-        component: LandingComponent,
-        data: {
-            title: 'Home',
-            description:"Hi I'm Stamp, nice to meet you!",
-            Image: 'assets/images/profile.jpg',
-        } 
-    },
-    { 
-        path: 'aboutme', 
-        component: AboutMeComponent,
-        data: {
-            title: 'About me',
-            description:"Hi I'm Stamp, nice to meet you!",
-            Image: 'assets/images/profile.jpg',
-        } 
-    },
-    { 
-        path: 'contact', 
-        component: ContactComponent,
-        data: {
-            title: 'Contact me',
-            description:"Feel free to contact me!",
-            Image: 'assets/images/profile.jpg',
-        } 
-    },
-    { 
-        path: 'resume', 
-        component: ResumeComponent,
-        data: {
-            title: 'Resume',
-            description:"Stamp's resume is here!",
-            Image: 'assets/images/profile.jpg',
-        } 
-    },
-    { 
-        path: '3d', 
-        component: ModelsComponent
-    },
-    { 
-        path: '3d/:model', 
-        component: ModelDetailsComponent
-    },
-    { 
-        path: '404', 
-        component: PageNotFoundComponent,
-        data: {
-            title: 'Hmmm 404',
-            description:"What are you looking for?",
-        }  
-    },
-    { 
-        path: '**', 
-        redirectTo: '404'
-    },
-];
 
 
 @NgModule({
@@ -122,7 +61,6 @@ const routes: Routes = [
         WavesComponent,
     ],
     imports: [
-        RouterModule.forRoot(routes),
         BrowserModule,
         AppRoutingModule, 
         HttpClientModule, 
