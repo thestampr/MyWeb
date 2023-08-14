@@ -28,11 +28,12 @@
         <button id="modal-close" (click)="CloseNav()">⨉</button>
     
         <button (click)="router.navigateByUrl('aboutme')" [ngClass]="{'active': isActive('aboutme')}">
-            <!-- <a class="fa fa-info-circle"></a> -->
             About me
         </button>
+        <button (click)="router.navigateByUrl('resume')" [ngClass]="{'active': isActive('resume')}">
+            Resume
+        </button>
         <button (click)="router.navigateByUrl('contact')" [ngClass]="{'active': isActive('contact')}">
-            <!-- <a class="fa fa-phone"></a> -->
             Contact
         </button>
         
