@@ -38,15 +38,15 @@ const routes: Routes = [
             Image: 'assets/images/profile.jpg',
         } 
     },
-    // { 
-    //     path: 'resume', 
-    //     component: ResumeComponent,
-    //     data: {
-    //         title: 'Resume',
-    //         description:"Stamp's resume is here!",
-    //         Image: 'assets/images/profile.jpg',
-    //     } 
-    // },
+    { 
+        path: 'resume', 
+        component: ResumeComponent,
+        data: {
+            title: 'Resume',
+            description:"Stamp's resume is here!",
+            Image: 'assets/images/profile.jpg',
+        } 
+    },
     { 
         path: '3d', 
         component: ModelsComponent

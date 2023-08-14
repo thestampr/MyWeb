@@ -8,7 +8,10 @@
                 <!-- </div> -->
     
                 <span id="greeting">
-                    <h1>Peeradon Rungkanawut</h1>
+                    <h1>
+                        Peeradon Rungkanawut
+                        <span>Fullstack Developer</span>
+                    </h1>
     
                     <p>
                         I have passion in programming and primarily use Python
@@ -20,7 +23,7 @@
                     </p>
     
                     <div id="buttons">
-                        <button id="resume" class="animated-btn" (click)="router.navigateByUrl('resume')" [disabled]="true">View resume</button>
+                        <button id="resume" class="animated-btn" (click)="router.navigateByUrl('resume')">View resume</button>
                         <button id="contact" class="animated-btn" (click)="router.navigateByUrl('contact')">Contact me</button>
                     </div>
                 </span>
@@ -31,8 +34,8 @@
             <app-flex-card-box 
                 name="What I do"
                 [items]="[
-                    {icon: 'fa-code', title: 'Coding', descriptions: ['C, C++, Python, JavaScript, TypeScript']}, 
-                    {icon: 'fa-sticky-note-o ', title: 'Web Design', descriptions: ['Angular, VueJs']}, 
+                    {icon: 'fa-code', title: 'Backend', descriptions: ['C, C++, Python, JavaScript, TypeScript']}, 
+                    {icon: 'fa-sticky-note-o ', title: 'Frontend', descriptions: ['Angular, VueJs']}, 
                     {icon: 'fa-cube', title: '3D Art', descriptions: ['Modeling, Lighting, Rendering', 'Blender'], url: '3d'}, 
                     {icon: 'fa-ellipsis-h', title: 'and more', descriptions: ['Traveling, Gaming']}, 
                 ]"

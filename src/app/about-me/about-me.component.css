@@ -54,7 +54,32 @@
 #greeting h1 {
     text-align: left;
     margin-top: 0px;
+    margin-bottom: 25px;
+
+    display: flex;
+    gap: 5px;
+    flex-direction: row;
+    position: relative;
 }
+
+#greeting > h1 > span {
+    font-weight: 200;
+    font-size: 18px;
+    
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+
+    opacity: 0.5;
+}
+
+/* #greeting > h1 > span::before {
+    content: "( ";
+}
+
+#greeting > h1 > span::after {
+    content: " )";
+} */
 
 #buttons {
     display: flex;
@@ -90,6 +115,11 @@
         font-size: 80%;
         line-height: 140%;
     }
+
+    #greeting > h1 > span {
+        font-size: 16px;
+        bottom: -2px;
+    }
 }
 
 @media only screen and (max-width: 900px) {
@@ -104,6 +134,12 @@
 
     #greeting h1 {
         text-align: center;
+        flex-direction: column;
+    }
+
+    #greeting > h1 > span {
+        position: unset;
+        font-size: 14px;
     }
 
     #buttons {
