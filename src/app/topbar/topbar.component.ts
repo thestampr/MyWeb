@@ -18,7 +18,7 @@ export class TopbarComponent{
 
     private _changeTheme(): void {
         let body: HTMLElement = this.elementRef.nativeElement.ownerDocument.body;
-        body.style.backgroundColor = this.theme.background_color;
+        // body.style.backgroundColor = this.theme.background_color;
     }
 
     @HostListener("window:resize")

@@ -30,7 +30,9 @@ export class PageComponent{
                 // console.log('end');
             }
 
-            this.OnEnter();
+            setTimeout(() => {
+                this.OnEnter();
+            }, 100);
         });
     }
 
@@ -43,7 +45,7 @@ export class PageComponent{
     }
 
     OnEnter(): void {
-        this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = this.theme.background_color;
+        // this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = this.theme.background_color;
         this.backend.updateMeta();
 
         let revealItems: HTMLCollectionOf<Element> = document.getElementsByClassName("scroll-reveal");

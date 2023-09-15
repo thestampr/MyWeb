@@ -168,11 +168,11 @@ h1 {
     cursor: pointer;
 }
 
-.white-theme {
+body:has(#container.white-theme) {
     background-color: var(--white3);
 }
 
-.dark-theme {
+body:has(#container.dark-theme) {
     background-color: var(--dark1);
 }
 
