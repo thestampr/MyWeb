@@ -37,6 +37,7 @@ import { ModelsComponent } from './models/models.component';
 import { ModelDetailsComponent } from './model-details/model-details.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { WavesComponent } from './waves/waves.component';
+import { CodeBlockComponent } from './code-block/code-block.component';
 
 
 @NgModule({
@@ -59,6 +60,7 @@ import { WavesComponent } from './waves/waves.component';
         ModelDetailsComponent,
         ProgressBarComponent,
         WavesComponent,
+        CodeBlockComponent,
     ],
     imports: [
         BrowserModule,

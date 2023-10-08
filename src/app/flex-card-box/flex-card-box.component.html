@@ -2,21 +2,22 @@
     <h2>{{name}}</h2>
 
     <div id="flex-container" class="glass" [ngClass]="{'dark-theme': theme.is_dark, 'white-theme': !theme.is_dark}">
-        <div id="flexable-item" class="flex-container-item {{item.url===undefined? '': 'clickable-all'}}" 
+        <div class="flexable-item"
             [ngClass]="{'fullsize': one_col}" 
-            *ngFor="let item of items; let i = index"
-            (click)="item.url===undefined? false: router.navigateByUrl(item.url)"
-            matRipple>
+            *ngFor="let item of items; let i = index">
 
-            <div id="item-icon">
-                <i id="item-icon" class="fa {{item.icon}} icon-large" ></i>
+            <div class="item-icon">
+                <i class="fa {{item.icon}} icon-large" ></i>
             </div>
 
-            <div id="item-details">
-                <h3>
-                    {{item.title}}
-                </h3>
-                <div id="item-description">
+            <div class="item-details">
+                <span class="item-header-wrapper">
+                    <h3>
+                        {{item.title}}
+                    </h3>
+                    <button class="item-ab-btn animated-btn glass" *ngIf="item.url" (click)="router.navigateByUrl(item.url)" cdkDrag>learn more</button>
+                </span>
+                <div class="item-description">
                     <p *ngFor="let description of item.descriptions;">
                         {{description}} <br>
                     </p>

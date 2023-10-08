@@ -143,6 +143,7 @@ div {
 
     #to-top {
         margin: 14px;
+        scale: 0.9;
     }
 
     #to-top.sticky {

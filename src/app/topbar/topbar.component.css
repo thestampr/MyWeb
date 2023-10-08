@@ -176,30 +176,40 @@ button[mat-icon-button] {
     flex-direction: column;
     position: relative;
 
-    padding-top: 80px;
-    padding-bottom: 50px;
-    padding-left: 0px;
-    padding-right: 0px;
-    gap: 10px;
+    padding: 18px;
+    padding-top: 56px;
+    gap: 12px;
 
     margin-right: -100%;
 }
 
-.buttom-nav {
+.top-nav, .bottom-nav {
     width: 100%;
-    height: auto;
 
     display: flex;
     flex-direction: column;
+    gap: 8px;
 
-    padding-bottom: 80px;
-    gap: 10px;
-
-    position: absolute;
-    bottom: 0;
+    padding: 8px 0;
 }
 
-#mobile-nav>button:not(#modal-close), .buttom-nav>button {
+.top-nav {
+    flex: 1;
+}
+
+.bottom-nav {
+    padding-bottom: 0;
+}
+
+.darkpage-nav .bottom-nav {
+    border-top: 1px solid var(--alpha-white);
+}
+
+.whitepage-nav .bottom-nav {
+    border-top: 1px solid var(--alpha-dark);
+}
+
+.top-nav > button, .bottom-nav > button {
     width: 100%;
     text-align: left;
 
@@ -208,11 +218,11 @@ button[mat-icon-button] {
 
     font-size: 20px;
 
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 0;
+    padding-right: 0;
 }
 
-#mobile-nav>button:hover, .buttom-nav>button:hover {
+.top-nav > button:hover, .bottom-nav > button:hover {
     color: var(--scheme-color);
 }
 
@@ -323,7 +333,7 @@ button[mat-icon-button] {
         font-weight: 400;
     }
 
-    #mobile-nav>button:not(#modal-close), .buttom-nav>button {
+    .top-nav > button, .bottom-nav > button {
         font-size: 16px;
     }
 }

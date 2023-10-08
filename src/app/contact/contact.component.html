@@ -44,7 +44,7 @@
                         </button>
                     </div>
                     <br>
-                    <div class="personal-item" [ngClass]="{'dark-theme': theme.is_dark, 'white-theme': !theme.is_dark}">
+                    <!-- <div class="personal-item" [ngClass]="{'dark-theme': theme.is_dark, 'white-theme': !theme.is_dark}">
                         <i id="icon" class="icon-small fa fa-phone"></i>
                         090-935-1529
                         <button #copy_tel 
@@ -53,6 +53,15 @@
                         (click)="OnCopy()"
                         matTooltipPosition="above" matTooltip="Copy"
                         matRipple>
+                        </button>
+                    </div> -->
+                    <div class="personal-item" [ngClass]="{'dark-theme': theme.is_dark, 'white-theme': !theme.is_dark}">
+                        <i id="icon" class="icon-small fa fa-phone"></i>
+                        Not available
+                        <button #copy_tel 
+                        class="clone-btn fa fa-clone" 
+                        matTooltipPosition="above" matTooltip="Not available"
+                        matRipple [matRippleDisabled]="true">
                         </button>
                     </div>
                 </div>

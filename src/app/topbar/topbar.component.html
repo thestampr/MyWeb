@@ -26,20 +26,20 @@
 <div id="mobile-nav-bg" (click)="CloseNav()">
     <div id="mobile-nav" [ngClass]="{'darkpage-nav': theme.is_dark, 'whitepage-nav': !theme.is_dark}" (contextmenu)="false">
         <button id="modal-close" (click)="CloseNav()">⨉</button>
-    
-        <button (click)="router.navigateByUrl('aboutme')" [ngClass]="{'active': isActive('aboutme')}">
-            About me
-        </button>
-        <button (click)="router.navigateByUrl('resume')" [ngClass]="{'active': isActive('resume')}">
-            Resume
-        </button>
-        <button (click)="router.navigateByUrl('contact')" [ngClass]="{'active': isActive('contact')}">
-            Contact
-        </button>
+
+        <div class="top-nav">
+            <button (click)="router.navigateByUrl('aboutme')" [ngClass]="{'active': isActive('aboutme')}">
+                About me
+            </button>
+            <button (click)="router.navigateByUrl('resume')" [ngClass]="{'active': isActive('resume')}">
+                Resume
+            </button>
+            <button (click)="router.navigateByUrl('contact')" [ngClass]="{'active': isActive('contact')}">
+                Contact
+            </button>
+        </div>
         
-        <div class="buttom-nav">
-            <div class="linebreak" [ngClass]="{'line-white': theme.is_dark, 'line-dark': !theme.is_dark}"></div>
-            
+        <div class="bottom-nav">
             <button class="bottom" (click)="ToogleTheme()">{{theme.is_dark? "Light mode" : "Dark mode"}}</button>
         </div>
     </div>

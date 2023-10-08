@@ -1,0 +1,21 @@
+<div class="codeblock-wrapper" [ngClass]="{'oneline': (lines.length === 1) && autoOneline}" [class]="class">
+    <span class="code-header" *ngIf="showHeader">
+        <p>{{format}}</p>
+        <i id="copy-btn-{{el_id}}" class="copy-btn clickable fa fa-clone" 
+        *ngIf="allowCopy"
+        [cdkCopyToClipboard]="lines.join('\n')"
+        #copyTooltip="matTooltip"
+        matTooltipPosition="left" 
+        matTooltipClass="unselectable"
+        [matTooltip]="tooltipCopyMessage"></i>
+    </span>
+    <code id="code-{{el_id}}">
+        <span id="code-wrapper-{{el_id}}" class="code-wrapper">
+            <span id="code-line-wrapper-{{el_id}}-{{i}}" class="code-line-wrapper" *ngFor="let line of displayLines; let i = index">
+                <span id="line-number-{{el_id}}-{{i}}" class="line-number" *ngIf="showLinenumber">{{i+1}}</span>
+                <p id="code-line-{{el_id}}-{{i}}">{{line === ''? '\n': line}}</p>
+                <span id="code-cursor-{{el_id}}-{{i}}" class="code-cursor" [class]="displayCursor && i === displayLines.length-1? 'display': ''">_</span>
+            </span>
+        </span>
+    </code>
+</div>

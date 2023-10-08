@@ -4,7 +4,7 @@
             <div id="about">
                 
                 <!-- <div class="aura"> -->
-                    <img id="me" src="assets/images/profile-4.jpg" [cdkContextMenuTriggerFor]="Image" ModalView /> 
+                    <img id="me" src="assets/images/profile-5.jpg" [cdkContextMenuTriggerFor]="Image" ModalView /> 
                 <!-- </div> -->
     
                 <span id="greeting">
@@ -23,19 +23,31 @@
                     </p>
     
                     <div id="buttons">
-                        <button id="resume" class="animated-btn" (click)="router.navigateByUrl('resume')">View resume</button>
-                        <button id="contact" class="animated-btn" (click)="router.navigateByUrl('contact')">Contact me</button>
+                        <button class="animated-btn primary" (click)="router.navigateByUrl('resume')">View resume</button>
+                        <button class="animated-btn" (click)="router.navigateByUrl('contact')">Contact me</button>
                     </div>
                 </span>
             </div>
         </section>
+
+        <!-- <section class="scroll-reveal">
+            <code-block class="section-content block" 
+            [typingAnimation]="true" 
+            [displayCursor]="true" 
+            [showLinenumber]="true"
+            [allowCopy]="false"
+            [lines]="[
+                'Hello world!', 
+                'Nice to reached you!'
+            ]" />
+        </section> -->
 
         <section class="scroll-reveal">
             <app-flex-card-box 
                 name="What I do"
                 [items]="[
                     {icon: 'fa-code', title: 'Backend', descriptions: ['C, C++, Python, JavaScript, TypeScript']}, 
-                    {icon: 'fa-sticky-note-o ', title: 'Frontend', descriptions: ['Angular, VueJs']}, 
+                    {icon: 'fa-sticky-note-o ', title: 'Frontend', descriptions: ['Angular, Vue']}, 
                     {icon: 'fa-cube', title: '3D Art', descriptions: ['Modeling, Lighting, Rendering', 'Blender'], url: '3d'}, 
                     {icon: 'fa-ellipsis-h', title: 'and more', descriptions: ['Traveling, Gaming']}, 
                 ]"

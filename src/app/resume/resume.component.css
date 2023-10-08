@@ -39,16 +39,24 @@ p {
 }
 
 .card-name {
-    opacity: 0.4;
     font-size: 14px;
 
     position: relative;
+    padding-bottom: 2px;
 }
 
-.card-name>.section-extra {
+.card-name > .section-extra {
+    top: 0;
     right: 0;
+    opacity: 0.4;
+}
 
-    opacity: 1;
+::ng-deep .whitecard .card-name {
+    border-bottom: 1px solid var(--alpha-dark);
+}
+
+::ng-deep .darkcard .card-name {
+    border-bottom: 1px solid var(--alpha-white);
 }
 
 #resume-content {
@@ -80,9 +88,6 @@ p {
 #download-btn {
     width: 200px;
     height: 50px;
-
-    background-color: var(--scheme-color);
-    color: var(--white1);
 }
 
 #download-frame {

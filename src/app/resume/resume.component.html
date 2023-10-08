@@ -6,7 +6,7 @@
                 <app-card class="card" [fullHeight]="true">
                     <div class="personal">
                         <div class="image">
-                            <img class="me" src="assets/images/me-rotated.jpg" [cdkContextMenuTriggerFor]="Image" ModalView /> 
+                            <img class="me" src="assets/images/profile-4.jpg" [cdkContextMenuTriggerFor]="Image" ModalView /> 
                         </div>
 
                         <div class="section-linebreak linebreak" [ngClass]="{'line-white': theme.is_dark, 'line-dark': !theme.is_dark}"></div>
@@ -22,8 +22,9 @@
                         </div>
 
                         <div class="section-name">Phone number</div>
-                        <div class="section-value">
-                            090-935-1529
+                        <div class="section-value" disabled>
+                            <!-- 090-935-1529 -->
+                            Not available
                         </div>
 
                         <div class="section-linebreak linebreak" [ngClass]="{'line-white': theme.is_dark, 'line-dark': !theme.is_dark}"></div>
@@ -61,7 +62,7 @@
                             </ul>
                         </div>
 
-                        <div class="linebreak" [ngClass]="{'line-white': theme.is_dark, 'line-dark': !theme.is_dark}"></div>
+                        
 
                         <div class="section-name">Languages</div>
                         <ul>
@@ -97,7 +98,7 @@
                 <app-card class="card">
                     <div class="auto-height">
                         <div class="card-name">About me</div>
-                        <div class="linebreak" [ngClass]="{'line-white': theme.is_dark, 'line-dark': !theme.is_dark}"></div>
+                        
 
                         <div class="section-spacing"></div>
                         <p>
@@ -110,7 +111,7 @@
                             Ready to learn and grow my skills.
                         </p>
 
-                        <!-- <div class="linebreak" [ngClass]="{'line-white': theme.is_dark, 'line-dark': !theme.is_dark}"></div>
+                        <!-- 
 
                         <div class="section-name">Career Objective</div>
                         <p>
@@ -123,7 +124,7 @@
                 <app-card class="card">
                     <div class="auto-height">
                         <div class="card-name">Projects</div>
-                        <div class="linebreak" [ngClass]="{'line-white': theme.is_dark, 'line-dark': !theme.is_dark}"></div>
+                        
 
                         <ul>
                             <li>
@@ -157,7 +158,7 @@
                             Skills
                             <div class="section-extra">click for more details</div>
                         </div>
-                        <div class="linebreak" [ngClass]="{'line-white': theme.is_dark, 'line-dark': !theme.is_dark}"></div>
+                        
                         <div class="section-spacing"></div>
 
                         <mat-accordion>
@@ -184,7 +185,7 @@
                                     <div class="section-value">
                                         Python
                                         <div id="bar" matTooltipPosition="left" matTooltip="Expert">
-                                            <app-progress-bar [percent]="88" [clickable]="true"/>
+                                            <app-progress-bar [percent]="89" [clickable]="true"/>
                                         </div>
                                     </div>
                                 </mat-expansion-panel-header>
@@ -203,7 +204,7 @@
                                     <div class="section-value">
                                         TypeScript
                                         <div id="bar" matTooltipPosition="left" matTooltip="Skilfull">
-                                            <app-progress-bar [percent]="65" [clickable]="true"/>
+                                            <app-progress-bar [percent]="72" [clickable]="true"/>
                                         </div>
                                     </div>
                                 </mat-expansion-panel-header>
@@ -219,7 +220,7 @@
                                     <div class="section-value">
                                         Angular
                                         <div id="bar" matTooltipPosition="left" matTooltip="Skilfull">
-                                            <app-progress-bar [percent]="60" [clickable]="true"/>
+                                            <app-progress-bar [percent]="69" [clickable]="true"/>
                                         </div>
                                     </div>
                                 </mat-expansion-panel-header>
@@ -236,7 +237,7 @@
                                     <div class="section-value">
                                         Sql
                                         <div id="bar" matTooltipPosition="left" matTooltip="Basic">
-                                            <app-progress-bar [percent]="15" [clickable]="true"/>
+                                            <app-progress-bar [percent]="25" [clickable]="true"/>
                                         </div>
                                     </div>
                                 </mat-expansion-panel-header>
@@ -253,7 +254,7 @@
                                         Self learning
                                         <!-- <progress max="100" value="95" matTooltipPosition="left" matTooltip="Expert"></progress> -->
                                         <div id="bar" matTooltipPosition="left" matTooltip="Expert">
-                                            <app-progress-bar [percent]="97" [clickable]="true"/>
+                                            <app-progress-bar [percent]="96" [clickable]="true"/>
                                         </div>
                                     </div>
                                 </mat-expansion-panel-header>
@@ -271,7 +272,7 @@
                 <app-card class="card">
                     <div class="auto-height">
                         <div class="card-name">Work Experiences</div>
-                        <div class="linebreak" [ngClass]="{'line-white': theme.is_dark, 'line-dark': !theme.is_dark}"></div>
+                        
                         <div class="section-spacing"></div>
 
                         <div class="timeline-item" [ngClass]="{'darktheme': theme.is_dark}">
@@ -333,6 +334,7 @@
                                 <!-- <div class="section-name">Takane Electronics Thailand Co., Ltd.</div> -->
                                 <div class="auto-height">
                                     <ul>
+                                        <li>Jr. Fullstack Developer</li>
                                         <li>Programmer</li>
                                         <li>IT</li>
                                     </ul>
@@ -348,7 +350,7 @@
                 <app-card class="card">
                     <div class="auto-height">
                         <div class="card-name">Educations</div>
-                        <div class="linebreak" [ngClass]="{'line-white': theme.is_dark, 'line-dark': !theme.is_dark}"></div>
+                        
                         <div class="section-spacing"></div>
                         
                         <div class="timeline-item" [ngClass]="{'darktheme': theme.is_dark}">
@@ -387,7 +389,7 @@
     </div>
 
     <div id="content-footer">
-        <button id="download-btn" class="animated-btn" (click)="OpenModal()">
+        <button id="download-btn" class="animated-btn primary" (click)="OpenModal()">
             Download 
         </button>
     </div>
