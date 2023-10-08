@@ -86,10 +86,10 @@ code {
 .codeblock-wrapper.oneline {
     height: fit-content;
     min-height: unset;
+}
 
-    > code {
-        padding-bottom: 8px !important;
-    }
+.codeblock-wrapper.oneline > code {
+    padding-bottom: 8px !important;
 }
 
 .codeblock-wrapper.oneline .code-line-wrapper:last-child > p {
