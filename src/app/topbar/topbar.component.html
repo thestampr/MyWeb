@@ -1,5 +1,5 @@
 <header [ngClass]="{'darkpage-header': theme.is_dark, 'whitepage-header': !theme.is_dark}" (contextmenu)="false">
-    <div id="topbar">
+    <div id="topbar" #topbar>
         <nav>
             <a (click)="router.navigateByUrl('aboutme')" [ngClass]="{'active': isActive('aboutme')}">About me</a>
             <a (click)="router.navigateByUrl('resume')" [ngClass]="{'active': isActive('resume')}">Resume</a>
@@ -14,14 +14,6 @@
 
     <div id="fake-scroll-track"></div>
 </header>
-
-<ng-template #Option>
-    <div class="ContextMenu" cdkMenu>
-        <button class="ContextMenu-Item" cdkMenuItem (contextmenu)="false" (click)="ToogleTheme()">
-            {{theme.is_dark? "Light mode" : "Dark mode"}}
-        </button>
-    </div>
-</ng-template>
 
 <div id="mobile-nav-bg" (click)="CloseNav()">
     <div id="mobile-nav" [ngClass]="{'darkpage-nav': theme.is_dark, 'whitepage-nav': !theme.is_dark}" (contextmenu)="false">
@@ -44,3 +36,11 @@
         </div>
     </div>
 </div>
+
+<ng-template #Option>
+    <div class="ContextMenu" cdkMenu>
+        <button class="ContextMenu-Item" cdkMenuItem (contextmenu)="false" (click)="ToogleTheme()">
+            {{theme.is_dark? "Light mode" : "Dark mode"}}
+        </button>
+    </div>
+</ng-template>

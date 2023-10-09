@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener } from '@angular/core';
+import { Component, ElementRef, HostListener, AfterViewInit } from '@angular/core';
 import { Router, NavigationStart, NavigationEnd } from '@angular/router';
 
 import { AppearanceService } from '../appearance.service';
@@ -13,7 +13,7 @@ const VISIBLE = 1.7;
   templateUrl: './page.component.html',
   styleUrls: ['./page.component.css']
 })
-export class PageComponent{
+export class PageComponent implements AfterViewInit{
 
     constructor(
         public theme: AppearanceService,
@@ -29,10 +29,6 @@ export class PageComponent{
             if ( event instanceof NavigationEnd ) {
                 // console.log('end');
             }
-
-            setTimeout(() => {
-                this.OnEnter();
-            }, 100);
         });
     }
 
@@ -44,36 +40,38 @@ export class PageComponent{
         scroll_wrapper.style.height = String(window.innerHeight - topbar.offsetHeight);
     }
 
-    OnEnter(): void {
-        // this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = this.theme.background_color;
-        this.backend.updateMeta();
-
-        let revealItems: HTMLCollectionOf<Element> = document.getElementsByClassName("scroll-reveal");
-        let scroll_page: HTMLElement = document.getElementById("scroll-page")!;
-        // let content_wrapper: HTMLElement = document.getElementById("content-wrapper")!;
-        let fake_scroll_track: HTMLElement = document.getElementById("fake-scroll-track")!;
-
-        let topbar: HTMLElement = document.getElementById("topbar")!;
-        let footer: HTMLElement = document.getElementById("footer")!;
-
-        for (let i = 0; i < revealItems.length; i++) {
-            let windowHeight = window.innerHeight;
-            let elementTop = revealItems[i].getBoundingClientRect().top;
-        
-            if (elementTop < windowHeight/VISIBLE) {
-                revealItems[i].classList.add("revealed");
+    ngAfterViewInit(): void {
+        setTimeout(() => {
+            // this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = this.theme.background_color;
+            this.backend.updateMeta();
+    
+            let revealItems: HTMLCollectionOf<Element> = document.getElementsByClassName("scroll-reveal");
+            let scroll_page: HTMLElement = document.getElementById("scroll-page")!;
+            // let content_wrapper: HTMLElement = document.getElementById("content-wrapper")!;
+            let fake_scroll_track: HTMLElement = document.getElementById("fake-scroll-track")!;
+    
+            let topbar: HTMLElement = document.getElementById("topbar")!;
+            let footer: HTMLElement = document.getElementById("footer")!;
+    
+            for (let i = 0; i < revealItems.length; i++) {
+                let windowHeight = window.innerHeight;
+                let elementTop = revealItems[i].getBoundingClientRect().top;
+            
+                if (elementTop < windowHeight/VISIBLE) {
+                    revealItems[i].classList.add("revealed");
+                }
             }
-        }
-
-        if (scroll_page.offsetHeight >= footer.getBoundingClientRect().bottom - topbar.offsetHeight) {
-            fake_scroll_track.classList.add("long");
-        } else {
-            fake_scroll_track.classList.remove("long");
-        }
-
-        if (scroll_page) {
-            scroll_page.addEventListener("scroll", this.OnScroll);
-        }
+    
+            if (scroll_page.offsetHeight >= footer.getBoundingClientRect().bottom - topbar.offsetHeight) {
+                fake_scroll_track.classList.add("long");
+            } else {
+                fake_scroll_track.classList.remove("long");
+            }
+    
+            if (scroll_page) {
+                scroll_page.addEventListener("scroll", this.OnScroll);
+            }
+        }, 100);
     }
     
     OnScroll(): void {

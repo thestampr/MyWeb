@@ -920,3 +920,12 @@ img[ModalView] {
         transform: translateX(0px);
      }
 }
+
+
+/* Overide angular style */
+
+@media (hover: none) {
+    .mat-expansion-panel:not(.mat-expanded):not([aria-disabled=true]) .mat-expansion-panel-header:hover {
+        background: var(--little-dark);
+    }
+}

@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener } from '@angular/core';
+import { Component, HostListener, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { AppearanceService } from '../appearance.service';
@@ -9,16 +9,21 @@ import { AppearanceService } from '../appearance.service';
   templateUrl: './topbar.component.html',
   styleUrls: ['./topbar.component.css']
 })
-export class TopbarComponent{
+export class TopbarComponent implements AfterViewInit{
 
     private tsX: number;
     private tsY: number;
     
-    constructor(public theme: AppearanceService, public router: Router, private elementRef: ElementRef) {}
+    constructor(
+        public theme: AppearanceService, 
+        public router: Router, 
+    ) {}
 
-    private _changeTheme(): void {
-        let body: HTMLElement = this.elementRef.nativeElement.ownerDocument.body;
-        // body.style.backgroundColor = this.theme.background_color;
+    ngAfterViewInit(): void {
+        const topbar: HTMLElement = document.getElementById("topbar")!;
+        this.router.events.subscribe(() => {
+            topbar.classList.remove("floating");
+        });
     }
 
     @HostListener("window:resize")
@@ -77,7 +82,6 @@ export class TopbarComponent{
 
     ToogleTheme(): void {
         this.theme.is_dark = !this.theme.is_dark;
-        this._changeTheme();
     }
 
     OpenNav(): void {
