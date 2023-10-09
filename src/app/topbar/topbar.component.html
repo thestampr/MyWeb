@@ -6,8 +6,8 @@
             <a (click)="router.navigateByUrl('contact')" [ngClass]="{'active': isActive('contact')}">Contact</a>
         </nav>
     
-        <button id="option-btn" mat-button [cdkMenuTriggerFor]="Option">⁝</button>
-        <button id="mobile-nav-open" mat-icon-button (click)="OpenNav()">
+        <button id="option-btn" mat-button [cdkMenuTriggerFor]="Option"><mat-icon class="clickable">more_vert</mat-icon></button>
+        <button id="mobile-nav-open" mat-icon-button (click)="openModal('mobile-nav-wrapper')">
             <mat-icon>menu</mat-icon>
         </button>
     </div>
@@ -15,9 +15,9 @@
     <div id="fake-scroll-track"></div>
 </header>
 
-<div id="mobile-nav-bg" (click)="CloseNav()">
-    <div id="mobile-nav" [ngClass]="{'darkpage-nav': theme.is_dark, 'whitepage-nav': !theme.is_dark}" (contextmenu)="false">
-        <button id="modal-close" (click)="CloseNav()">⨉</button>
+<div id="mobile-nav-wrapper" class="modal-bg" (click)="closeModal('mobile-nav-wrapper')">
+    <div id="mobile-nav" class="glass" [ngClass]="{'darkpage-nav': theme.is_dark, 'whitepage-nav': !theme.is_dark}" (contextmenu)="false">
+        <button class="modal-close" (click)="closeModal('mobile-nav-wrapper')"><mat-icon>close</mat-icon></button>
 
         <div class="top-nav">
             <button (click)="router.navigateByUrl('aboutme')" [ngClass]="{'active': isActive('aboutme')}">
@@ -32,15 +32,31 @@
         </div>
         
         <div class="bottom-nav">
-            <button class="bottom" (click)="ToogleTheme()">{{theme.is_dark? "Light mode" : "Dark mode"}}</button>
+            <!-- <button class="bottom" (click)="ToogleTheme()">{{theme.is_dark? "Light mode" : "Dark mode"}}</button> -->
+            <div class="nav-button row clickable checktype-wrapper">
+                <span class="checktype-indicator" [ngClass]="{'right': theme.is_dark}"></span>
+                <button class="styled-button" [ngClass]="{'checked': !theme.is_dark}" (click)="theme.is_dark = false">
+                    Light
+                </button>
+                <button class="styled-button" [ngClass]="{'checked': theme.is_dark}" (click)="theme.is_dark = true">
+                    Dark
+                </button>
+            </div>
         </div>
     </div>
 </div>
 
 <ng-template #Option>
-    <div class="ContextMenu" cdkMenu>
-        <button class="ContextMenu-Item" cdkMenuItem (contextmenu)="false" (click)="ToogleTheme()">
+    <div class="ContextMenu row clickable checktype-wrapper" cdkMenu>
+        <!-- <button class="ContextMenu-Item" cdkMenuItem (contextmenu)="false" (click)="ToogleTheme()">
             {{theme.is_dark? "Light mode" : "Dark mode"}}
+        </button> -->
+        <span class="checktype-indicator" [ngClass]="{'right': theme.is_dark}"></span>
+        <button class="styled-button" [ngClass]="{'checked': !theme.is_dark}" (click)="theme.is_dark = false">
+            Light
+        </button>
+        <button class="styled-button" [ngClass]="{'checked': theme.is_dark}" (click)="theme.is_dark = true">
+            Dark
         </button>
     </div>
 </ng-template>

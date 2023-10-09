@@ -13,6 +13,8 @@ export class TopbarComponent implements AfterViewInit{
 
     private tsX: number;
     private tsY: number;
+
+    public is_open: boolean = false;
     
     constructor(
         public theme: AppearanceService, 
@@ -21,8 +23,12 @@ export class TopbarComponent implements AfterViewInit{
 
     ngAfterViewInit(): void {
         const topbar: HTMLElement = document.getElementById("topbar")!;
+        const mobile_nav_wrapper: HTMLElement = document.getElementById("mobile-nav-wrapper")!;
         this.router.events.subscribe(() => {
             topbar.classList.remove("floating");
+            setTimeout(() => {
+                mobile_nav_wrapper.classList.remove("open");
+            }, 250);
         });
     }
 
@@ -96,5 +102,30 @@ export class TopbarComponent implements AfterViewInit{
         let floating_nav: HTMLElement = document.getElementById("mobile-nav-bg")!;
 
         floating_nav.classList.remove("open");
+    }
+
+    public closeModal(el: string): void {
+        let modal: HTMLElement = document.getElementById(el)!;
+        modal.classList.remove("open");
+    }
+
+    public openModal(el: string): void {
+        let modal: HTMLElement = document.getElementById(el)!;
+        modal.classList.add("open");
+
+        modal.addEventListener("click", () => {
+            modal.classList.remove("open");
+            if (el === "sidebar-nav") {
+                this.is_open = false;
+            }
+        })
+
+        let childrens = Array.from(modal.querySelectorAll(`#${el} > *`));
+
+        for (let child of childrens) {
+            (child as HTMLElement).addEventListener("click", (event: MouseEvent) => {
+                event.stopPropagation? event.stopPropagation() : event.cancelBubble = true;
+            });
+        }
     }
 }

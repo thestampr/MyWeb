@@ -15,7 +15,7 @@
                     <h3>
                         {{item.title}}
                     </h3>
-                    <button class="item-ab-btn animated-btn glass" *ngIf="item.url" (click)="router.navigateByUrl(item.url)">learn more</button>
+                    <button class="desktop item-ab-btn animated-btn glass" *ngIf="item.url" (click)="router.navigateByUrl(item.url)">learn more</button>
                 </span>
                 <div class="item-description">
                     <p *ngFor="let description of item.descriptions;">
@@ -23,6 +23,7 @@
                     </p>
                 </div>
             </div>
+            <button class="mobile item-ab-btn animated-btn glass" *ngIf="item.url" (click)="router.navigateByUrl(item.url)">learn more</button>
         </div>
     </div>
 </div>

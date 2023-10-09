@@ -11,6 +11,7 @@ import { AppearanceService } from '../appearance.service';
 export class ProgressBarComponent {
     @Input() percent: number = 0;
     @Input() clickable: boolean;
+    @Input() startAnimation: boolean;
 
     constructor(public theme: AppearanceService) {}
 }

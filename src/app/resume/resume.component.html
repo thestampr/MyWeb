@@ -3,7 +3,7 @@
 
         <div class="grid-content">
             <div class="side-field grid-item">
-                <app-card class="card" [fullHeight]="true">
+                <app-card class="card" [fullHeight]="true" [ngClass]="{'scroll-reveal': backend.isMobile}">
                     <div class="personal">
                         <div class="image">
                             <img class="me" src="assets/images/profile-4.jpg" [cdkContextMenuTriggerFor]="Image" ModalView /> 
@@ -95,7 +95,7 @@
             <!-- <div class="grid-linebreak linebreak" [ngClass]="{'line-white': theme.is_dark, 'line-dark': !theme.is_dark}"></div> -->
 
             <div class="content-field grid-item">
-                <app-card class="card">
+                <app-card class="card" [ngClass]="{'scroll-reveal': backend.isMobile}">
                     <div class="auto-height">
                         <div class="card-name">About me</div>
                         
@@ -121,7 +121,7 @@
                     </div>
                 </app-card>
 
-                <app-card class="card">
+                <app-card class="card" [ngClass]="{'scroll-reveal': backend.isMobile}">
                     <div class="auto-height">
                         <div class="card-name">Projects</div>
                         
@@ -152,7 +152,7 @@
                     </div>
                 </app-card>
 
-                <app-card class="card">
+                <app-card class="card" [ngClass]="{'scroll-reveal': backend.isMobile}">
                     <div id="skills" class="auto-height">
                         <div class="card-name">
                             Skills
@@ -167,7 +167,7 @@
                                     <div class="section-value">
                                         C, C++
                                         <div id="bar" matTooltipPosition="left" matTooltip="Experienced">
-                                            <app-progress-bar [percent]="70" [clickable]="true"/>
+                                            <app-progress-bar [percent]="70" [clickable]="true" [startAnimation]="!backend.isMobile"/>
                                         </div>
                                     </div>
                                 </mat-expansion-panel-header>
@@ -185,7 +185,7 @@
                                     <div class="section-value">
                                         Python
                                         <div id="bar" matTooltipPosition="left" matTooltip="Expert">
-                                            <app-progress-bar [percent]="89" [clickable]="true"/>
+                                            <app-progress-bar [percent]="89" [clickable]="true" [startAnimation]="!backend.isMobile"/>
                                         </div>
                                     </div>
                                 </mat-expansion-panel-header>
@@ -204,7 +204,7 @@
                                     <div class="section-value">
                                         TypeScript
                                         <div id="bar" matTooltipPosition="left" matTooltip="Skilfull">
-                                            <app-progress-bar [percent]="72" [clickable]="true"/>
+                                            <app-progress-bar [percent]="72" [clickable]="true" [startAnimation]="!backend.isMobile"/>
                                         </div>
                                     </div>
                                 </mat-expansion-panel-header>
@@ -220,7 +220,7 @@
                                     <div class="section-value">
                                         Angular
                                         <div id="bar" matTooltipPosition="left" matTooltip="Skilfull">
-                                            <app-progress-bar [percent]="69" [clickable]="true"/>
+                                            <app-progress-bar [percent]="69" [clickable]="true" [startAnimation]="!backend.isMobile"/>
                                         </div>
                                     </div>
                                 </mat-expansion-panel-header>
@@ -237,7 +237,7 @@
                                     <div class="section-value">
                                         Sql
                                         <div id="bar" matTooltipPosition="left" matTooltip="Basic">
-                                            <app-progress-bar [percent]="25" [clickable]="true"/>
+                                            <app-progress-bar [percent]="25" [clickable]="true" [startAnimation]="!backend.isMobile"/>
                                         </div>
                                     </div>
                                 </mat-expansion-panel-header>
@@ -254,7 +254,7 @@
                                         Self learning
                                         <!-- <progress max="100" value="95" matTooltipPosition="left" matTooltip="Expert"></progress> -->
                                         <div id="bar" matTooltipPosition="left" matTooltip="Expert">
-                                            <app-progress-bar [percent]="96" [clickable]="true"/>
+                                            <app-progress-bar [percent]="96" [clickable]="true" [startAnimation]="!backend.isMobile"/>
                                         </div>
                                     </div>
                                 </mat-expansion-panel-header>
@@ -269,7 +269,7 @@
                     </div>
                 </app-card>
 
-                <app-card class="card">
+                <app-card class="card" [ngClass]="{'scroll-reveal': backend.isMobile}">
                     <div class="auto-height">
                         <div class="card-name">Work Experiences</div>
                         
@@ -347,7 +347,7 @@
                     </div>
                 </app-card>
 
-                <app-card class="card">
+                <app-card class="card" [ngClass]="{'scroll-reveal': backend.isMobile}">
                     <div class="auto-height">
                         <div class="card-name">Educations</div>
                         
@@ -388,7 +388,7 @@
         </div>
     </div>
 
-    <div id="content-footer">
+    <div id="content-footer" [ngClass]="{'scroll-reveal': backend.isMobile}">
         <button id="download-btn" class="animated-btn primary" (click)="OpenModal()" disabled>
             Download 
         </button>
