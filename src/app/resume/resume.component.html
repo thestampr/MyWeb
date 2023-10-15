@@ -27,11 +27,9 @@
                             Not available
                         </div>
 
-                        <div class="section-linebreak linebreak" [ngClass]="{'line-white': theme.is_dark, 'line-dark': !theme.is_dark}"></div>
+                        <!-- <div class="section-linebreak linebreak" [ngClass]="{'line-white': theme.is_dark, 'line-dark': !theme.is_dark}"></div>
 
-                        <div class="section-name">
-                            Date of birth
-                        </div>
+                        <div class="section-name">Date of birth</div>
                         <div class="section-value">
                             5 Apr 2001
                         </div>
@@ -49,7 +47,7 @@
                         <div class="section-name">Nationality</div>
                         <div class="section-value">
                             Thai
-                        </div>
+                        </div> -->
 
                         <div class="section-linebreak linebreak" [ngClass]="{'line-white': theme.is_dark, 'line-dark': !theme.is_dark}"></div>
 
@@ -413,7 +411,7 @@
             <a class="fa fa-file-text-o"></a>
         </button> -->
 
-        <button class="ContextMenu-Item" cdkMenuItem (click)="OpenModal()">
+        <button class="ContextMenu-Item" cdkMenuItem (click)="OpenModal()" disabled>
             Download
             <!-- <a class="fa fa-download"></a> -->
         </button>
