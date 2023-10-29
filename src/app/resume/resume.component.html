@@ -23,8 +23,7 @@
 
                         <div class="section-name">Phone number</div>
                         <div class="section-value" disabled>
-                            <!-- 090-935-1529 -->
-                            Not available
+                            Not available yet
                         </div>
 
                         <!-- <div class="section-linebreak linebreak" [ngClass]="{'line-white': theme.is_dark, 'line-dark': !theme.is_dark}"></div>
@@ -59,8 +58,6 @@
                                 <li>Movies</li>
                             </ul>
                         </div>
-
-                        
 
                         <div class="section-name">Languages</div>
                         <ul>
@@ -202,7 +199,7 @@
                                     <div class="section-value">
                                         TypeScript
                                         <div id="bar" matTooltipPosition="left" matTooltip="Skilfull">
-                                            <app-progress-bar [percent]="72" [clickable]="true" [startAnimation]="!backend.isMobile"/>
+                                            <app-progress-bar [percent]="74" [clickable]="true" [startAnimation]="!backend.isMobile"/>
                                         </div>
                                     </div>
                                 </mat-expansion-panel-header>
@@ -235,7 +232,7 @@
                                     <div class="section-value">
                                         Sql
                                         <div id="bar" matTooltipPosition="left" matTooltip="Basic">
-                                            <app-progress-bar [percent]="25" [clickable]="true" [startAnimation]="!backend.isMobile"/>
+                                            <app-progress-bar [percent]="26" [clickable]="true" [startAnimation]="!backend.isMobile"/>
                                         </div>
                                     </div>
                                 </mat-expansion-panel-header>
@@ -243,6 +240,20 @@
                                     <li>Simple query</li>
                                     <li>Create, Insert, Update</li>
                                     <li>*</li>
+                                </ul>
+                            </mat-expansion-panel>
+
+                            <mat-expansion-panel hideToggle>
+                                <mat-expansion-panel-header>
+                                    <div class="section-value">
+                                        Flutter
+                                        <div id="bar" matTooltipPosition="left" matTooltip="Beginner">
+                                            <app-progress-bar [percent]="10" [clickable]="true" [startAnimation]="!backend.isMobile"/>
+                                        </div>
+                                    </div>
+                                </mat-expansion-panel-header>
+                                <ul>
+                                    <li>Basic layout</li>
                                 </ul>
                             </mat-expansion-panel>
 
