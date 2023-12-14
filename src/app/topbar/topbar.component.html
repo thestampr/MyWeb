@@ -1,4 +1,4 @@
-<header [ngClass]="{'darkpage-header': theme.is_dark, 'whitepage-header': !theme.is_dark}" (contextmenu)="false">
+<header class="glass" [ngClass]="{'darkpage-header': theme.is_dark, 'whitepage-header': !theme.is_dark}" (contextmenu)="false">
     <div id="topbar" #topbar>
         <nav>
             <a (click)="router.navigateByUrl('aboutme')" [ngClass]="{'active': isActive('aboutme')}">About me</a>

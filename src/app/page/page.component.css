@@ -16,7 +16,8 @@
 
 #container {
     width: 100%;
-    height: calc(100% - 60px);
+    /* height: calc(100% - 60px); */
+    height: 100%;
     
     margin: 0;
 
@@ -29,6 +30,7 @@
     height: 100%;
 
     padding: 0px;
+    padding-top: 60px;
 
     display: flex;
     justify-content: center;
@@ -95,7 +97,7 @@ div {
     cursor: pointer;
     opacity: 0;
     visibility: hidden;
-    z-index: 9999;
+    z-index: 5000;
 
     transition: margin-right 0s, 
     background-color 0.2s ease-in-out,
@@ -123,9 +125,9 @@ div {
 }
 
 @media only screen and (max-width: 900px) {
-    #container {
+    /* #container {
         height: calc(100% - 50px);
-    }
+    } */
 
     #to-top {
         margin: 30px;
@@ -137,9 +139,9 @@ div {
 }
 
 @media only screen and (max-width: 600px) {
-    #container {
+    /* #container {
         height: calc(100% - 40px);
-    }
+    } */
 
     #to-top {
         margin: 14px;

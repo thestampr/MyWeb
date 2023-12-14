@@ -1,11 +1,12 @@
-import { Component, ElementRef, HostListener, AfterViewInit } from '@angular/core';
+import { Component, HostListener, AfterViewInit } from '@angular/core';
 import { Router, NavigationStart, NavigationEnd } from '@angular/router';
 
 import { AppearanceService } from '../appearance.service';
 import { BackendService } from '../backend.service';
 
 
-const VISIBLE = 1.7;
+const VISIBLE = 1.6;
+const VISIBLE_HIDE = 1.2;
 
 
 @Component({
@@ -19,7 +20,6 @@ export class PageComponent implements AfterViewInit{
         public theme: AppearanceService,
         public router: Router, 
         private backend: BackendService, 
-        private elementRef: ElementRef
     ) {
         router.events.subscribe((event) => {
             if ( event instanceof NavigationStart ) {
@@ -32,40 +32,42 @@ export class PageComponent implements AfterViewInit{
         });
     }
 
-    @HostListener('window:resize')
-    private onResize(): void {
-        let topbar: HTMLElement = document.getElementById("topbar")!;
-        let scroll_wrapper: HTMLElement = document.getElementById("scroll-wrapper")!;
+    // @HostListener('window:resize')
+    // private onResize(): void {
+    //     const topbar: HTMLElement = document.getElementById("topbar")!;
+    //     const scroll_wrapper: HTMLElement = document.getElementById("scroll-wrapper")!;
 
-        scroll_wrapper.style.height = String(window.innerHeight - topbar.offsetHeight);
-    }
+    //     scroll_wrapper.style.height = String(window.innerHeight - topbar.offsetHeight);
+    // }
 
     ngAfterViewInit(): void {
         setTimeout(() => {
             // this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = this.theme.background_color;
             this.backend.updateMeta();
     
-            let revealItems: HTMLCollectionOf<Element> = document.getElementsByClassName("scroll-reveal");
-            let scroll_page: HTMLElement = document.getElementById("scroll-page")!;
-            // let content_wrapper: HTMLElement = document.getElementById("content-wrapper")!;
-            let fake_scroll_track: HTMLElement = document.getElementById("fake-scroll-track")!;
+            const revealItems: HTMLCollectionOf<Element> = document.getElementsByClassName("scroll-reveal");
+            const scroll_page: HTMLElement = document.getElementById("scroll-page")!;
+            // const content_wrapper: HTMLElement = document.getElementById("content-wrapper")!;
+            const fake_scroll_track: HTMLElement = document.getElementById("fake-scroll-track")!;
     
-            let topbar: HTMLElement = document.getElementById("topbar")!;
-            let footer: HTMLElement = document.getElementById("footer")!;
+            const topbar: HTMLElement = document.getElementById("topbar")!;
+            const footer: HTMLElement = document.getElementById("footer")!;
     
             for (let i = 0; i < revealItems.length; i++) {
-                let windowHeight = window.innerHeight;
-                let elementTop = revealItems[i].getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                const elementTop = revealItems[i].getBoundingClientRect().top;
             
                 if (elementTop < windowHeight/VISIBLE) {
                     revealItems[i].classList.add("revealed");
                 }
             }
     
-            if (scroll_page.offsetHeight >= footer.getBoundingClientRect().bottom - topbar.offsetHeight) {
+            if (scroll_page.offsetHeight >= footer.getBoundingClientRect().bottom) {
                 fake_scroll_track.classList.add("long");
+                // fake_scroll_track.classList.add("hide");
             } else {
                 fake_scroll_track.classList.remove("long");
+                // fake_scroll_track.classList.remove("hide");
             }
     
             if (scroll_page) {
@@ -74,25 +76,31 @@ export class PageComponent implements AfterViewInit{
         }, 100);
     }
     
-    OnScroll(): void {
-        let topbar: HTMLElement = document.getElementById("topbar")!;
-        let footer: HTMLElement = document.getElementById("footer")!;
+    async OnScroll() {
+        const topbar: HTMLElement = document.getElementById("topbar")!;
+        const footer: HTMLElement = document.getElementById("footer")!;
 
-        let revealItems: HTMLCollectionOf<Element> = document.getElementsByClassName("scroll-reveal");
-        let scroll_page: HTMLElement = document.getElementById("scroll-page")!;
-        let to_top: HTMLElement = document.getElementById("to-top")!;
+        const revealItems: HTMLCollectionOf<Element> = document.getElementsByClassName("scroll-reveal");
+        const scroll_page: HTMLElement = document.getElementById("scroll-page")!;
+        const to_top: HTMLElement = document.getElementById("to-top")!;
 
-        let windowHeight = window.innerHeight;
+        const windowHeight = window.innerHeight;
 
         for (let i = 0; i < revealItems.length; i++) {
-            let element_top = revealItems[i].getBoundingClientRect().top;
-        
-            if (element_top < windowHeight/VISIBLE) {
+            const element_top = revealItems[i].getBoundingClientRect().top;
+
+            if (revealItems[i].classList.contains("scroll-hide")) {
+                const element_btm = revealItems[i].getBoundingClientRect().bottom;
+
+                if (element_top < windowHeight/VISIBLE_HIDE && element_btm > windowHeight - (windowHeight/VISIBLE_HIDE)) {
+                    revealItems[i].classList.add("revealed");
+                } else {
+                    revealItems[i].classList.remove("revealed");
+                }
+                
+            } else if (element_top < windowHeight/VISIBLE_HIDE) {
                 revealItems[i].classList.add("revealed");
-            } 
-            // else {
-            //     revealItems[i].classList.remove("revealed");
-            // }
+            }
         }
 
         let footer_top = footer.getBoundingClientRect().top;

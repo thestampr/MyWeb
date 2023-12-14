@@ -39,7 +39,7 @@ p {
 }
 
 .card-name {
-    font-size: 14px;
+    font-size: 12px;
 
     position: relative;
     padding-bottom: 2px;
@@ -52,11 +52,11 @@ p {
 }
 
 ::ng-deep .whitecard .card-name {
-    border-bottom: 1px solid var(--alpha-dark);
+    border-bottom: 0.6px solid var(--alpha-dark);
 }
 
 ::ng-deep .darkcard .card-name {
-    border-bottom: 1px solid var(--alpha-white);
+    border-bottom: 0.6px solid var(--alpha-white);
 }
 
 #resume-content {
@@ -213,7 +213,7 @@ p {
     margin-top: 18px;
 
     opacity: 0.4;
-    font-size: 14px;
+    font-size: 12px;
 
     display: flex;
     position: relative;
@@ -243,7 +243,7 @@ li {
 }
 
 .section-extra {
-    font-size: 14px;
+    font-size: 12px;
 
     width: 100%;
     opacity: 0.5;
@@ -473,7 +473,7 @@ progress[value] {
     }
     
     .section-value {
-        font-size: 14px;
+        font-size: 12px;
     }
     
     .section-extra {
@@ -485,7 +485,7 @@ progress[value] {
     }
 
     li, p {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .timeline-dot {
@@ -527,7 +527,7 @@ progress[value] {
     }
     
     .section-name, .card-name {
-        font-size: 14px;
+        font-size: 12px;
     }
     
     .section-value {
@@ -535,7 +535,7 @@ progress[value] {
     }
     
     .section-extra {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .grid-linebreak {
@@ -547,11 +547,11 @@ progress[value] {
     }
 
     li {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     p {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     /* .auto-height > ul > li {
@@ -598,7 +598,7 @@ progress[value] {
 
 @media only screen and (max-width: 600px) {
     p {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .grid-item  {
@@ -619,7 +619,7 @@ progress[value] {
     }
     
     .section-extra {
-        font-size: 14px;
+        font-size: 12px;
     }
 }
 

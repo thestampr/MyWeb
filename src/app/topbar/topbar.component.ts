@@ -92,25 +92,25 @@ export class TopbarComponent implements AfterViewInit{
 
     OpenNav(): void {
         if (window.innerWidth <= 900) {
-            let floating_nav: HTMLElement = document.getElementById("mobile-nav-bg")!;
+            const floating_nav: HTMLElement = document.getElementById("mobile-nav-bg")!;
             
             floating_nav.classList.add("open");
         }
     }
 
     CloseNav(): void {
-        let floating_nav: HTMLElement = document.getElementById("mobile-nav-bg")!;
+        const floating_nav: HTMLElement = document.getElementById("mobile-nav-bg")!;
 
         floating_nav.classList.remove("open");
     }
 
     public closeModal(el: string): void {
-        let modal: HTMLElement = document.getElementById(el)!;
+        const modal: HTMLElement = document.getElementById(el)!;
         modal.classList.remove("open");
     }
 
     public openModal(el: string): void {
-        let modal: HTMLElement = document.getElementById(el)!;
+        const modal: HTMLElement = document.getElementById(el)!;
         modal.classList.add("open");
 
         modal.addEventListener("click", () => {
@@ -120,7 +120,7 @@ export class TopbarComponent implements AfterViewInit{
             }
         })
 
-        let childrens = Array.from(modal.querySelectorAll(`#${el} > *`));
+        const childrens = Array.from(modal.querySelectorAll(`#${el} > *`));
 
         for (let child of childrens) {
             (child as HTMLElement).addEventListener("click", (event: MouseEvent) => {

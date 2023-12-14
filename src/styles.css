@@ -22,6 +22,9 @@
     --little-dark: rgba(31, 33, 41, 0.05);
     --little-white: rgba(255, 255, 255, 0.03);
 
+    --white3-alpha: rgba(193, 193, 193, 0.8);
+    --dark1-alpha: rgba(23, 24, 30, 0.8);
+
     --scheme-color: #7C83C8;
     --alpha-scheme-color: rgba(124, 131, 200, 0.2);
 
@@ -355,7 +358,7 @@ button {
     background-size: 100% 100%;
     background-position-x: 0;
 
-    opacity: 0.2;
+    opacity: 0.4;
 
     position: absolute;
     left: 4px;
@@ -450,7 +453,7 @@ button {
 } */
 
 #fake-scroll-track {
-    width: var(--scroll-w);
+    width: 0;
     height: 100%;
 
     background-color: var(--scroll-bg);
@@ -468,10 +471,17 @@ button {
 }
 
 #fake-scroll-track.long {
+    width: var(--scroll-w);
     height: 100vh;
     position: fixed;
 
-    z-index: 9999;
+    z-index: 8000;
+}
+
+
+html:has(#viewport.fullscreen) header:has(#topbar) {
+    visibility: hidden;
+    /* transform: translateY(-100%); */
 }
 
 
@@ -708,7 +718,7 @@ mat-progress-bar {
 .linebreak {
     width: 80%;
     height: 1px;
-    opacity: 0.6;
+    /* opacity: 0.6; */
 
     margin-left: auto;
     margin-right: auto;
@@ -717,11 +727,13 @@ mat-progress-bar {
 }
 
 .line-white {
-    background-color: var(--alpha-white);
+    /* background-color: var(--alpha-white); */
+    border-bottom: 0.6px solid var(--alpha-white);
 }
 
 .line-dark {
-    background-color: var(--alpha-dark);
+    /* background-color: var(--alpha-dark); */
+    border-bottom: 0.6px solid var(--alpha-dark);
 }
 
 .flex-container {
@@ -813,6 +825,11 @@ mat-progress-bar {
     -moz-filter: blur(5px);
     -webkit-filter: blur(5px);
     -o-filter: blur(5px);
+}
+
+header.glass {
+    backdrop-filter: blur(18px) !important;
+    -webkit-backdrop-filter: blur(18px) !important;
 }
 
 .glass {
