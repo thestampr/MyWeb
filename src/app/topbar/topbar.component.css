@@ -19,11 +19,6 @@ header {
     z-index: 1000;
 }
 
-header:has(#fake-scroll-track.long) {
-    width: 100%;
-    right: 0;
-}
-
 button {
     box-shadow: unset;
     font-weight: unset;

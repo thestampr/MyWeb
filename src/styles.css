@@ -464,6 +464,7 @@ button {
     position: absolute;
     top: 0;
     right: 0 !important;
+    transform: translateX(100%);
 }
 
 #fake-scroll-track.hide {
