@@ -63,7 +63,7 @@
 
     opacity: 1;
     visibility: visible;
-    z-index: 2000;
+    z-index: 500;
 
     transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
 

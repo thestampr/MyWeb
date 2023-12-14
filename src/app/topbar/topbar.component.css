@@ -106,7 +106,7 @@ nav a:hover {
 }
 
 .whitepage-header {
-    background-color: transparent;
+    background-color: var(--white3-alpha);
     color: var(--dark2);
 }
 
