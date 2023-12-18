@@ -1,4 +1,4 @@
-import { Component, HostListener, AfterViewInit } from '@angular/core';
+import { Component, Input, AfterViewInit } from '@angular/core';
 import { Router, NavigationStart, NavigationEnd } from '@angular/router';
 
 import { AppearanceService } from '../appearance.service';
@@ -16,6 +16,8 @@ const VISIBLE_HIDE = 1.2;
 })
 export class PageComponent implements AfterViewInit{
 
+    @Input() fadeButtom: boolean = false;
+
     constructor(
         public theme: AppearanceService,
         public router: Router, 
@@ -32,15 +34,8 @@ export class PageComponent implements AfterViewInit{
         });
     }
 
-    // @HostListener('window:resize')
-    // private onResize(): void {
-    //     const topbar: HTMLElement = document.getElementById("topbar")!;
-    //     const scroll_wrapper: HTMLElement = document.getElementById("scroll-wrapper")!;
-
-    //     scroll_wrapper.style.height = String(window.innerHeight - topbar.offsetHeight);
-    // }
-
     ngAfterViewInit(): void {
+        this.fadeButtom = this.fadeButtom && this.backend.isMobile;
         setTimeout(() => {
             // this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = this.theme.background_color;
             this.backend.updateMeta();
@@ -79,6 +74,7 @@ export class PageComponent implements AfterViewInit{
     async OnScroll() {
         const topbar: HTMLElement = document.getElementById("topbar")!;
         const footer: HTMLElement = document.getElementById("footer")!;
+        const bottom_shadow: HTMLElement = document.getElementById("bottom-shadow")!;
 
         const revealItems: HTMLCollectionOf<Element> = document.getElementsByClassName("scroll-reveal");
         const scroll_page: HTMLElement = document.getElementById("scroll-page")!;
@@ -103,11 +99,13 @@ export class PageComponent implements AfterViewInit{
             }
         }
 
-        let footer_top = footer.getBoundingClientRect().top;
-        if (footer_top < windowHeight) {
-            to_top.classList.add("sticky");
-        } else {
-            to_top.classList.remove("sticky");
+        if (bottom_shadow) {
+            const footer_top = footer.getBoundingClientRect().top;
+            if (footer_top < windowHeight + (windowHeight/3)) {
+                bottom_shadow.classList.add("hide");
+            } else {
+                bottom_shadow.classList.remove("hide");
+            }
         }
         
         // if (scroll_page.scrollTop === 0) {

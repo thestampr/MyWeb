@@ -15,9 +15,11 @@
 
     --alpha-dark: rgba(31, 33, 41, 0.2);
     --alpha-dark2: rgba(31, 33, 41, 0.75);
+    --alpha-dark3: rgba(31, 33, 41, 0.5);
     
     --alpha-white: rgba(255, 255, 255, 0.1);
     --alpha-white2: rgba(255, 255, 255, 0.75);
+    --alpha-white3: rgba(255, 255, 255, 0.5);
 
     --little-dark: rgba(31, 33, 41, 0.05);
     --little-white: rgba(255, 255, 255, 0.03);
@@ -286,6 +288,13 @@ button {
     border: unset;
 
     /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); */
+}
+
+button:disabled {
+    opacity: 1 !important;
+
+    backdrop-filter: blur(7.5px);
+    -webkit-backdrop-filter: blur(7.5px);
 }
 
 .styled-button {
@@ -836,6 +845,46 @@ header.glass {
 .glass {
     backdrop-filter: blur(7.5px) !important;
     -webkit-backdrop-filter: blur(7.5px) !important;
+}
+
+.sticky {
+    position: sticky;
+}
+
+.sticky.bottom {
+    position: sticky;
+
+    bottom: 35px;
+    right: 35px;
+
+    margin-bottom: 35px;
+}
+
+.sticky.center {
+    left: 0;
+    right: 0;
+    /* transform: translateX(-50%); */
+}
+
+@media only screen and (max-width: 1200px) {
+}
+
+@media only screen and (max-width: 900px) {
+    .sticky.bottom {
+        bottom: 30px;
+        right: 30px;
+    
+        margin-bottom: 30px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .sticky.bottom {
+        bottom: 18px;
+        right: 18px;
+    
+        margin-bottom: 18px;
+    }
 }
 
 /* directive component */

@@ -307,6 +307,36 @@ button[mat-icon-button] {
     transition: opacity 0.3s ease-in-out, color 0.3s ease-in-out !important;
 }
 
+.checktype-wrapper > .styled-button {
+    background: none !important;
+    border: none !important;
+    color: white !important;
+    transition: opacity 0.3s ease-in-out, color 0.3s ease-in-out !important;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 14px;
+}
+
+.checktype-wrapper > .styled-button > mat-icon {
+    position: unset;
+    transform: none;
+}
+
+.checktype-wrapper > button:active {
+    scale: 1 !important;
+}
+
+.checktype-wrapper > .styled-button.checked {
+    color: white;
+}
+
+.checktype-wrapper > .styled-button:not(.checked) {
+    opacity: 0.2;
+}
+
 
 @media only screen and (max-width: 1200px) {
     nav a, #option-btn {

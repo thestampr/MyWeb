@@ -1,4 +1,4 @@
-<app-page>
+<app-page [fadeButtom]="true">
     <div id="resume-content" class="no-background" [cdkContextMenuTriggerFor]="Download" [ngClass]="{'dark-theme': theme.is_dark, 'white-theme': !theme.is_dark}">
 
         <div class="grid-content">
@@ -413,11 +413,22 @@
         </div>
     </div>
 
-    <div id="content-footer" [ngClass]="{'scroll-reveal': backend.isMobile}">
-        <button id="download-btn" class="animated-btn primary" (click)="OpenModal()" disabled>
+    <ng-container *ngIf="backend.isMobile;else desktopDownloadBtn">
+        <span [ngClass]="{'dark-theme': theme.is_dark, 'white-theme': !theme.is_dark}"></span>
+        <button class="download-btn animated-btn primary sticky bottom center" (click)="OpenModal()" disabled>
             Download 
         </button>
-    </div>
+    </ng-container>
+
+    <ng-template #desktopDownloadBtn>
+        <div id="content-footer">
+            <span [ngClass]="{'dark-theme': theme.is_dark, 'white-theme': !theme.is_dark}"></span>
+            <button class="download-btn animated-btn primary" (click)="OpenModal()" disabled>
+                Download 
+            </button>
+        </div>
+    </ng-template>
+
 </app-page>
 
 <ng-template #Download>
