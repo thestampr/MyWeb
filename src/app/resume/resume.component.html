@@ -3,10 +3,10 @@
 
         <div class="grid-content">
             <div class="side-field grid-item">
-                <app-card class="card" [fullHeight]="true" [ngClass]="{'scroll-reveal': backend.isMobile}">
+                <app-card class="card" [fullHeight]="true">
                     <div class="personal">
                         <div class="image">
-                            <img class="me" src="assets/images/profile-4.jpg" [cdkContextMenuTriggerFor]="Image" ModalView /> 
+                            <img class="me" src="assets/images/profile-4.jpg" [cdkContextMenuTriggerFor]="Image" ModalView #me /> 
                         </div>
 
                         <div class="section-linebreak linebreak" [ngClass]="{'line-white': theme.is_dark, 'line-dark': !theme.is_dark}"></div>
@@ -90,7 +90,7 @@
             <!-- <div class="grid-linebreak linebreak" [ngClass]="{'line-white': theme.is_dark, 'line-dark': !theme.is_dark}"></div> -->
 
             <div class="content-field grid-item">
-                <app-card class="card" [ngClass]="{'scroll-reveal': backend.isMobile}">
+                <app-card class="card">
                     <div class="auto-height">
                         <div class="card-name">About me</div>
                         
@@ -116,7 +116,7 @@
                     </div>
                 </app-card>
 
-                <app-card class="card" [ngClass]="{'scroll-reveal': backend.isMobile}">
+                <app-card class="card">
                     <div class="auto-height">
                         <div class="card-name">Projects</div>
                         
@@ -147,7 +147,7 @@
                     </div>
                 </app-card>
 
-                <app-card class="card" [ngClass]="{'scroll-reveal': backend.isMobile}">
+                <app-card class="card">
                     <div id="skills" class="auto-height">
                         <div class="card-name">
                             Skills
@@ -294,7 +294,7 @@
                     </div>
                 </app-card>
 
-                <app-card class="card" [ngClass]="{'scroll-reveal': backend.isMobile}">
+                <app-card class="card">
                     <div class="auto-height">
                         <div class="card-name">Work Experiences</div>
                         
@@ -372,7 +372,7 @@
                     </div>
                 </app-card>
 
-                <app-card class="card" [ngClass]="{'scroll-reveal': backend.isMobile}">
+                <app-card class="card">
                     <div class="auto-height">
                         <div class="card-name">Educations</div>
                         
@@ -465,7 +465,7 @@
 
 <ng-template #Image>
     <div class="ContextMenu" cdkMenu>
-        <button class="ContextMenu-Item" cdkMenuItem ModalView [src]="'assets/images/me-rotated.jpg'">View image</button>
+        <button class="ContextMenu-Item" cdkMenuItem (click)="me.click()">View image</button>
     </div>
 </ng-template>
 
