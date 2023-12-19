@@ -19,6 +19,13 @@ header {
     z-index: 1000;
 }
 
+header:has(#topbar.sliver.pin) {
+    position: absolute;
+    /* background-color: red; */
+
+    transform: translateY(-100%);
+}
+
 button {
     box-shadow: unset;
     font-weight: unset;

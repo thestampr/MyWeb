@@ -18,6 +18,8 @@ export class PageComponent implements AfterViewInit{
 
     @Input() fadeButtom: boolean = false;
 
+    private lastScrollTop = 0;
+
     constructor(
         public theme: AppearanceService,
         public router: Router, 
@@ -71,6 +73,7 @@ export class PageComponent implements AfterViewInit{
     }
     
     async OnScroll() {
+        const header: HTMLElement = document.getElementById("topbar-wrapper")!;
         const topbar: HTMLElement = document.getElementById("topbar")!;
         const footer: HTMLElement = document.getElementById("footer")!;
         const bottom_shadow: HTMLElement = document.getElementById("bottom-shadow")!;
@@ -80,6 +83,18 @@ export class PageComponent implements AfterViewInit{
         const to_top: HTMLElement = document.getElementById("to-top")!;
 
         const windowHeight = window.innerHeight;
+
+        var st = scroll_page.scrollTop;
+        if (topbar.classList.contains("sliver")) {
+            if (st > this.lastScrollTop) {
+                // downscroll code
+                topbar.classList.add("pin");
+            } else if (st < this.lastScrollTop) {
+                // upscroll code
+                topbar.classList.remove("pin");
+            }
+        }
+        this.lastScrollTop = st <= 0 ? 0 : st;
 
         for (let i = 0; i < revealItems.length; i++) {
             const element_top = revealItems[i].getBoundingClientRect().top;
@@ -129,6 +144,6 @@ export class PageComponent implements AfterViewInit{
         let scroll_page: HTMLElement = document.getElementById("scroll-page")!;
 
         // to_top.classList.add("hide");
-        scroll_page.scrollTo(0, 0);
+        scroll_page.scrollTo({top: 0, behavior:'smooth'});
     }
 }
