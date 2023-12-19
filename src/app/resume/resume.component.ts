@@ -14,6 +14,8 @@ import * as htmlToImage from 'html-to-image';
 export class ResumeComponent {
 
     public disabled_downloads: boolean = false;
+    public disabled_png: boolean = false;
+    public disabled_pdf: boolean = true;
     public disabled_transcript: boolean = true;
 
     public expand_download: boolean;

@@ -413,7 +413,7 @@
         </div>
     </div>
 
-    <ng-container *ngIf="theme.is_portrait;else desktopDownloadBtn">
+    <ng-container *ngIf="theme.is_portrait; else desktopDownloadBtn">
         <span [ngClass]="{'dark-theme': theme.is_dark, 'white-theme': !theme.is_dark}"></span>
         <button class="download-btn animated-btn primary sticky bottom center fadein-2" (click)="OpenModal()" [disabled]="disabled_downloads">
             Download 
@@ -477,13 +477,13 @@
 
         <div class="linebreak no-margin-top line-dark"></div>
 
-        <button (click)="backend.DownloadResume()" matRipple>
-            Save as PDF
-            <a class="fa fa-file-pdf-o"></a>
-        </button>
-        <button (click)="SaveAsPng()" matRipple>
+        <button (click)="SaveAsPng()" matRipple [disabled]="disabled_png" [matRippleDisabled]="disabled_png">
             Save as PNG
             <a class="fa fa-file-image-o"></a>
+        </button>
+        <button (click)="backend.DownloadResume()" matRipple [disabled]="disabled_pdf" [matRippleDisabled]="disabled_pdf">
+            Save as PDF
+            <a class="fa fa-file-pdf-o"></a>
         </button>
 
         <div class="linebreak line-dark"></div>
