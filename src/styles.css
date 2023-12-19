@@ -837,7 +837,11 @@ mat-progress-bar {
     opacity: 0;
 }
 
-.revealed {
+.scroll-reveal.no-animation {
+    opacity: 1;
+}
+
+.revealed:not(.no-animation) {
     opacity: 1;
     animation: WalkIn-from-right ease 1s;
 }

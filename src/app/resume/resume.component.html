@@ -147,7 +147,7 @@
                     </div>
                 </app-card>
 
-                <app-card class="card">
+                <app-card class="card" [ngClass]="{'scroll-reveal no-animation': backend.isMobile}">
                     <div id="skills" class="auto-height">
                         <div class="card-name">
                             Skills
