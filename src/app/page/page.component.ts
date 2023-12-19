@@ -73,7 +73,6 @@ export class PageComponent implements AfterViewInit{
     }
     
     async OnScroll() {
-        const header: HTMLElement = document.getElementById("topbar-wrapper")!;
         const topbar: HTMLElement = document.getElementById("topbar")!;
         const footer: HTMLElement = document.getElementById("footer")!;
         const bottom_shadow: HTMLElement = document.getElementById("bottom-shadow")!;

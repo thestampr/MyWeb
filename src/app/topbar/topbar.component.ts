@@ -2,6 +2,7 @@ import { Component, HostListener, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { AppearanceService } from '../appearance.service';
+import { BackendService } from '../backend.service';
 
 
 @Component({
@@ -19,6 +20,7 @@ export class TopbarComponent implements AfterViewInit{
     constructor(
         public theme: AppearanceService, 
         public router: Router, 
+        public backend: BackendService, 
     ) {}
 
     ngAfterViewInit(): void {

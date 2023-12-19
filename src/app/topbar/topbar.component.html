@@ -1,5 +1,5 @@
 <header id="topbar-wrapper" class="glass" [ngClass]="{'darkpage-header': theme.is_dark, 'whitepage-header': !theme.is_dark}" (contextmenu)="false">
-    <div id="topbar" [ngClass]="{'sliver': theme.is_portrait}" #topbar>
+    <div id="topbar" [ngClass]="{'sliver border': theme.is_portrait || backend.isMobile}" #topbar>
         <nav>
             <a (click)="router.navigateByUrl('aboutme')" [ngClass]="{'active': isActive('aboutme')}">About me</a>
             <a (click)="router.navigateByUrl('resume')" [ngClass]="{'active': isActive('resume')}">Resume</a>
