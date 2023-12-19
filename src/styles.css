@@ -179,6 +179,10 @@ h1 {
     /* box-shadow: initial !important; */
 }
 
+button:disabled:has(:active, :hover) {
+    background-color: initial;
+}
+
 .clickable {
     cursor: pointer;
 }
@@ -295,6 +299,14 @@ button:disabled {
 
     backdrop-filter: blur(7.5px);
     -webkit-backdrop-filter: blur(7.5px);
+
+    color: initial !important;
+    background-color: initial !important;
+}
+
+button:disabled * {
+    color: initial !important;
+    background-color: initial !important;
 }
 
 .styled-button {
@@ -1027,6 +1039,19 @@ img[ModalView] {
 
 
 /* Animations */
+
+.fadein {
+    animation: fadeIn ease 0.3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.fadein-2 {
+    animation: fadeIn ease 0.8s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
 @keyframes fadeIn {
     0% {
         opacity: 0;

@@ -1,4 +1,4 @@
-<app-page [fadeButtom]="true">
+<app-page [fadeButtom]="theme.is_portrait">
     <div id="resume-content" class="no-background" [cdkContextMenuTriggerFor]="Download" [ngClass]="{'dark-theme': theme.is_dark, 'white-theme': !theme.is_dark}">
 
         <div class="grid-content">
@@ -413,9 +413,9 @@
         </div>
     </div>
 
-    <ng-container *ngIf="backend.isMobile;else desktopDownloadBtn">
+    <ng-container *ngIf="theme.is_portrait;else desktopDownloadBtn">
         <span [ngClass]="{'dark-theme': theme.is_dark, 'white-theme': !theme.is_dark}"></span>
-        <button class="download-btn animated-btn primary sticky bottom center" (click)="OpenModal()" disabled>
+        <button class="download-btn animated-btn primary sticky bottom center fadein-2" (click)="OpenModal()" [disabled]="disabled_downloads">
             Download 
         </button>
     </ng-container>
@@ -423,7 +423,7 @@
     <ng-template #desktopDownloadBtn>
         <div id="content-footer">
             <span [ngClass]="{'dark-theme': theme.is_dark, 'white-theme': !theme.is_dark}"></span>
-            <button class="download-btn animated-btn primary" (click)="OpenModal()" disabled>
+            <button class="download-btn animated-btn primary fadein-2" (click)="OpenModal()" [disabled]="disabled_downloads">
                 Download 
             </button>
         </div>
@@ -449,7 +449,7 @@
             <a class="fa fa-file-text-o"></a>
         </button> -->
 
-        <button class="ContextMenu-Item" cdkMenuItem (click)="OpenModal()" disabled>
+        <button class="ContextMenu-Item" cdkMenuItem (click)="OpenModal()" [disabled]="disabled_downloads">
             Download
             <!-- <a class="fa fa-download"></a> -->
         </button>
@@ -475,7 +475,7 @@
             Download 
         </p>
 
-        <div class="linebreak no-margin-top"></div>
+        <div class="linebreak no-margin-top line-dark"></div>
 
         <button (click)="backend.DownloadResume()" matRipple>
             Save as PDF
@@ -486,9 +486,9 @@
             <a class="fa fa-file-image-o"></a>
         </button>
 
-        <div class="linebreak"></div>
+        <div class="linebreak line-dark"></div>
     
-        <button (click)="backend.DownloadTranscriptEn()" matRipple>
+        <button (click)="backend.DownloadTranscriptEn()" matRipple [disabled]="disabled_transcript" [matRippleDisabled]="disabled_transcript">
             Transcript
             <a class="fa fa-file-text-o"></a>
         </button>

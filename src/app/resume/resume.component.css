@@ -97,9 +97,9 @@ p {
     z-index: 600;
 }
 
-.download-btn:disabled {
-    opacity: 1 !important;
-}
+/* .download-btn:disabled {
+    opacity: 1;
+} */
 
 .dark-theme + .download-btn:disabled {
     color: var(--alpha-white);
@@ -133,7 +133,7 @@ p {
     /* transition: max-height 0.2s ease-in-out, padding-top 0.2s ease-in-out; */
 }
 
-#download-frame>button {
+#download-frame > button {
     height: 40px;
     min-height: unset;
 
@@ -153,20 +153,20 @@ p {
     /* background-color: aqua; */
 }
 
-#download-frame>button a {
+#download-frame > button a {
     transition: color 0s, background-color 0s;
 }
 
-#download-frame>button:hover {
+#download-frame > button:hover {
     background-color: var(--scheme-color);
     color: var(--white1);
 }
 
-#download-frame>button:hover a {
+#download-frame > button:hover a {
     color: var(--white1);
 }
 
-#download-frame>#download-expand-header {
+#download-frame > #download-expand-header {
     width: 100%;
     height: 50px;
 
@@ -184,13 +184,15 @@ p {
     font-size: 16px;
 }
 
-#download-frame>.linebreak {
+#download-frame > .linebreak {
     width: 250px;
-    height: 1px;
-
-    background-color: var(--alpha-dark);
+    
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+#download-frame > *:disabled {
+    opacity: 0.4 !important;
 }
 
 #download-frame a {
@@ -291,6 +293,19 @@ li {
     display: unset;
 
     /* background-color: aqua; */
+}
+
+.saving .side-field ::ng-deep app-card #card {
+    width: 100%;
+    height: auto;
+
+    position: absolute;
+    top: 0;
+}
+
+.saving .side-field {
+    display: flex;
+    position: relative;
 }
 
 .side-field ::ng-deep app-card #card {
@@ -662,6 +677,19 @@ progress[value] {
     
     .section-extra {
         font-size: 12px;
+    }
+
+    .saving .side-field ::ng-deep app-card #card {
+        width: unset;
+        height: unset;
+    
+        position: unset;
+        top: unset;
+    }
+    
+    .saving .side-field {
+        display: unset;
+        position: unset;
     }
 }
 

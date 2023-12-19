@@ -65,10 +65,6 @@ div {
     display: flex;
     justify-content: center;
 
-    animation: fadeIn ease 0.3s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-
     padding-bottom: 4dvh;
 
     transition: height 0s !important;

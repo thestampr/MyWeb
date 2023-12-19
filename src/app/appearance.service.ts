@@ -15,6 +15,14 @@ export class AppearanceService {
 
     constructor() {}
 
+    get is_portrait(): boolean {
+        return window.innerHeight > window.innerWidth;
+    }
+
+    get is_landscape(): boolean {
+        return !this.is_portrait;
+    }
+
     get is_dark(): boolean {
         return this._dark;
     }

@@ -21,7 +21,7 @@ export class PageComponent implements AfterViewInit{
     constructor(
         public theme: AppearanceService,
         public router: Router, 
-        private backend: BackendService, 
+        public backend: BackendService, 
     ) {
         router.events.subscribe((event) => {
             if ( event instanceof NavigationStart ) {
@@ -35,7 +35,6 @@ export class PageComponent implements AfterViewInit{
     }
 
     ngAfterViewInit(): void {
-        this.fadeButtom = this.fadeButtom && this.backend.isMobile;
         setTimeout(() => {
             // this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = this.theme.background_color;
             this.backend.updateMeta();
