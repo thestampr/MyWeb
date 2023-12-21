@@ -9,7 +9,7 @@
     /* opacity: 0; */
 
     /* transition: opacity 0s, bottom 3s ease-in-out; */
-    transition: opacity 0s;
+    transition: opacity 0s, bottom 3s ease;
 
     -moz-animation: onload 0s ease-in 0.5s forwards;
     -webkit-animation: onload 0s ease-in 0.5s forwards; /* Firefox */

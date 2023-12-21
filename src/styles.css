@@ -24,7 +24,7 @@
     --little-dark: rgba(31, 33, 41, 0.05);
     --little-white: rgba(255, 255, 255, 0.03);
 
-    --white3-alpha: rgba(224, 224, 224, 0.8);
+    --white2-alpha: rgba(239, 239, 239, 0.8);
     --dark1-alpha: rgba(23, 24, 30, 0.8);
 
     --scheme-color: #7C83C8;
@@ -192,7 +192,7 @@ button:disabled:has(:active, :hover) {
 }
 
 body:has(#container.white-theme) {
-    background-color: var(--white3);
+    background-color: var(--white2);
 }
 
 body:has(#container.dark-theme) {
@@ -238,7 +238,7 @@ body:has(#container.dark-theme) {
 }
 
 .whitepage {
-    background-color: var(--white3);
+    background-color: var(--white2);
     border: 1px solid var(--alpha-dark);
     color: var(--dark2);
 }
@@ -1050,8 +1050,15 @@ img[ModalView] {
     animation-fill-mode: forwards;
 }
 
-.fadein-2 {
-    animation: fadeIn ease 0.8s;
+.fadein-delay {
+    animation-delay: 0.6s;
+    animation: fadeIn ease 0.3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.fadein-blur {
+    animation: fadeInBlur ease 0.3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
@@ -1062,6 +1069,23 @@ img[ModalView] {
     }
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes fadeInBlur {
+    0% {
+        opacity: 0;
+        filter: blur(2px);
+        -moz-filter: blur(2px);
+        -webkit-filter: blur(2px);
+        -o-filter: blur(2px);
+    }
+    100% {
+        opacity: 1;
+        filter: blur(0);
+        -moz-filter: blur(0);
+        -webkit-filter: blur(0);
+        -o-filter: blur(0);
     }
 }
 

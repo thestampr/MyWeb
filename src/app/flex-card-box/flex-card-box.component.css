@@ -108,8 +108,12 @@
     font-size: 12px;
 
     margin-top: 8px;
+    margin-right: 16px;
 
     box-shadow: none;
+
+    /* border-radius: 6px; */
+    border-radius: 100px;
 }
 
 .mobile.item-ab-btn {
@@ -117,6 +121,9 @@
     bottom: 8px;
     left: 8px;
     right: 8px;
+    margin-right: 0;
+
+    border-radius: 100px;
 }
 
 .white-theme .item-ab-btn {

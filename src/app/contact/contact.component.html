@@ -1,21 +1,23 @@
 <app-page>
     <div id="content">
-        <h1>Contact me</h1><br>
+        <h1>Contact me</h1>
+        
+        <br>
 
-        <div id="buttons">
-            <a id="icon-btn" href="https://www.facebook.com/thestampr" target="_blank" 
+        <div class="buttons">
+            <a class="icon-btn" href="https://www.facebook.com/thestampr" target="_blank" 
             class="animated-btn  fa fa-facebook" matTooltipPosition="above" matTooltip="Facebook">
             </a>
 
-            <a id="icon-btn" href="https://www.instagram.com/__stampr/" target="_blank" 
+            <a class="icon-btn" href="https://www.instagram.com/__stampr/" target="_blank" 
             class="animated-btn fa fa-instagram" matTooltipPosition="above" matTooltip="Instagram">
             </a>
 
-            <a id="icon-btn" href="https://www.linkedin.com/in/stampr/" target="_blank" 
+            <a class="icon-btn" href="https://www.linkedin.com/in/stampr/" target="_blank" 
             class="animated-btn fa fa-linkedin" matTooltipPosition="above" matTooltip="Linkedin">
             </a>
 
-            <a id="icon-btn" href="https://github.com/thestampr" target="_blank" 
+            <a class="icon-btn" href="https://github.com/thestampr" target="_blank" 
             class="animated-btn fa fa-github" matTooltipPosition="above" matTooltip="Github">
             </a>
 
@@ -28,12 +30,18 @@
             <button id="hire" class="animated-btn" (click)="HireMe()"
             matTooltipPosition="above" matTooltip="Click to see the magic">Hire me</button>
         </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
         
         <div id="personal_wrapper">
             <app-card>
                 <div id="personal">
                     <div class="personal-item" [ngClass]="{'dark-theme': theme.is_dark, 'white-theme': !theme.is_dark}">
-                        <i id="icon" class="icon-small fa fa-envelope"></i>
+                        <i class="icon icon-small fa fa-envelope"></i>
                         thestampmc@gmail.com
                         <button #copy_email
                         class="clone-btn fa fa-clone" 
@@ -45,7 +53,7 @@
                     </div>
                     <br>
                     <!-- <div class="personal-item" [ngClass]="{'dark-theme': theme.is_dark, 'white-theme': !theme.is_dark}">
-                        <i id="icon" class="icon-small fa fa-phone"></i>
+                        <i class="icon icon-small fa fa-phone"></i>
                         090-935-1529
                         <button #copy_tel 
                         class="clone-btn fa fa-clone" 
@@ -56,7 +64,7 @@
                         </button>
                     </div> -->
                     <div class="personal-item" [ngClass]="{'dark-theme': theme.is_dark, 'white-theme': !theme.is_dark}">
-                        <i id="icon" class="icon-small fa fa-phone"></i>
+                        <i class="icon icon-small fa fa-phone"></i>
                         Not available
                         <button #copy_tel 
                         class="clone-btn fa fa-clone" 

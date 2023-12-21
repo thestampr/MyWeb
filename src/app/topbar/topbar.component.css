@@ -109,7 +109,7 @@ nav a:hover {
 }
 
 .whitepage-header {
-    background-color: var(--white3-alpha);
+    background-color: var(--white2-alpha);
     color: var(--dark2);
 }
 
@@ -270,7 +270,7 @@ button[mat-icon-button] {
 }
 
 .whitepage-nav {
-    background-color: var(--white3);
+    background-color: var(--white2);
     color: var(--dark2);
 
     /* border-left: 1px solid var(--alpha-dark); */

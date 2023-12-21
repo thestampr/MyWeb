@@ -4,7 +4,7 @@
             <ng-content />
         </div>
         
-        <div id="bottom-shadow" class="fadein" *ngIf="fadeButtom && theme.is_portrait" [ngClass]="{'dark-theme': theme.is_dark, 'white-theme': !theme.is_dark}"></div>
+        <div id="bottom-shadow" class="fadein-delay" *ngIf="fadeButtom && theme.is_portrait" [ngClass]="{'dark-theme': theme.is_dark, 'white-theme': !theme.is_dark}"></div>
 
         <a id="to-top" class="animated-btn fa fa-arrow-up sticky bottom" (click)="ToTop()" [ngClass]="{'dark-btn': theme.is_dark, 'white-btn': !theme.is_dark}"></a>
         <app-footer />

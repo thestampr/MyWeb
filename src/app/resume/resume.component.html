@@ -415,7 +415,7 @@
 
     <ng-container *ngIf="theme.is_portrait; else desktopDownloadBtn">
         <span [ngClass]="{'dark-theme': theme.is_dark, 'white-theme': !theme.is_dark}"></span>
-        <button class="download-btn animated-btn primary sticky bottom center fadein-2" (click)="OpenModal()" [disabled]="disabled_downloads">
+        <button class="download-btn animated-btn primary sticky bottom center fadein" (click)="OpenModal()" [disabled]="disabled_downloads">
             Download 
         </button>
     </ng-container>
@@ -423,7 +423,7 @@
     <ng-template #desktopDownloadBtn>
         <div id="content-footer">
             <span [ngClass]="{'dark-theme': theme.is_dark, 'white-theme': !theme.is_dark}"></span>
-            <button class="download-btn animated-btn primary fadein-2" (click)="OpenModal()" [disabled]="disabled_downloads">
+            <button class="download-btn animated-btn primary fadein" (click)="OpenModal()" [disabled]="disabled_downloads">
                 Download 
             </button>
         </div>
