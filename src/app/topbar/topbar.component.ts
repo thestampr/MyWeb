@@ -28,6 +28,8 @@ export class TopbarComponent implements AfterViewInit{
         const mobile_nav_wrapper: HTMLElement = document.getElementById("mobile-nav-wrapper")!;
         this.router.events.subscribe(() => {
             topbar.classList.remove("floating");
+            topbar.classList.remove("pin");
+            
             setTimeout(() => {
                 mobile_nav_wrapper.classList.remove("open");
             }, 250);
@@ -88,6 +90,15 @@ export class TopbarComponent implements AfterViewInit{
         return document.location.pathname.endsWith(path);
     }
 
+    isSubPath(): boolean {
+        // if (document.location.hostname.includes("github.io")) {
+        //     return (document.location.pathname.split("/").length - 1) > 2;
+        // }
+        // return (document.location.pathname.split("/").length - 1) > 1;
+        const sparated = document.location.pathname.split("/");
+        return !["aboutme", "resume", "contact"].includes(sparated.at(sparated.length-1)!);
+    }
+
     ToogleTheme(): void {
         this.theme.is_dark = !this.theme.is_dark;
     }
@@ -104,6 +115,10 @@ export class TopbarComponent implements AfterViewInit{
         const floating_nav: HTMLElement = document.getElementById("mobile-nav-bg")!;
 
         floating_nav.classList.remove("open");
+    }
+
+    public Back() {
+        history.back();
     }
 
     public closeModal(el: string): void {

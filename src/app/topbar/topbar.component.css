@@ -99,13 +99,20 @@ nav a:hover {
     height: 100%;
 
     display: flex;
-    justify-content: right;
+    justify-content: space-between;
     align-items: center;
+    flex-direction: row;
 
     /* position: absolute;
     top: 0;
     left: 0; */
     border-bottom: 1px solid transparent;
+}
+
+#topbar > span {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .whitepage-header {
@@ -154,21 +161,29 @@ nav a:hover {
 
 
 button[mat-icon-button] {
+    display: flex;
     align-items: center;
 }
 
-#mobile-nav-open {
+.nav-icon-btn {
     width: auto;
-
-    margin-right: 5px;
 
     font-size: 20px;
 
-    display: none;
+    cursor: pointer;
 }
 
-#mobile-nav-open:focus {
+.nav-icon-btn > mat-icon {
+    cursor: pointer;
+}
+
+.nav-icon-btn:focus {
     color: unset;
+}
+
+#mobile-nav-open {
+    margin-right: 4px;
+    display: none;
 }
 
 #mobile-nav-wrapper {

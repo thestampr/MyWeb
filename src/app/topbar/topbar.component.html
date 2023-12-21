@@ -1,16 +1,24 @@
 <header id="topbar-wrapper" class="glass" [ngClass]="{'darkpage-header': theme.is_dark, 'whitepage-header': !theme.is_dark}" (contextmenu)="false">
     <div id="topbar" [ngClass]="{'sliver border': theme.is_portrait || backend.isMobile}" #topbar>
-        <nav>
-            <a (click)="router.navigateByUrl('aboutme')" [ngClass]="{'active': isActive('aboutme')}">About me</a>
-            <a (click)="router.navigateByUrl('resume')" [ngClass]="{'active': isActive('resume')}">Resume</a>
-            <a (click)="router.navigateByUrl('contact')" [ngClass]="{'active': isActive('contact')}">Contact</a>
-        </nav>
-    
-        <button id="option-btn" mat-button [cdkMenuTriggerFor]="Option"><mat-icon class="clickable">more_vert</mat-icon></button>
+        <span>
+            <button class="nav-icon-btn" mat-icon-button *ngIf="isSubPath()" (click)="Back()">
+                <mat-icon>keyboard_arrow_left-left</mat-icon>
+            </button>
+        </span>
+
+        <span>
+            <nav>
+                <a (click)="router.navigateByUrl('aboutme')" [ngClass]="{'active': isActive('aboutme')}">About me</a>
+                <a (click)="router.navigateByUrl('resume')" [ngClass]="{'active': isActive('resume')}">Resume</a>
+                <a (click)="router.navigateByUrl('contact')" [ngClass]="{'active': isActive('contact')}">Contact</a>
+            </nav>
         
-        <button id="mobile-nav-open" mat-icon-button (click)="openModal('mobile-nav-wrapper')">
-            <mat-icon>menu</mat-icon>
-        </button>
+            <button id="option-btn" mat-button [cdkMenuTriggerFor]="Option"><mat-icon class="clickable">more_vert</mat-icon></button>
+    
+            <button id="mobile-nav-open" class="nav-icon-btn" mat-icon-button (click)="openModal('mobile-nav-wrapper')">
+                <mat-icon>menu</mat-icon>
+            </button>
+        </span>
     </div>
 
     <div id="fake-scroll-track" class="long"></div>

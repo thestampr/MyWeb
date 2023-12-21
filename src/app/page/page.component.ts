@@ -121,10 +121,6 @@ export class PageComponent implements AfterViewInit{
             }
         }
         
-        // if (scroll_page.scrollTop === 0) {
-        //     to_top.classList.remove("hide");
-        // }
-        
         if (scroll_page.scrollTop > 300) {
             to_top.classList.add("visible");
         } else {

@@ -6,24 +6,30 @@
             [ngClass]="{'fullsize': one_col}" 
             *ngFor="let item of items; let i = index">
 
-            <div class="item-icon">
-                <i class="fa {{item.icon}} icon-large" ></i>
-            </div>
+            <span class="item-banner" *ngIf="item.banner">
+                <img src="{{item.banner}}" alt="{{item.title}} banner" class="fadein-delay">
+            </span>
 
-            <div class="item-details">
-                <span class="item-header-wrapper">
-                    <h3>
-                        {{item.title}}
-                    </h3>
-                    <button class="desktop item-ab-btn animated-btn glass" *ngIf="item.url" (click)="router.navigateByUrl(item.url)">learn more</button>
-                </span>
-                <div class="item-description">
-                    <p *ngFor="let description of item.descriptions;">
-                        {{description}} <br>
-                    </p>
+            <div class="item-content">
+                <div class="item-icon">
+                    <i class="fa {{item.icon}} icon-large" ></i>
                 </div>
+    
+                <div class="item-details">
+                    <span class="item-header-wrapper">
+                        <h3>
+                            {{item.title}}
+                        </h3>
+                        <button class="desktop item-ab-btn animated-btn glass" *ngIf="item.url" (click)="router.navigateByUrl(item.url)">learn more</button>
+                    </span>
+                    <div class="item-description">
+                        <p *ngFor="let description of item.description_lines;">
+                            {{description}} <br>
+                        </p>
+                    </div>
+                </div>
+                <button class="mobile item-ab-btn animated-btn glass" *ngIf="item.url" (click)="router.navigateByUrl(item.url)">learn more</button>
             </div>
-            <button class="mobile item-ab-btn animated-btn glass" *ngIf="item.url" (click)="router.navigateByUrl(item.url)">learn more</button>
         </div>
     </div>
 </div>
