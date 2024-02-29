@@ -297,11 +297,13 @@ button {
 button:disabled {
     opacity: 1 !important;
 
-    backdrop-filter: blur(7.5px);
-    -webkit-backdrop-filter: blur(7.5px);
-
     color: initial !important;
     background-color: initial !important;
+}
+
+button:not(swiper button):disabled {
+    backdrop-filter: blur(7.5px);
+    -webkit-backdrop-filter: blur(7.5px);
 }
 
 button:disabled * {
